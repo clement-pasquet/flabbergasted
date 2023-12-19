@@ -1,0 +1,114 @@
+.nunito {
+	color: #FFF;
+	font-family: Nunito;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal; 
+}
+
+body {
+	margin: 0; /* Pour enlever les marges par défaut du body */
+	background: linear-gradient(183deg, rgba(55, 37, 72, 0.95) -5.36%, #000 108.29%); 
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+ 
+
+.header1 {
+	background: rgba(0, 0, 0, 0.35);/* Couleur de fond du header */
+	color: #fff; /* Couleur du texte */
+	max-width: 100%;
+    display: flex; /* Utilisation de flexbox pour aligner les éléments */
+    align-items: center; /* Aligne les éléments verticalement */
+    justify-content: space-between; /* Espace entre les éléments */
+	padding-left: 64px;
+	padding-right: 64px;
+}
+
+ 
+.logo { 
+	max-width: 4vw;
+	max-height: 4vw;
+	min-width: 55px;
+	min-height: 55px;
+	flex-shrink: 0;
+	}
+
+
+.headersearchbox {
+	width: 30%;
+	height: 5%;
+	border-radius: 89px;
+	border: 5px solid #FFF;
+	background: #342641; 
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 10px;
+}
+
+.headerText {
+	font-size: 35px;
+	min-width: 175px;
+}
+
+.iconAndText {
+	align-items: center; 
+	gap: 10%;
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.headerLeft {
+	align-items: center; 
+	display: flex;
+	gap: 50%;
+}
+
+.headerRight {
+    align-items: center; 
+	display: flex;
+	gap: 10%;
+}
+
+
+
+
+.contentTable {
+	padding-left: 100px;
+	width: 100%;
+	height: 100%;
+}
+
+
+
+.thumbnail {
+	object-fit: cover; 
+    object-position: center;
+	border-radius: 15px;
+	border: 1px solid #171717;
+	width: 360px;
+	height: 200px;
+	flex-shrink: 0; 
+	
+
+}
+
+.categoryTitle {
+	color: #FFF;
+	font-family: Nunito;
+	font-size: 48px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal; 
+	margin-top: 34px;
+	margin-bottom: 18px;
+}
+
+.selectionArrow {
+	width: 40px;
+	height: 58px;
+	flex-shrink: 0; 
+	margin-left: -150px;
+}
