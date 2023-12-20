@@ -27,11 +27,11 @@ body {
 .header1 {
 	background: rgba(0, 0, 0, 0.35);/* Couleur de fond du header */
 	color: #fff; /* Couleur du texte */
-	width: 100vw;
     display: flex; /* Utilisation de flexbox pour aligner les éléments */
     align-items: center; /* Aligne les éléments verticalement */
     justify-content: space-between; /* Espace entre les éléments */
 	/* padding: 10px 0; */
+	padding: 10px;
 }
 
  
@@ -41,6 +41,7 @@ body {
 	min-width: 55px;
 	min-height: 55px;
 	flex-shrink: 0;
+	margin-right: 2vw;
 }
 
 
@@ -62,15 +63,19 @@ body {
 
 .iconAndText {
 	align-items: center; 
-	gap: 10%;
+	gap: 8%;
 	display: flex;
-	flex-wrap: nowrap;
+	flex-wrap: nowrap;	
+	width: 29vw;
+
 }
 
 .headerLeft {
 	align-items: center; 
 	display: flex;
-	gap: 50%;
+	gap: 37%;
+	margin-right: -12vw;
+
 }
 
 .headerRight {
