@@ -1,0 +1,152 @@
+
+
+.nunito {
+	color: #FFF;
+	font-family: Nunito;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal; 
+}
+html{
+    margin:0;
+    padding:0;
+}
+
+body {
+	margin: 0; /* Pour enlever les marges par défaut du body */
+	padding:0;
+	background: linear-gradient(183deg, rgba(55, 37, 72, 0.95) -5.36%, #000 108.29%); 
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	width: 100vw;
+}
+ 
+ 
+
+
+.connectionLogo { 
+	max-width: 12vw;
+	max-height: 12v;
+	min-width: 100px;
+	min-height: 100px;
+	flex-shrink: 0;
+}
+
+.mainConnectionDiv {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 3vh;
+}
+
+.mainConnectionText {
+color: #FFF;
+font-family: Nunito;
+font-size: 48px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+margin: 0px;
+}
+
+.mainConnectionChamptexte {
+	width: 27vw;
+	height: 7vh;
+	flex-shrink: 0;
+	border-radius: 15px;
+	background: #D9D9D9;
+}
+
+.mainConnectionChamptextePassword {
+	width: 27vw;
+	height: 7vh;
+	flex-shrink: 0;
+	border-radius: 15px;
+	background: #D9D9D9;
+	background-image: url('images/eyeIcon.png'); /* Remplacez par le chemin de votre image SVG */
+    background-size:contain; /* Ajuste la taille de l'image pour couvrir le bouton */
+	transform:contain;
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: 3vw;
+}
+
+::placeholder {
+	color: rgba(0, 0, 0, 0.50);
+	font-family: Nunito;
+	font-size: 40px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+}
+
+
+
+.mainConnectionPassword {
+	position: relative;
+	display: inline-block;
+}
+ 
+
+.checkboxPassword{
+	display: flex;
+	flex-direction: row;
+	gap: 1vw;
+}
+
+.checkboxPasswordInput {
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	border-radius: 1vh;
+	background: #D9D9D9;
+	width: 4vh;
+	height: 4vh;
+}
+.checkboxPasswordInput:checked {
+	background-color: #747272; /* Changer la couleur de fond lorsque la case est cochée */
+  }
+
+
+
+
+.connectionButtonText {
+	color: #000;
+	font-family: Nunito;
+	font-size: 35px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	margin: 0px;
+}
+
+.connectionButton {
+	background-color: #01F9BB;
+	border: 0px;
+	height: 8vh;
+	width: 14vw;
+	border-radius: 1vw; 
+}
+
+.reinitText {
+	color: #02F8BB;
+	font-family: Nunito;
+	font-size: 35px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	margin: 0px;
+}
+
+.createaccountText {
+	color: #FFF;
+	font-family: Nunito;
+	font-size: 48px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	text-decoration-line: underline;
+	margin: 0px;
+}
