@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <title>accountConnection</title>
+  <title>accountCreate</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
@@ -18,10 +18,9 @@
   <div class="mainConnectionDiv">
     <img class="connectionLogo" src="images/logo1.png" alt="Logo Flabbergaster"></img>
 
-    <p class="nunito mainConnectionText">Connexion</p>
+    <p class="nunito mainConnectionText">Créer compte</p>
 
     <form class="mainConnectionDiv" action="#" method="post">
-
 
       <input class="mainConnectionChamptexte mainConnectionwritingText" type="text" placeholder="Pseudo ou adresse e-mail">
 
@@ -29,22 +28,23 @@
         <input class="mainConnectionChamptextePassword mainConnectionwritingText" type="password" placeholder="Mot de passe">
       </div>
 
+      <div class="mainConnectionPassword">
+        <input class="mainConnectionChamptextePassword mainConnectionwritingText" type="password" placeholder="Confirmation du MDP">
+      </div>
+
       <div class="checkboxPassword"> 
         <input class="checkboxPasswordInput" type="checkbox" id="passwordCheckbox1">
         <label class="mainConnectionText" for="passwordCheckbox1">Se souvenir de moi</label>
       </div>
-
-      <button class="connectionButton">
-        <p class="nunito connectionButtonText">Se connecter</p>
+      
+      <button type="submit" class="connectionButton">
+        <p class="nunito connectionButtonText">S'inscrire</p>
       </button>
 
     </form>
 
-
-    <p class="nunito reinitText">Réinitialiser mot de passe ?</p>
-
-    <a href="../accountCreate/index.html">
-      <p class="nunito createaccountText">Créer compte</p>
+    <a href="../accountConnection/index.html">
+      <p class="nunito createaccountText">Connexion</p>
     </a>
 
   </div>

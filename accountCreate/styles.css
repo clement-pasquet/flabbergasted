@@ -12,7 +12,7 @@ html{
     margin:0;
     padding:0;
 }
-
+ 
 body {
 	margin: 0; /* Pour enlever les marges par défaut du body */
 	padding:0;
@@ -49,16 +49,6 @@ font-style: normal;
 font-weight: 500;
 line-height: normal;
 margin: 0px;
-}
-
-.mainConnectionwritingText {
-	color: #000;
-	font-family: Nunito;
-	font-size: 48px;
-	font-style: normal;
-	font-weight: 500;
-	line-height: normal;
-	margin: 0px;
 }
 
 .mainConnectionChamptexte {
@@ -158,5 +148,15 @@ margin: 0px;
 	font-weight: 500;
 	line-height: normal;
 	text-decoration-line: underline;
+	margin: 0px;
+}
+
+.mainConnectionwritingText {
+	color: #000;
+	font-family: Nunito;
+	font-size: 48px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
 	margin: 0px;
 }
