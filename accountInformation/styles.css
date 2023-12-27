@@ -1,0 +1,103 @@
+
+
+.nunito {
+	color: #FFF;
+	font-family: Nunito;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal; 
+}
+html{
+    margin:0;
+    padding:0;
+}
+
+body { 
+	margin: 0; /* Pour enlever les marges par défaut du body */
+	padding:0;
+	background: linear-gradient(183deg, rgba(55, 37, 72, 0.95) -5.36%, #000 108.29%); 
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	width: 100vw;
+}
+ 
+ 
+
+
+.accountInformationMainText {
+	color: #FFF;
+	font-family: Nunito;
+	font-size: 48px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	margin: 0px;
+	margin-top: 5vh;
+	margin-bottom: 5vh;
+	margin-left: 5vw;
+}
+
+.accountIcon {
+	width: 25vh;
+	height: 25vh;
+	margin: 10vw;
+}
+
+.accountInformationMainDiv {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-left: 5vw;
+}
+
+
+.BlockLine {
+	width:95%;
+	height: 2px;
+	display: block;
+}
+
+.accountParameterBlockTitle {
+	color: #FFF;
+	font-family: Nunito;
+	font-size: 35px;
+	font-style: italic;
+	font-weight: 700;
+	line-height: normal;
+	margin: 0px;
+	margin-top: 3vh	;
+	margin-bottom: 2vh;
+}
+
+.accountParameterBlockText {
+	color: #FFF;
+	font-family: Nunito;
+	font-size: 40px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: normal;
+	margin: 0px;
+	margin-bottom: 3vh;
+}
+
+
+.accountParameter {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+
+.arrowDiv {
+	display: flex;
+	flex-direction: row;
+	align-items: center; /* Centre les éléments verticalement */
+	justify-content: space-between; /* Place les éléments à gauche et à droite de la div parente */
+	/* Autres styles pour la div arrowDiv */
+	width: 100%; /* Par exemple, définir une largeur */
+	height: 100px; /* Par exemple, définir une hauteur */
+	background-color: lightgray; /* Par exemple, une couleur de fond */
+
+}
+  
