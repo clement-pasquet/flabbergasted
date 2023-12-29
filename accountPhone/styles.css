@@ -97,3 +97,10 @@ body {
 .accountNameMainDiv {
 	margin-left: 10vw;
 }
+
+.updateButton:hover {
+	background-color: #00d6a1;
+}
+.updateButton:active {
+	background-color: #00ac81;
+}
