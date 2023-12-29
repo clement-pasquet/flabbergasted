@@ -68,14 +68,6 @@ body {
 	padding-left: 2vw;
 }
 
-.updateButton {
-	background-color: #01F9BB;
-	border: 0px;
-	height: 8vh;
-	width: 24vw;
-	border-radius: 1vw;
-}
-
 .updateButtonText {
 	color: #0C090F;
 	font-family: Nunito;
@@ -85,6 +77,8 @@ body {
 	line-height: normal;
 	margin: 0px;
 }
+
+
 
 .buttonDiv {
 	display: flex;
@@ -96,6 +90,16 @@ body {
 
 .accountNameMainDiv {
 	margin-left: 10vw;
+}
+
+
+.updateButton {
+	background-color: #01F9BB;
+	border: 0px;
+	height: 8vh;
+	width: 24vw;
+	border-radius: 1vw;
+	cursor: pointer;
 }
 
 .updateButton:hover {

@@ -69,13 +69,6 @@ body {
 	margin-bottom: 4vh;
 }
 
-.updateButton {
-	background-color: #01F9BB;
-	border: 0px;
-	height: 8vh;
-	width: 24vw;
-	border-radius: 1vw;
-}
 
 .updateButtonText {
 	color: #0C090F;
@@ -85,6 +78,23 @@ body {
 	font-weight: 700;
 	line-height: normal;
 	margin: 0px;
+}
+
+
+.updateButton {
+	background-color: #01F9BB;
+	border: 0px;
+	height: 8vh;
+	width: 24vw;
+	border-radius: 1vw;
+	cursor: pointer;
+}
+
+.updateButton:hover {
+	background-color: #00d6a1;
+}
+.updateButton:active {
+	background-color: #00ac81;
 }
 
 .buttonDiv {
@@ -98,11 +108,3 @@ body {
 .accountNameMainDiv {
 	margin-left: 10vw;
 }	
-
-.updateButton:hover {
-	background-color: #00d6a1;
-}
-.updateButton:active {
-	background-color: #00ac81;
-}
-
