@@ -127,7 +127,7 @@ body {
 
 
 
-/* Div principale de la galerie. C'est le nom de la ligne ou on peut faire defiler les miniaures en cliquant sur la flèche. */
+/* Div principale de la galerie. C'est le nom de la ligne ou on peut faire defiler les miniatures en cliquant sur la flèche. */
 .galerie {
 	overflow: hidden;
 	margin: 0px;

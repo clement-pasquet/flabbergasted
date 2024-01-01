@@ -25,6 +25,10 @@
 	white-space: nowrap;
 	margin: 0px;
 }
+
+.interactionText:hover {
+	text-decoration: underline; /* Ajoute un soulignement lorsque la souris survole le texte */
+}
 /*  */
 
 
@@ -230,11 +234,11 @@ body {
 }
   
 .icon:hover path {
-	stroke: #bebebe; /* Couleur plus foncée (gris foncé) lorsque la souris est dessus */
+	stroke: #cc0000; /* Couleur plus foncée (gris foncé) lorsque la souris est dessus */
 }
   
 .icon:active path {
-	stroke: #777777; /* Couleur encore plus foncée (noir clair) lorsque cliqué */	
+	stroke: #910000; /* Couleur encore plus foncée (noir clair) lorsque cliqué */	
 }
 
 
@@ -283,3 +287,4 @@ body {
 }
 
 /* Fin des paramètres de la galerie */
+
