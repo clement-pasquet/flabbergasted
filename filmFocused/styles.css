@@ -45,7 +45,7 @@ body {
  
 
 .contentDiv {
-	margin-left: 6vw;
+	margin-left: 5vw;
 	margin-right: 6vw;
 	margin-top: 5vh;
 }
@@ -145,33 +145,10 @@ body {
 	margin: 0px;
 }
 
-/* Tableau des différents films */
-.contentTable {
-	width: 100%;
-	height: 100%;
-}
 
 
-/* "Case" du tableau comprenant les différents affiches et la flèche de direction */
-.contentCase {
-	text-align: center;
-	vertical-align: middle;
-}
-
-
-/* "Miniature" des films */
-.thumbnail {
-	object-fit: cover; 
-    object-position: center;
-	border-radius: 15px;
-	border: 1px solid #171717;
-	width: 19vw;
-	height: 20vh;
-	flex-shrink: 0; 
-}
-
-/* Miniature du film selectionné */
-.thumbnailFocused {
+/* Paramètre du lecteur du film selectionné */
+.videoFocused {
 	object-fit: cover; 
     object-position: center;
 	border-radius: 15px;
@@ -260,3 +237,49 @@ body {
 	stroke: #777777; /* Couleur encore plus foncée (noir clair) lorsque cliqué */	
 }
 
+
+
+
+/* Div principale de la galerie. C'est le nom de la ligne ou on peut faire defiler les miniatures en cliquant sur la flèche. */
+.galerie {
+	overflow: hidden;
+	margin: 0px;
+	position: relative;
+	width: 95vw;
+
+}
+  
+.galerieContent {
+	display: flex;
+	transition: transform 0.5s ease-in-out;
+	gap: 5vw;
+}
+  
+/* Paramètre des affiches des films et séries */
+.thumbnailGalerie {
+	object-fit: cover; 
+    object-position: center;
+	border-radius: 3vh;
+	border: 1px solid #171717;
+	flex-shrink: 0; 
+
+	width: 18.75vw;
+	height: 10vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+  
+/* Flèche de selection permettant de faire defiler les affiches */
+.selectionArrow {
+	width: 2vw;
+	height: 5.8vh;
+	flex-shrink: 0; 
+	position: absolute; /* Position absolue pour positionner la flèche */
+	top: 50%; /* Ajustez la position verticale selon vos besoins */
+	right: 1.3vw; /* Ajustez la position horizontale selon vos besoins */
+	transform: translateY(-50%); /* Pour centrer verticalement la flèche */
+	z-index: 2; /* Pour placer la flèche au-dessus des miniatures */
+}
+
+/* Fin des paramètres de la galerie */

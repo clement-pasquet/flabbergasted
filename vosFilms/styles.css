@@ -103,6 +103,8 @@ body {
 
 
 
+/* Debut des paramètre de la Galerie */
+
 .contentTable {
 	display: flex;
 	flex-direction: column;
@@ -122,7 +124,6 @@ body {
 	line-height: normal;
 	margin: 0px;
 }
-
 
 
 
@@ -167,3 +168,5 @@ body {
 	transform: translateY(-50%); /* Pour centrer verticalement la flèche */
 	z-index: 2; /* Pour placer la flèche au-dessus des miniatures */
 }
+
+/* Fin des paramètres de la galerie */
