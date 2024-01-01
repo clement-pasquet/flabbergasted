@@ -24,8 +24,52 @@ body {
 }
  
  
+/* Paramètres des textes des deux textes principaux (Connexion, se souvenir de moi) */
+.mainConnectionText {
+	color: #FFF;
+	font-family: Nunito;
+	font-size: 48px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	margin: 0px;
+}
 
+/* Paramètres du texte du bouton "se connecter" */
+.connectionButtonText {
+	color: #000;
+	font-family: Nunito;
+	font-size: 35px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	margin: 0px;
+}
 
+/* Paramètres du texte "reinitaliser le mot de passe ?" */
+.reinitText {
+	color: #02F8BB;
+	font-family: Nunito;
+	font-size: 35px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	margin: 0px;
+}
+
+/* Paramètres du texte "Créer compte*/
+.createaccountText {
+	color: #FFF;
+	font-family: Nunito;
+	font-size: 48px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	text-decoration-line: underline;
+	margin: 0px;
+}
+
+/* Paramètres du logo affiché du milieu de l'écran */
 .connectionLogo { 
 	max-width: 12vw;
 	max-height: 12v;
@@ -41,17 +85,8 @@ body {
 	gap: 3vh;
 }
 
-.mainConnectionText {
-color: #FFF;
-font-family: Nunito;
-font-size: 48px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-margin: 0px;
-}
-
-.mainConnectionwritingText {
+/* Paramètres du champ texte 1 : celui du pseudo */
+.mainConnectionChamptexte {
 	color: #000;
 	font-family: Nunito;
 	font-size: 48px;
@@ -59,9 +94,7 @@ margin: 0px;
 	font-weight: 500;
 	line-height: normal;
 	margin: 0px;
-}
 
-.mainConnectionChamptexte {
 	width: 27vw;
 	height: 7vh;
 	flex-shrink: 0;
@@ -69,7 +102,16 @@ margin: 0px;
 	background: #D9D9D9;
 }
 
+/* Paramètres du champ texte 2 : celui du mot de passe */
 .mainConnectionChamptextePassword {
+	color: #000;
+	font-family: Nunito;
+	font-size: 48px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	margin: 0px;
+	
 	width: 27vw;
 	height: 7vh;
 	flex-shrink: 0;
@@ -100,12 +142,14 @@ margin: 0px;
 }
  
 
+/* Paramètres de la ligne du checkbox et du texte "se souvenir de moi" */
 .checkboxPassword{
 	display: flex;
 	flex-direction: row;
 	gap: 1vw;
 }
 
+/* Paramètres de la checkbox */
 .checkboxPasswordInput {
 	appearance: none;
 	-webkit-appearance: none;
@@ -115,48 +159,17 @@ margin: 0px;
 	width: 4vh;
 	height: 4vh;
 }
+
 .checkboxPasswordInput:checked {
 	background-color: #747272; /* Changer la couleur de fond lorsque la case est cochée */
-  }
-
-
-
-
-.connectionButtonText {
-	color: #000;
-	font-family: Nunito;
-	font-size: 35px;
-	font-style: normal;
-	font-weight: 500;
-	line-height: normal;
-	margin: 0px;
 }
 
+
+/* Paramètres du bouton "se connecter" */
 .connectionButton {
 	background-color: #01F9BB;
 	border: 0px;
 	height: 8vh;
 	width: 14vw;
 	border-radius: 1vw; 
-}
-
-.reinitText {
-	color: #02F8BB;
-	font-family: Nunito;
-	font-size: 35px;
-	font-style: normal;
-	font-weight: 500;
-	line-height: normal;
-	margin: 0px;
-}
-
-.createaccountText {
-	color: #FFF;
-	font-family: Nunito;
-	font-size: 48px;
-	font-style: normal;
-	font-weight: 500;
-	line-height: normal;
-	text-decoration-line: underline;
-	margin: 0px;
 }
