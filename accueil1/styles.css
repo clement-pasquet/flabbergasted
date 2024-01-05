@@ -7,7 +7,7 @@
 	line-height: normal; 
 }
 
-
+ 
 html{
     margin:0;
     padding:0;
@@ -93,10 +93,11 @@ body {
 /* Div de la partie droite du header */
 .headerRight {
     align-items: center; 
-	display: flex;
-	gap: 10%;
+    display: flex;
+    gap: 10%;
+    flex-shrink: 0; /* Empêche le headerRight de se rétrécir */
+    overflow-x: hidden; /* Empêche le débordement horizontal */
 }
-
 
 
 /* Fin des paramètres du header */
