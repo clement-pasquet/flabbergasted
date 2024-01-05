@@ -12,9 +12,7 @@
 
 
 
-
 <body>
-
   <div class="mainConnectionDiv">
     <a href="/accueil1/index.html">
       <img class="connectionLogo" src="images/logo1.png" alt="Logo Flabbergaster"></img>
