@@ -117,12 +117,6 @@ body {
 	flex-shrink: 0;
 	border-radius: 15px;
 	background: #D9D9D9;
-	background-image: url('images/eyeIcon.png'); /* Remplacez par le chemin de votre image SVG */
-    background-size:contain; /* Ajuste la taille de l'image pour couvrir le bouton */
-	transform:contain;
-	background-repeat: no-repeat;
-	background-position: right;
-	background-size: 3vw;
 }
 
 ::placeholder {
@@ -172,4 +166,16 @@ body {
 	height: 8vh;
 	width: 14vw;
 	border-radius: 1vw; 
+}
+
+/* Paramètres de reglage de l'icon pour "toggle" la visibilité des mots de passe */
+.eyeIcon {
+    position: absolute;
+    top: 50%;
+    right: 1vh; /* Ajustez cette valeur selon la position souhaitée de l'icône */
+    transform: translateY(-50%);
+    width: 5vh; /* Ajustez cette valeur selon la taille souhaitée */
+    height: auto; /* Pour maintenir les proportions */
+    cursor: pointer; /* Ajoute un curseur pointer au survol */
+    /* Autres styles pour l'icône */
 }
