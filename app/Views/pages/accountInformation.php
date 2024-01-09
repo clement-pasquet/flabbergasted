@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="<?= CSS.'accountInformation.css'?>">
   <title>accountInformation</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +18,7 @@
   <p class="accountInformationMainText">Informations sur le compte :</p>
   <div class="accountInformationMainDiv">
     <div class="accountIconDiv">
-      <a href="/accueil1/index.html"><img class="accountIcon" src="images/accountIcon.png"></a>
+      <img class="accountIcon" src="<?= IMG.'accountIcon.png' ?>">
     </div>
 
     <div class="accountParameter">
@@ -27,11 +27,11 @@
           <p class="accountParameterBlockTitle">Nom et Prenom</p>
           <p class="accountParameterBlockText">Basma Malki</p>
         </div>
-        <a href="/accountName/index.html">
-          <img class="arrowRight" src="images/arrowRight.png">
+        <a href="/accountName">
+          <img class="arrowRight" src="<?= IMG.'arrowRight.png' ?>">
         </a>
       </div>
-      <img class="BlockLine" src="images/accountParameterLine2.png">
+        <img class="BlockLine">
 
 
       <div class="accountParameterBlock">
@@ -39,11 +39,11 @@
           <p class="accountParameterBlockTitle">Numéro de téléphone</p>
           <p class="accountParameterBlockText">+33 * ** ** ** **</p>
         </div>
-        <a href="/accountPhone/index.html">
-          <img class="arrowRight" src="images/arrowRight.png">
+        <a href="/accountPhone">
+          <img class="arrowRight" src="<?= IMG.'arrowRight.png' ?>">
         </a>
       </div>
-      <img class="BlockLine" src="images/accountParameterLine2.png">
+        <img class="BlockLine">
 
 
       <div class="accountParameterBlock">
@@ -51,11 +51,11 @@
           <p class="accountParameterBlockTitle">Adresse e-mail</p>
           <p class="accountParameterBlockText">adresseemail@gmail.com</p>
         </div>
-        <a href="/accountMail/index.html">
-          <img class="arrowRight" src="images/arrowRight.png">
+        <a href="/accountMail">
+          <img class="arrowRight" src="<?= IMG.'arrowRight.png' ?>">
         </a>
       </div>
-      <img class="BlockLine" src="images/accountParameterLine2.png">
+        <img class="BlockLine">
 
 
       <div class="accountParameterBlock">
@@ -63,11 +63,11 @@
           <p class="accountParameterBlockTitle">Mot de passe</p>
           <p class="accountParameterBlockText">Changer de mot de passe</p>
         </div>
-        <a href="/accountPassword/index.html">
-          <img class="arrowRight" src="images/arrowRight.png">
+        <a href="/accountPassword">
+          <img class="arrowRight" src="<?= IMG.'arrowRight.png' ?>">
         </a>
       </div>
-      <img class="BlockLine" src="images/accountParameterLine2.png">
+      <img class="BlockLine">
     </div>
 
   </div>
