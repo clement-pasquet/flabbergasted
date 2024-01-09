@@ -5,6 +5,41 @@ Le SGBD dispose du compte user avec comme mot de passe pass et du compte sql ave
 Sur l'OS root et user ont le même mot de passe (ip, password) : 172.26.82.53
 e3qnBIJF
 
+## Utiliser la base de données
+### Créer la BD sur son PC et la remplir
+La base de données est actuellement faite pour fonctionner sur le même PC que le PHP.
+
+Pour faire cela il faut :
+- Avoir MariaDB ( ou MySQL )
+- Créer une BD dessus
+- Utiliser le "dump" pour la remplir
+
+
+```bash
+sudo mysql -u root -p
+``` 
+( pour se connecter en tant que root, si un mdp est demandé, appuyez sur entrée )
+
+```sql
+CREATE DATABASE mainDatabase;
+```
+
+( pour créer la base de données qu'on remplira )
+
+```shell
+sudo mysql -u root -p mainDatabase < mainDatabaseDump.sql
+``` 
+( pour utiliser le "dump" pour remplir la BD. **ATTENTION**, il faut être dans le dossier app/Database )
+
+### Créer un dump
+
+Si l'on souhaite faire une "sauvegarde" des diverses modifications faites aux tabels et à leurs éléments, ils faut faire un dump, une "sauvegarde" :
+
+```shell
+sudo mysqldump -u root -p mainDatabase > mainDatabaseDump.sql
+```
+( **ATTENTION**, il faut être dans le dossier app/Database )
+
 
 # CodeIgniter 4 Application Starter
 

@@ -1,8 +1,14 @@
 -- Connexion MySQL :
 sudo mysql -u root -p
 
+CREATE DATABASE mainDatabase;
 USE mainDatabase;
 -- Connexion MySQL :
+
+-- Faire le "dump" de la bd :
+sudo mysqldump -u root -p mainDatabase > mainDatabaseDump.sql
+-- Utiliser le "dump" de la bd :
+sudo mysql -u root -p mainDatabase < mainDatabaseDump.sql
 
 
 -- Insertion utilisateur
@@ -31,7 +37,7 @@ INSERT INTO film (id_film, titre, date, image, prix, genre, realisateur, synopsi
 VALUES
 (1, 'Les Étoiles Brillantes', '15 janvier 2024', 'etoiles_brillantes.jpg', 10, 'Science-fiction', 'Alice Dupont', 'Dans un futur lointain une équipe de scientifiques découvre une nouvelle source d''énergie dans l''espace.', 120, 'France'),
 (2, 'L''Odyssée Perdue', '3 mars 2023', 'odyssee_perdue.jpg', 12, 'Aventure', 'Jean-Luc Moreau', 'Un explorateur part à la recherche d''une ancienne cité perdue pleine de mystères et de dangers.', 145, 'États-Unis'),
-(3, 'Le Secret des Âges', '22 mai 2025', 'secret_ages.jpg', 8, 'Fantasy', 'Sophie Tremblay', 'Une quête épique commence lorsqu''un jeune héritier découvre un secret ancestral menant à un pouvoir inimaginable.', 110, 'Canada'),
+(3, 'Le Secret des Âges', '22 mai 2025', 'secret_   ages.jpg', 8, 'Fantasy', 'Sophie Tremblay', 'Une quête épique commence lorsqu''un jeune héritier découvre un secret ancestral menant à un pouvoir inimaginable.', 110, 'Canada'),
 (4, 'Au-delà des Limites', '7 novembre 2022', 'au-dela_limites.jpg', 15, 'Action', 'Alexandre Martin', 'Des agents secrets tentent d''arrêter un groupe terroriste avant qu''ils ne déclenchent une catastrophe mondiale.', 130, 'Royaume-Uni'),
 (5, 'Rêves de Demain', '18 avril 2024', 'reves_demain.jpg', 11, 'Drame', 'Sophie Leclerc', 'Une histoire émouvante sur la lutte d''une jeune artiste pour réaliser ses rêves malgré les obstacles.', 105, 'France'),
 (6, 'La Dernière Frontière', '9 septembre 2023', 'derniere_frontiere.jpg', 14, 'Science-fiction', 'Antoine Dubois', 'Des pionniers entreprennent un voyage intergalactique à la recherche d''une nouvelle planète habitable.', 155, 'États-Unis'),
