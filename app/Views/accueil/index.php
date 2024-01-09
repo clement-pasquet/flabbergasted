@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>accueil1</title>
+  <link rel="stylesheet" href="<?=CSS.'accueil.css'?>">
+  <title>accueil</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
@@ -13,8 +13,8 @@
 <header class="header1">
   <div class="headerLeft">
       <!-- Groupe à gauche avec logo/nom et Icon Fichier/Texte Vos Fichiers -->
-    <a href="/accueil1/index.html">
-      <img class="logo" src="images/logo1.png" alt="Logo Flabbergaster"></img>
+    <a href="/">
+      <img class="logo" src="<?=IMG.'logo1.png'?>" alt="Logo Flabbergaster">
     </a>
 
     <div class="iconAndText">
@@ -58,7 +58,7 @@
 
     <div id="galerie1" class="galerie">
       <div class="galerieContent">
-        <img class="thumbnailGalerie" src="images/rectangle_17.png"></img>
+        <img class="thumbnailGalerie" src="<?=IMG.'rectangle_17.png'?>"></img>
         <img class="thumbnailGalerie" src="images/rectangle_18.png"></img>
         <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
         <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
@@ -75,7 +75,7 @@
         <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
         <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
       </div>
-    <img onclick="defiler('galerie1')" class="selectionArrow" src="images/arrowRight.png" alt="Flèche de selection"></img> 
+    <img onclick="defiler('galerie1')" class="selectionArrow" src="<?=IMG.'arrowRight.png'?>" alt="Flèche de selection"></img>
     </div>
 
     <p class="categoryTitle">Nouveaux films</p>
@@ -99,7 +99,7 @@
         <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
         <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
       </div>
-    <img onclick="defiler('galerie2')" class="selectionArrow" src="images/arrowRight.png" alt="Flèche de selection"></img> 
+    <img onclick="defiler('galerie2')" class="selectionArrow" src="images/arrowRight.png" alt="Flèche de selection"></img>
     </div>
 
     <p class="categoryTitle">Documentaire</p>
@@ -123,7 +123,7 @@
         <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
         <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
       </div>
-    <img onclick="defiler('galerie3')" class="selectionArrow" src="images/arrowRight.png" alt="Flèche de selection"></img> 
+    <img onclick="defiler('galerie3')" class="selectionArrow" src="images/arrowRight.png" alt="Flèche de selection"></img>
     </div>
   </div>
 
