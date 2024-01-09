@@ -164,7 +164,7 @@ body {
 .thumbnailGalerie {
 	object-fit: cover; 
     object-position: center;
-	border-radius: 1.5vh;
+	border-radius: 15px;
 	border: 1px solid #171717;
 	flex-shrink: 0; 
 
