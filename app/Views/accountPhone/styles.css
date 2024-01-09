@@ -1,32 +1,31 @@
-
-
 .nunito {
 	color: #FFF;
 	font-family: Nunito;
 	font-size: 15px;
 	font-style: normal;
 	font-weight: 500;
-	line-height: normal; 
+	line-height: normal;
 }
-html{
-    margin:0;
-    padding:0;
-} 
 
-body { 
-	margin: 0; /* Pour enlever les marges par défaut du body */
-	padding:0;
-	background: linear-gradient(183deg, rgba(55, 37, 72, 0.95) -5.36%, #000 108.29%); 
+html {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(183deg, rgba(55, 37, 72, 0.95) -5.36%, #000 108.29%);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
 }
- 
-
-
-
-
 
 .updateButtonText {
 	color: #0C090F;
@@ -61,7 +60,6 @@ body {
 	margin-bottom: 2vh;
 }
 
-
 #ChamptexteName {
 	width: 40vw;
 	height: 10vh;
@@ -89,10 +87,10 @@ body {
 .updateButton:hover {
 	background-color: #00d6a1;
 }
+
 .updateButton:active {
 	background-color: #00ac81;
 }
-
 
 .buttonDiv {
 	display: flex;
@@ -105,5 +103,111 @@ body {
 .accountMainDiv {
 	margin-left: 10vw;
 	margin-right: 10vw;
+	text-align: center;
 }
 
+/* Responsive Design */
+@media only screen and (max-width: 600px) {
+	#ChamptexteName {
+		width: 55vw;
+		height: 40px;
+		font-size: 12px;
+	}
+
+	.updateButton {
+		width: 80vw;
+		height: 40px;
+		margin-top: -80px;
+	}
+	.updateButtonText {
+		font-size: 15px;
+	}
+	.accountPhoneTitle {
+		font-size: 25px;
+	}
+	.accountNameSubtitle {
+		font-size: 15px;
+	}
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+	#ChamptexteName {
+		width: 50vw;
+		height: 70px;
+		font-size: 27px;
+	}
+
+	.updateButton {
+		width: 23vw;
+		height: 60px;
+		margin-top: -40px;
+	}
+	.updateButtonText {
+		font-size: 25px;
+	}
+	.accountPhoneTitle {
+		font-size: 40px;
+	}
+	.accountNameSubtitle {
+		font-size: 30px;
+	}
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+	#ChamptexteName {
+		width: 40vw;
+		height: 60px;
+	}
+
+	.updateButton {
+		width: 20vw;
+	}
+	.updateButtonText {
+		font-size: 25px;
+	}
+	.accountPhoneTitle {
+		font-size: 45px;
+	}
+	.accountNameSubtitle {
+		font-size: 35px;
+	}
+}
+
+@media only screen and (min-width: 1441px) and (max-width: 1920px) {
+	#ChamptexteName {
+		width: 25vw;
+		height: 40px;
+		font-size: 20px;
+	}
+
+	.updateButton {
+		width: 12vw;
+	}
+	.updateButtonText {
+		font-size: 20px;
+	}
+	.accountPhoneTitle {
+		font-size: 35px;
+	}
+	.accountNameSubtitle {
+		font-size: 28px;
+	}
+}
+
+@media only screen and (min-width: 1921px) {
+	#ChamptexteName {
+		width: 30vw;
+		height: 70px;
+	}
+
+	.updateButton {
+		width: 30vw;
+	}
+
+	.accountPhoneTitle {
+		font-size: 48px;
+	}
+	.accountNameSubtitle {
+		font-size: 40px;
+	}
+}

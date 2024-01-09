@@ -4,76 +4,68 @@
 	font-size: 15px;
 	font-style: normal;
 	font-weight: 500;
-	line-height: normal; 
+	line-height: normal;
 }
-html{
-    margin:0;
-    padding:0;
+
+html {
+	margin: 0;
+	padding: 0;
 }
- 
+
 body {
-	margin: 0; /* Pour enlever les marges par défaut du body */
-	padding:0;
-	background: linear-gradient(183deg, rgba(55, 37, 72, 0.95) -5.36%, #000 108.29%); 
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(183deg, rgba(55, 37, 72, 0.95) -5.36%, #000 108.29%);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	width: 100vw;
 }
- 
- 
-
- 
-
 
 .mainConnectionwritingText {
 	color: #000;
 	font-family: Nunito;
-	font-size: 48px;
+	font-size: 20px;
 	font-style: normal;
 	font-weight: 500;
 	line-height: normal;
 	margin: 0px;
 }
 
-/* Paramètres des textes des deux textes principaux (Connexion, se souvenir de moi) */
 .mainConnectionText {
 	color: #FFF;
 	font-family: Nunito;
-	font-size: 48px;
+	font-size: 20px;
 	font-style: normal;
 	font-weight: 500;
 	line-height: normal;
 	margin: 0px;
 }
 
-/* Paramètres du texte du bouton "se connecter" */
 .connectionButtonText {
 	color: #000;
 	font-family: Nunito;
-	font-size: 35px;
+	font-size: 25px;
 	font-style: normal;
 	font-weight: 500;
 	line-height: normal;
 	margin: 0px;
 }
 
-/* Paramètres du texte "reinitaliser le mot de passe ?" */
 .reinitText {
 	color: #02F8BB;
 	font-family: Nunito;
-	font-size: 35px;
+	font-size: 25px;
 	font-style: normal;
 	font-weight: 500;
 	line-height: normal;
 	margin: 0px;
 }
 
-/* Paramètres du texte "Créer compte*/
 .createaccountText {
 	color: #FFF;
 	font-family: Nunito;
-	font-size: 48px;
+	font-size: 20px;
 	font-style: normal;
 	font-weight: 500;
 	line-height: normal;
@@ -81,8 +73,7 @@ body {
 	margin: 0px;
 }
 
-/* Paramètres du logo affiché du milieu de l'écran */
-.connectionLogo { 
+.connectionLogo {
 	max-width: 12vw;
 	max-height: 12v;
 	min-width: 100px;
@@ -97,34 +88,16 @@ body {
 	gap: 3vh;
 }
 
-/* Paramètres du champ texte 1 : celui du pseudo */
-.mainConnectionChamptexte {
-	color: #000;
-	font-family: Nunito;
-	font-size: 48px;
-	font-style: normal;
-	font-weight: 500;
-	line-height: normal;
-	margin: 0px;
-
-	width: 27vw;
-	height: 7vh;
-	flex-shrink: 0;
-	border-radius: 15px;
-	background: #D9D9D9;
-}
-
-/* Paramètres du champ texte 2 : celui du mot de passe */
+.mainConnectionChamptexte,
 .mainConnectionChamptextePassword {
 	color: #000;
 	font-family: Nunito;
-	font-size: 48px;
+	font-size: 20px;
 	font-style: normal;
 	font-weight: 500;
 	line-height: normal;
 	margin: 0px;
-	
-	width: 27vw;
+	width: 20vw;
 	height: 7vh;
 	flex-shrink: 0;
 	border-radius: 15px;
@@ -134,60 +107,174 @@ body {
 ::placeholder {
 	color: rgba(0, 0, 0, 0.50);
 	font-family: Nunito;
-	font-size: 40px;
+	font-size: 20px;
 	font-style: normal;
 	font-weight: 500;
 	line-height: normal;
 }
-
-
 
 .mainConnectionPassword {
 	position: relative;
 	display: inline-block;
 }
 
-/* Paramètres de reglage de l'icon pour "toggle" la visibilité des mots de passe */
 .eyeIcon {
-    position: absolute;
-    top: 50%;
-    right: 1vh; /* Ajustez cette valeur selon la position souhaitée de l'icône */
-    transform: translateY(-50%);
-    width: 5vh; /* Ajustez cette valeur selon la taille souhaitée */
-    height: auto; /* Pour maintenir les proportions */
-    cursor: pointer; /* Ajoute un curseur pointer au survol */
-    /* Autres styles pour l'icône */
+	position: absolute;
+	top: 50%;
+	right: 1vh;
+	transform: translateY(-50%);
+	width: 3vh;
+	height: auto;
+	cursor: pointer;
 }
- 
 
-/* Paramètres de la ligne du checkbox et du texte "se souvenir de moi" */
-.checkboxPassword{
+.checkboxPassword {
 	display: flex;
 	flex-direction: row;
 	gap: 1vw;
 }
 
-/* Paramètres de la checkbox */
 .checkboxPasswordInput {
 	appearance: none;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	border-radius: 1vh;
 	background: #D9D9D9;
-	width: 4vh;
-	height: 4vh;
+	width: 3vh;
+	height: 3vh;
 }
 
 .checkboxPasswordInput:checked {
-	background-color: #747272; /* Changer la couleur de fond lorsque la case est cochée */
+	background-color: #747272;
 }
 
-
-/* Paramètres du bouton "se connecter" */
 .connectionButton {
 	background-color: #01F9BB;
 	border: 0px;
-	height: 8vh;
-	width: 14vw;
-	border-radius: 1vw; 
+	height: 6vh;
+	width: 12vw;
+	border-radius: 1vw;
+}
+
+/* Responsivité */
+@media only screen and (max-width: 600px) {
+	.mainConnectionChamptexte,
+	.mainConnectionChamptextePassword {
+		width: 55vw;
+		height: 40px;
+	}
+
+	.connectionButton {
+		width: 30vw;
+	}
+	.connectionButtonText {
+		font-size: 20px;
+	}
+	.connectionLogo {
+		max-width: 20vw;
+	}
+	.mainConnectionText {
+		font-size: 17px;
+	}
+	.checkboxPasswordInput {
+		width: 2.3vh;
+		height: 2.3vh;
+	}
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+	.mainConnectionChamptexte,
+	.mainConnectionChamptextePassword {
+		width: 40vw;
+		height: 40px;
+	}
+
+	.connectionButton {
+		width: 23vw;
+	}
+	.connectionButtonText {
+		font-size: 20px;
+	}
+	.connectionLogo {
+		max-width: 15vw;
+	}
+	.mainConnectionText {
+		font-size: 20px;
+	}
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+	.mainConnectionChamptexte,
+	.mainConnectionChamptextePassword {
+		width: 40vw;
+		height: 60px;
+	}
+
+	.connectionButton {
+		width: 20vw;
+	}
+	.connectionButtonText {
+		font-size: 25px;
+	}
+	.connectionLogo {
+		max-width: 15vw;
+	}
+	.mainConnectionText {
+		font-size: 25px;
+	}
+	.checkboxPasswordInput {
+		width: 2.5vh;
+		height: 2.5vh;
+	}
+}
+
+@media only screen and (min-width: 1441px) and (max-width: 1920px) {
+	.mainConnectionChamptexte,
+	.mainConnectionChamptextePassword {
+		width: 25vw;
+		height: 40px;
+	}
+
+	.connectionButton {
+		width: 12vw;
+	}
+	.connectionButtonText {
+		font-size: 20px;
+	}
+	.connectionLogo {
+		max-width: 10vw;
+	}
+	.checkboxPasswordInput {
+		width: 2.5vh;
+		height: 2.5vh;
+	}
+	.mainConnectionText {
+		font-size: 18px;
+	}
+}
+
+@media only screen and (min-width: 1921px) {
+	.mainConnectionChamptexte,
+	.mainConnectionChamptextePassword {
+		width: 30vw;
+		height: 70px;
+	}
+
+	.connectionButton {
+		width: 30vw;
+	}
+
+	.connectionLogo {
+		max-width: 17vw;
+	}
+	.connectionButton {
+		width: 20vw;
+	}
+	.checkboxPasswordInput {
+		width: 2.5vh;
+		height: 2.5vh;
+	}
+	.mainConnectionText {
+		font-size: 25px;
+	}
 }
