@@ -1,35 +1,31 @@
-
-
 .nunito {
 	color: #FFF;
 	font-family: Nunito;
 	font-size: 15px;
 	font-style: normal;
 	font-weight: 500;
-	line-height: normal; 
-}
-html{
-    margin:0;
-    padding:0;
+	line-height: normal;
 }
 
-body { 
-	margin: 0; /* Pour enlever les marges par défaut du body */
-	padding:0;
-	background: linear-gradient(183deg, rgba(55, 37, 72, 0.95) -5.36%, #000 108.29%); 
+html {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(183deg, rgba(55, 37, 72, 0.95) -5.36%, #000 108.29%);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	width: 100vw;
 }
- 
- 
-
 
 .accountInformationMainText {
 	color: #FFF;
 	font-family: Nunito;
-	font-size: 48px;
+	font-size: 20px;
 	font-style: normal;
 	font-weight: 700;
 	line-height: normal;
@@ -40,9 +36,9 @@ body {
 }
 
 .accountIcon {
-	width: 25vh;
-	height: 25vh;
-	margin: 10vw;
+	width: 15vw;
+	height: 15vw;
+	margin: 5vw;
 }
 
 .accountInformationMainDiv {
@@ -52,9 +48,8 @@ body {
 	margin-left: 5vw;
 }
 
-
 .BlockLine {
-	width:95%;
+	width: 95%;
 	height: 2px;
 	display: block;
 }
@@ -62,26 +57,25 @@ body {
 .accountParameterBlockTitle {
 	color: #FFF;
 	font-family: Nunito;
-	font-size: 35px;
+	font-size: 20px;
 	font-style: italic;
 	font-weight: 700;
 	line-height: normal;
 	margin: 0px;
-	margin-top: 3vh	;
+	margin-top: 3vh;
 	margin-bottom: 2vh;
 }
 
 .accountParameterBlockText {
 	color: #FFF;
 	font-family: Nunito;
-	font-size: 40px;
+	font-size: 25px;
 	font-style: normal;
 	font-weight: 300;
 	line-height: normal;
 	margin: 0px;
 	margin-bottom: 3vh;
 }
-
 
 .accountParameter {
 	width: 100%;
@@ -90,14 +84,13 @@ body {
 .arrowDiv {
 	display: flex;
 	flex-direction: row;
-	align-items: center; /* Centre les éléments verticalement */
-	justify-content: space-between; /* Place les éléments à gauche et à droite de la div parente */
-	/* Autres styles pour la div arrowDiv */
-	width: 100%; /* Par exemple, définir une largeur */
-	height: 100px; /* Par exemple, définir une hauteur */
-	background-color: lightgray; /* Par exemple, une couleur de fond */
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 8vh;
+	background-color: lightgray;
 }
-  
+
 .accountParameterBlock {
 	display: flex;
 	flex-direction: row;
@@ -109,4 +102,184 @@ body {
 	width: 2vw;
 	height: 2vw;
 	padding-right: 5vw;
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 600px) {
+	.accountInformationMainText {
+		font-size: 15px;
+	}
+
+	.accountIcon {
+		width: 20vw;
+		height: 20vw;
+		margin-left: -5px;
+	}
+
+	.accountInformationMainDiv {
+		flex-direction: column;
+		align-items: flex-start;
+		margin-left: 10vw;
+	}
+
+	.BlockLine {
+		margin: 0 auto;
+	}
+
+	.accountParameterBlockTitle {
+		font-size: 15px;
+		margin-top: 2vh;
+		margin-bottom: 1vh;
+	}
+
+	.accountParameterBlockText {
+		font-size: 20px;
+		margin-bottom: 2vh;
+	}
+
+	.arrowRight {
+		padding-right: 2vw;
+	}
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+	.accountInformationMainText {
+		font-size: 25px;
+	}
+
+	.accountIcon {
+		width: 20vw;
+		height: 20vw;
+		margin-top: -500px;
+		margin-left: -10px;
+	}
+
+	.accountInformationMainDiv {
+		margin-left: 10vw;
+	}
+
+	.BlockLine {
+		margin: 0 auto;
+	}
+
+	.accountParameterBlockTitle {
+		font-size: 20px;
+		margin-top: 3vh;
+		margin-bottom: 2vh;
+	}
+
+	.accountParameterBlockText {
+		font-size: 25px;
+		margin-bottom: 3vh;
+	}
+
+	.arrowRight {
+		padding-right: 5vw;
+	}
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+	.accountInformationMainText {
+		font-size: 30px;
+	}
+
+	.accountIcon {
+		width: 15vw;
+		height: 15vw;
+		margin-top: -500px;
+	}
+
+	.accountInformationMainDiv {
+		margin-left: 5vw;
+	}
+
+	.BlockLine {
+		margin: 0 auto;
+	}
+
+	.accountParameterBlockTitle {
+		font-size: 25px;
+		margin-top: 3vh;
+		margin-bottom: 2vh;
+	}
+
+	.accountParameterBlockText {
+		font-size: 30px;
+		margin-bottom: 3vh;
+	}
+
+	.arrowRight {
+		padding-right: 5vw;
+	}
+}
+
+@media only screen and (min-width: 1441px) and (max-width: 1920px) {
+	.accountInformationMainText {
+		font-size: 25px;
+	}
+
+	.accountIcon {
+		width: 15vw;
+		height: 15vw;
+		margin-top: -150px;
+	}
+
+	.accountInformationMainDiv {
+		margin-left: 5vw;
+	}
+
+	.BlockLine {
+		margin: 0 auto;
+	}
+
+	.accountParameterBlockTitle {
+		font-size: 20px;
+		margin-top: 3vh;
+		margin-bottom: 2vh;
+	}
+
+	.accountParameterBlockText {
+		font-size: 25px;
+		margin-bottom: 3vh;
+	}
+
+	.arrowRight {
+		padding-right: 5vw;
+	}
+}
+
+@media only screen and (min-width: 1921px) {
+	.accountInformationMainText {
+		font-size: 35px;
+	}
+
+	.accountIcon {
+		width: 10vw;
+		height: 10vw;
+		margin-top: -150px;
+	}
+
+	.accountInformationMainDiv {
+		margin-left: 3vw;
+	}
+
+	.BlockLine {
+		margin: 0 auto;
+	}
+
+	.accountParameterBlockTitle {
+		font-size: 30px;
+		margin-top: 3vh;
+		margin-bottom: 2vh;
+	}
+
+	.accountParameterBlockText {
+		font-size: 35px;
+		margin-bottom: 3vh;
+	}
+
+	.arrowRight {
+		padding-right: 3vw;
+	}
 }
