@@ -28,7 +28,7 @@ body {
 .mainConnectionText {
 	color: #FFF;
 	font-family: Nunito;
-	font-size: 20px;
+	font-size: 2vh;
 	font-style: normal;
 	font-weight: 300;
 	line-height: normal;
@@ -39,7 +39,7 @@ body {
 .connectionButtonText {
 	color: #000;
 	font-family: Nunito;
-	font-size: 25px;
+	font-size: 2.5vh;
 	font-style: normal;
 	font-weight: 500;
 	line-height: normal;
@@ -50,7 +50,7 @@ body {
 .reinitText {
 	color: #02F8BB;
 	font-family: Nunito;
-	font-size: 20px;
+	font-size: 2vh;
 	font-style: normal;
 	font-weight: 500;
 	line-height: normal;
@@ -61,7 +61,7 @@ body {
 .createaccountText {
 	color: #FFF;
 	font-family: Nunito;
-	font-size: 20px;
+	font-size: 2vh;
 	font-style: normal;
 	font-weight: 500;
 	line-height: normal;
@@ -192,9 +192,6 @@ body {
 	.connectionButton {
 		width: 30vw;
 	}
-	.connectionButtonText {
-		font-size: 20px;
-	}
 	.connectionLogo {
 		max-width: 20vw;
 	}
@@ -218,9 +215,6 @@ body {
 	.connectionButton {
 		width: 23vw;
 	}
-	.connectionButtonText {
-		font-size: 20px;
-	}
 	.connectionLogo {
 		max-width: 15vw;
 	}
@@ -239,9 +233,6 @@ body {
 
 	.connectionButton {
 		width: 20vw;
-	}
-	.connectionButtonText {
-		font-size: 25px;
 	}
 	.connectionLogo {
 		max-width: 15vw;
@@ -265,9 +256,6 @@ body {
 
 	.connectionButton {
 		width: 12vw;
-	}
-	.connectionButtonText {
-		font-size: 20px;
 	}
 	.connectionLogo {
 		max-width: 10vw;
@@ -304,6 +292,6 @@ body {
 		height: 2.5vh;
 	}
 	.mainConnectionText{
-		font-size: 25px;
+		font-size: 40px;
 	}
 }
