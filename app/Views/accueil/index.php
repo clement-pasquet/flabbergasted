@@ -30,14 +30,10 @@
   </div>
 
   <!-- Barre de recherche au milieu -->
-  <div class="headersearchbox">
-    <svg width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">    
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M21.4375 10.0622C15.2358 10.0622 10.2083 14.9058 10.2083 20.8807C10.2083 26.8555 15.2358 31.6991 21.4375 31.6991C27.6392 31.6991 32.6667 26.8555 32.6667 20.8807C32.6667 14.9058 27.6392 10.0622 21.4375 10.0622ZM6.125 20.8807C6.125 12.7331 12.9806 6.12823 21.4375 6.12823C29.8944 6.12823 36.75 12.7331 36.75 20.8807C36.75 29.0282 29.8944 35.6331 21.4375 35.6331C12.9806 35.6331 6.125 29.0282 6.125 20.8807Z" fill="white"/>
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M30.2021 29.3248C30.9994 28.5566 32.2921 28.5566 33.0895 29.3248L42.277 38.1762C43.0743 38.9444 43.0743 40.1898 42.277 40.958C41.4796 41.7261 40.1869 41.7261 39.3896 40.958L30.2021 32.1065C29.4048 31.3384 29.4048 30.0929 30.2021 29.3248Z" fill="white"/>
-    </svg> 
-  </div>
+    <input type="text" name="autocomplete" class="text-search input-with-icon" placeholder="Choisis un film ou une série">
 
-  <div class="headerRight">
+
+    <div class="headerRight">
       <!-- Groupe à droite avec texte et image du compte/de la connexion au compte -->
     <a href="/accountConnection/index.html">
       <p class="nunito headerText">Connexion</p>

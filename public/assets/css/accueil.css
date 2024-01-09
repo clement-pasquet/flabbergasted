@@ -42,6 +42,20 @@ body {
 	padding: 10px;
 }
 
+.text-search {
+	color: white;
+	font-size: 20px;
+}
+
+.input-with-icon {
+	border: 5px  solid #FFFFFF;
+	border-radius: 30px;
+	background: #342641 url('../images/Icons - Boldloupe.png') no-repeat right center;
+	background-size: 40px;
+	padding: 1vh 1.5vw;
+	padding-right: 10vh;
+	background-position-x: 95%;
+}
 
 
 .headersearchbox {
