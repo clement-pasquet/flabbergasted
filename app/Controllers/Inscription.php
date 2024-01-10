@@ -14,6 +14,7 @@ class Inscription extends BaseController
         $this->db = \Config\Database::connect();
     }
 
+    // Gestion de la gestion du formulaire d'inscription de AccountCreate
     public function sauvegarder()
     {
         // Récupérez les données du formulaire
@@ -51,4 +52,39 @@ class Inscription extends BaseController
             return redirect()->to(base_url('/accountCreate'));
         }
     }
+
+    // Gestion de la gestion du formulaire de conn de AccountCreate
+    public function connecter()
+    {
+        // Récupérez les données du formulaire
+        $pseudoAndMail = $this->request->getPost('pseudoAndMail');
+        $password = $this->request->getPost('password');
+        $checkbox = $this->request->getPost('checkbox');
+
+        // Création d'une instance du modèle UserModel
+        $userModel = new UserModel();
+
+        $user = $userModel->getUserByUsernameOrEmail($pseudoAndMail);
+
+        if ($user && password_verify($password, $user['password'])) {
+            // Les informations de connexion sont correctes
+            // Gestion de la connexion de l'utilisateur, en utilisant les sessions
+
+            $session = session();
+            $session->set('user', $user);
+
+            // Redirection vers la page d'accueil
+            return redirect()->to(base_url('/'));
+        } else {
+            // Les informations de connexion sont incorrectes
+            // Redirection vers la page de connexion avec un message d'erreur
+            $session = session();
+            $session->setFlashdata('error', 'Identifiants incorrects.');
+
+            return redirect()->to(base_url('/accountConnection'));
+        }
+
+    }
+
+
 }

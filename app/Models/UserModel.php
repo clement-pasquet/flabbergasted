@@ -33,6 +33,14 @@ class UserModel extends Model
         return $this->update($id_user, $data);
     }
 
+    public function getUserByUsernameOrEmail($usernameOrEmail)
+    {
+        return $this->where('username', $usernameOrEmail)
+            ->orWhere('mail', $usernameOrEmail)
+            ->first();
+    }
+
+
 
 
 }

@@ -7,6 +7,8 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Pages::index');
 $routes->post('inscription', 'Inscription::sauvegarder');
+$routes->post('connecter', 'Inscription::connecter');
+
 
 
 use App\Controllers\Pages;
