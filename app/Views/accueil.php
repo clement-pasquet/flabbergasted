@@ -57,7 +57,7 @@
     <div id="galerie1" class="galerie">
       <div class="galerieContent">
           <?php foreach ($series as $serie): ?>
-                <a href="filmFocused"><img class="thumbnailGalerie" src="<?=IMG.$serie['image']?>" alt="<?=$serie['titre']?>"></a>
+                <a href="filmFocused/<?=$serie['id_film']?>"><img class="thumbnailGalerie" src="<?=IMG.$serie['image']?>" alt="<?=$serie['titre']?>"></a>
           <?php endforeach; ?>
       </div>
     <img onclick="defiler('galerie1')" class="selectionArrow" src="<?=IMG.'arrowRight.png'?>" alt="Flèche de selection"></img>
@@ -68,7 +68,7 @@
     <div id="galerie2" class="galerie"> 
       <div class="galerieContent">
           <?php foreach ($filmsAventure as $film): ?>
-              <a href="filmFocused"><img class="thumbnailGalerie" src="<?=IMG.$film['image']?>" alt="<?=$film['titre']?>"></a>
+              <a href="filmFocused/<?=$film['id_film']?>"><img class="thumbnailGalerie" src="<?=IMG.$film['image']?>" alt="<?=$film['titre']?>"></a>
           <?php endforeach; ?>
       </div>
     <img onclick="defiler('galerie2')" class="selectionArrow" src="<?=IMG.'arrowRight.png'?>" alt="Flèche de selection"></img>
@@ -79,7 +79,7 @@
     <div id="galerie3" class="galerie">
       <div class="galerieContent">
           <?php foreach ($filmsScienceFiction as $film): ?>
-              <a href="filmFocused"><img class="thumbnailGalerie" src="<?=IMG.$film['image']?>" alt="<?=$film['titre']?>"></a>
+              <a href="filmFocused/<?=$film['id_film']?>"><img class="thumbnailGalerie" src="<?=IMG.$film['image']?>" alt="<?=$film['titre']?>"></a>
           <?php endforeach; ?>
       </div>
     <img onclick="defiler('galerie3')" class="selectionArrow" src="<?=IMG.'arrowRight.png'?>" alt="Flèche de selection"></img>

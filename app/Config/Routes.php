@@ -10,4 +10,5 @@ $routes->post('inscription', 'Inscription::sauvegarder');
 
 
 use App\Controllers\Pages;
+$routes->get('filmFocused/(:num)', [Pages::class, 'filmFocused/$1']);
 $routes->get('(:segment)', [Pages::class, 'view']);

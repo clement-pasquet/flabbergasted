@@ -22,4 +22,9 @@ class filmModel extends Model
     {
         return $this->where(['est_serie' => 0, 'genre' => 'Science-fiction'])->findAll();
     }
+
+    public function getFilmByGenre($genre, $number)
+    {
+        return $this->where('genre', $genre)->limit($number)->findAll();
+    }
 }

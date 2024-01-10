@@ -58,8 +58,8 @@
       </video>
       
       <div class="focusedDivDescription">
-        <p class="nunito categoryTitle">Titre du film</p>
-        <p class="descriptionText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="nunito categoryTitle"><?= $film['titre']?></p>
+        <p class="nunito descriptionText"><?=$film['synopsis']?></p>
 
         <div class="interactionBar">
           <button type="submit" class="updateButton">
@@ -83,7 +83,7 @@
             <svg class="icon" width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M30.7366 22.6984C29.028 22.8641 27.3876 23.4684 25.9665 24.4558C22.9805 27.3167 20.4174 30.6095 18.3584 34.2301C18.0988 34.7282 17.7121 35.1444 17.2396 35.4342C16.7671 35.7239 16.2266 35.8763 15.6761 35.875C15.244 35.8752 14.8167 35.7811 14.4228 35.5988C14.0288 35.4166 13.6772 35.1504 13.3912 34.8179C13.1053 34.4855 12.8916 34.0944 12.7643 33.6706C12.637 33.2469 12.5991 32.8002 12.6531 32.3603L15.3216 24.4558M30.7366 22.6984H35.875V6.88234C35.875 6.41627 35.6945 5.96928 35.3733 5.63971C35.0521 5.31015 34.6165 5.125 34.1622 5.125H32.4494C31.9952 5.125 31.5595 5.31015 31.2383 5.63971C30.9171 5.96928 30.7367 6.41627 30.7367 6.88234L30.7366 22.6984ZM17.0344 24.4558H8.54926C7.99883 24.4556 7.45656 24.3193 6.96837 24.0584C6.48017 23.7976 6.06043 23.4199 5.74468 22.9573C5.42893 22.4947 5.22647 21.9609 5.15445 21.401C5.08243 20.8411 5.14297 20.2716 5.33094 19.7408L9.36283 7.43942C9.85611 6.04936 10.1833 5.125 12.5812 5.125C17.007 5.125 21.7891 6.93682 25.4013 7.95959" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-          <a href="#"><p class="descriptionText interactionText">Regarder hors connexion</p></a>
+          <a href="#"><p class="descriptionText interactionText nunito">Regarder hors connexion</p></a>
 
           </div>
         </div>
@@ -93,26 +93,13 @@
     
   <div class="contentTable">
     
-    <p class="categoryTitle">Documentaire</p>
+    <p class="categoryTitle">Film du même genre</p>
 
     <div id="galerie1" class="galerie">
       <div class="galerieContent">
-        <img class="thumbnailGalerie" src="images/rectangle_17.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_18.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_17.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_18.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_17.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_18.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_17.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_18.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
+          <?php foreach ($filmGenre as $film): ?>
+              <a href="filmFocused/<?=$film['id_film']?>"><img class="thumbnailGalerie" src="<?=IMG.$film['image']?>" alt="<?=$film['titre']?>"></a>
+          <?php endforeach; ?>
       </div>
     <img onclick="defiler('galerie1')" class="selectionArrow" src="images/arrowRight.png" alt="Flèche de selection"></img> 
     </div>

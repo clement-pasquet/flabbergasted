@@ -21,6 +21,17 @@ class Pages extends BaseController
         $data['filmsScienceFiction'] = $this->filmModel->getFilmScienceFiction();
         return view('accueil', $data);
     }
+
+    public function filmFocused($id)
+    {
+        $film = $this->filmModel->find($id);
+        if ($film === null) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Film not found');
+        }
+        $filmGenre = $this->filmModel->getFilmByGenre($film['genre'], 4);
+        return view('filmFocused', ['film' => $film, 'filmGenre' => $filmGenre]);
+    }
+
     public function view($page = 'home')
     {
         if (! is_file(APPPATH . 'Views/pages/' . $page . '.php')) {
