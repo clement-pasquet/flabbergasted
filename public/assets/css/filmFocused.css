@@ -1,13 +1,128 @@
-
-/* Paramètres des textes */
 .nunito {
 	color: #FFF;
-	font-family: Nunito;
+	font-family: Nunito, sans-serif;
 	font-size: 15px;
 	font-style: normal;
 	font-weight: 500;
-	line-height: normal; 
+	line-height: normal;
 }
+
+
+html{
+	margin:0;
+	padding:0;
+}
+
+body {
+	margin: 0; /* Pour enlever les marges par défaut du body */
+	padding:0;
+	background: linear-gradient(183deg, rgba(55, 37, 72, 0.95) -5.36%, #000 108.29%);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	width: 100vw;
+}
+
+
+.contentDiv {
+	margin-left: 6vw;
+	margin-right: 6vw;
+	margin-top: 5vh;
+}
+
+
+
+.header1 {
+	background: rgba(0, 0, 0, 0.35);/* Couleur de fond du header */
+	color: #fff; /* Couleur du texte */
+	display: flex; /* Utilisation de flexbox pour aligner les éléments */
+	align-items: center; /* Aligne les éléments verticalement */
+	justify-content: space-between; /* Espace entre les éléments */
+	/* padding: 10px 0; */
+	padding: 10px;
+}
+
+/*Paramètres de la barre de recherche*/
+.searchbar {
+	color: white;
+	font-size: 1.3vh;
+
+	border: 5px  solid #FFFFFF;
+	border-radius: 30px;
+	background: #342641 url('../images/Icons - Boldloupe.png') no-repeat right center;
+	background-size: 40px;
+	padding: 1vh 1.5vw;
+	padding-right: 10vh;
+	background-position-x: 95%;
+	outline: none;
+	margin-right: 12vw;
+	width: 20vw;
+}
+.searchbar:focus {
+	border-color: #0CBABA;
+}
+
+.headersearchbox {
+	width: 30%;
+	height: 5%;
+	border-radius: 89px;
+	border: 5px solid #FFF;
+	background: #342641;
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 10px;
+}
+
+.headersearchbox:active {
+	border: 5px solid #0CBABA;
+}
+
+.headerText {
+	font-size: 35px;
+	margin: 0;
+}
+
+.logo {
+	max-width: 4vw;
+	max-height: 4vw;
+	min-width: 55px;
+	min-height: 55px;
+	flex-shrink: 0;
+	margin-right: 2vw;
+}
+
+.iconAndText {
+	align-items: center;
+	gap: 8%;
+	display: flex;
+	flex-wrap: nowrap;
+	width: 29vw;
+}
+
+/* Div de la partie gauche du header */
+.headerLeft {
+	align-items: center;
+	display: flex;
+	gap: 37%;
+	margin-right: -12vw;
+
+}
+
+/* Div de la partie droite du header */
+.headerRight {
+	align-items: center;
+	display: flex;
+	gap: 10%;
+	flex-shrink: 0; /* Empêche le headerRight de se rétrécir */
+	overflow-x: hidden; /* Empêche le débordement horizontal */
+}
+
+
+/* Fin des paramètres du header */
+
+
+
+/* Paramètres des textes */
 
 .descriptionText {
 	color: #FFF;
@@ -32,101 +147,7 @@
 /*  */
 
 
-html{
-    margin:0;
-    padding:0;
-}
-
-body {
-	margin: 0; /* Pour enlever les marges par défaut du body */
-	padding:0;
-	background: linear-gradient(183deg, rgba(55, 37, 72, 0.95) -5.36%, #000 108.29%); 
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	width: 100vw;
-}
- 
-
-.contentDiv {
-	margin-left: 5vw;
-	margin-right: 6vw;
-	margin-top: 5vh;
-}
-
-
-
-.header1 {
-	background: rgba(0, 0, 0, 0.35);/* Couleur de fond du header */
-	color: #fff; /* Couleur du texte */
-    display: flex; /* Utilisation de flexbox pour aligner les éléments */
-    align-items: center; /* Aligne les éléments verticalement */
-    justify-content: space-between; /* Espace entre les éléments */
-	/* padding: 10px 0; */
-	padding: 10px;
-}
-
-
-
-.headersearchbox {
-	width: 30%;
-	height: 5%;
-	border-radius: 89px;
-	border: 5px solid #FFF;
-	background: #342641; 
-	display: flex;
-	justify-content: flex-end;
-	padding-right: 10px;
-}
-
-.headersearchbox:active {
-	border: 5px solid #0CBABA;
-}
-
-.headerText {
-	font-size: 35px;
-	margin: 0;
-}
-
-.logo { 
-	max-width: 4vw;
-	max-height: 4vw;
-	min-width: 55px;
-	min-height: 55px;
-	flex-shrink: 0;
-	margin-right: 2vw;
-}
-
-.iconAndText {
-	align-items: center; 
-	gap: 8%;
-	display: flex;
-	flex-wrap: nowrap;	
-	width: 29vw;
-}
- 
-/* Div de la partie gauche du header */
-.headerLeft {
-	align-items: center; 
-	display: flex;
-	gap: 37%;
-	margin-right: -12vw;
-
-}
-
-/* Div de la partie droite du header */
-.headerRight {
-    align-items: center; 
-    display: flex;
-    gap: 10%;
-    flex-shrink: 0; /* Empêche le headerRight de se rétrécir */
-    overflow-x: hidden; /* Empêche le débordement horizontal */
-}
-
-
-
 /* Fin des paramètres du header */
-
 
 
 .categoryTitle {

@@ -42,12 +42,11 @@ body {
 	padding: 10px;
 }
 
-.text-search {
+/*Paramètres de la barre de recherche*/
+.searchbar {
 	color: white;
-	font-size: 20px;
-}
+	font-size: 1.3vh;
 
-.input-with-icon {
 	border: 5px  solid #FFFFFF;
 	border-radius: 30px;
 	background: #342641 url('../images/Icons - Boldloupe.png') no-repeat right center;
@@ -56,8 +55,10 @@ body {
 	padding-right: 10vh;
 	background-position-x: 95%;
 	outline: none;
+	margin-right: 12vw;
+	width: 20vw;
 }
-.input-with-icon:focus {
+.searchbar:focus {
 	border-color: #0CBABA;
 }
 

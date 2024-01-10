@@ -30,7 +30,7 @@
   </div>
 
   <!-- Barre de recherche au milieu -->
-    <input type="text" name="autocomplete" class="text-search input-with-icon" placeholder="Choisir un film ou une série">
+    <input type="text" name="autocomplete" class="searchbar" placeholder="Rechercher un film ou une série">
 
 
     <div class="headerRight">
