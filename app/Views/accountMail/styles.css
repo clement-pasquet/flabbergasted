@@ -17,13 +17,17 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin-top: 100px;
 	padding: 0;
 	background: linear-gradient(183deg, rgba(55, 37, 72, 0.95) -5.36%, #000 108.29%);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
 }
 
 .accountMainDiv {
