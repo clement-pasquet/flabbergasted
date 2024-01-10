@@ -1,3 +1,5 @@
+<?php
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,70 +56,31 @@
 
     <div id="galerie1" class="galerie">
       <div class="galerieContent">
-        <img class="thumbnailGalerie" src="<?=IMG.'rectangle_17.png'?>"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_18.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_17.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_18.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_17.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_18.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_17.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_18.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
+          <?php foreach ($series as $serie): ?>
+                <a href="filmFocused"><img class="thumbnailGalerie" src="<?=IMG.$serie['image']?>" alt="<?=$serie['titre']?>"></a>
+          <?php endforeach; ?>
       </div>
     <img onclick="defiler('galerie1')" class="selectionArrow" src="<?=IMG.'arrowRight.png'?>" alt="Flèche de selection"></img>
     </div>
 
-    <p class="categoryTitle">Nouveaux films</p>
+    <p class="categoryTitle">Films d'Aventure</p>
   
     <div id="galerie2" class="galerie"> 
       <div class="galerieContent">
-        <img class="thumbnailGalerie" src="images/rectangle_17.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_18.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_17.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_18.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_17.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_18.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_17.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_18.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
+          <?php foreach ($filmsAventure as $film): ?>
+              <a href="filmFocused"><img class="thumbnailGalerie" src="<?=IMG.$film['image']?>" alt="<?=$film['titre']?>"></a>
+          <?php endforeach; ?>
       </div>
     <img onclick="defiler('galerie2')" class="selectionArrow" src="<?=IMG.'arrowRight.png'?>" alt="Flèche de selection"></img>
     </div>
 
-    <p class="categoryTitle">Documentaire</p>
-  
-    <div id="galerie3" class="galerie"> 
+    <p class="categoryTitle">Science-Fiction</p>
+
+    <div id="galerie3" class="galerie">
       <div class="galerieContent">
-        <img class="thumbnailGalerie" src="images/rectangle_17.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_18.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_17.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_18.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_17.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_18.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_17.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_18.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
+          <?php foreach ($filmsScienceFiction as $film): ?>
+              <a href="filmFocused"><img class="thumbnailGalerie" src="<?=IMG.$film['image']?>" alt="<?=$film['titre']?>"></a>
+          <?php endforeach; ?>
       </div>
     <img onclick="defiler('galerie3')" class="selectionArrow" src="<?=IMG.'arrowRight.png'?>" alt="Flèche de selection"></img>
     </div>
