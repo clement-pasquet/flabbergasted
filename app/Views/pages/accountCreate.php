@@ -22,6 +22,16 @@
 
     <p class="nunito mainConnectionText">Créer compte</p>
 
+      <?php
+      // Affichage du message d'erreur s'il existe
+      $session = session();
+      $error = $session->getFlashdata('error');
+      if ($error !== null) {
+          echo '<div class="errorText">' . $error . '</div>';
+      }
+      ?>
+
+
       <form class="mainConnectionDiv" action="<?php echo base_url('inscription'); ?>" method="post">
 
 

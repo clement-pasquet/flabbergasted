@@ -23,6 +23,10 @@ class Inscription extends BaseController
         $passwordConfirmation = $this->request->getPost('passwordConfirmation');
 
         if ($password != $passwordConfirmation) {
+            $session = session();
+            $session->setFlashdata('error', 'Une erreur est survenue lors de l\'enregistrement.');
+
+            // Redirection vers la page précédente (le formulaire)
             return redirect()->to(base_url('/accountCreate'));
         }
         // Création d'une instance du modèle UserModel
