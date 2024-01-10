@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS utilisateur (
-    id_user INT PRIMARY KEY,
+    id_user INT PRIMARY KEY AUTO_INCREMENT,
     mail VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
     status VARCHAR(255) DEFAULT 'adherent' NOT NULL,
@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS utilisateur (
 
 
 CREATE TABLE IF NOT EXISTS film (
-    id_film INT PRIMARY KEY,
+    id_film INT PRIMARY KEY AUTO_INCREMENT,
     titre VARCHAR(255) NOT NULL,
     date_release VARCHAR(255) NOT NULL,
     image VARCHAR(255) NOT NULL,

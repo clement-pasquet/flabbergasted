@@ -39,11 +39,6 @@
             <span class="password-toggle" onclick="togglePasswordVisibility(2)"><img src="<?= IMG.'eyeIcon.png' ?>" class="eyeIcon" alt="To Toggle Password Visibility" ></span>
           </div>
 
-          <div class="checkboxPassword">
-            <input name="checkbox" class="checkboxPasswordInput" type="checkbox" id="passwordCheckbox1">
-            <label class="mainConnectionText" for="passwordCheckbox1">Se souvenir de moi</label>
-          </div>
-
           <button type="submit" class="connectionButton">
             <p class="nunito connectionButtonText">S'inscrire</p>
           </button>
