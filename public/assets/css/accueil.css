@@ -4,10 +4,10 @@
 	font-size: 15px;
 	font-style: normal;
 	font-weight: 500;
-	line-height: normal; 
+	line-height: normal;
 }
 
- 
+
 html{
     margin:0;
     padding:0;
@@ -16,13 +16,13 @@ html{
 body {
 	margin: 0; /* Pour enlever les marges par défaut du body */
 	padding:0;
-	background: linear-gradient(183deg, rgba(55, 37, 72, 0.95) -5.36%, #000 108.29%); 
+	background: linear-gradient(183deg, rgba(55, 37, 72, 0.95) -5.36%, #000 108.29%);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	width: 100vw;
 }
- 
+
 
 .contentDiv {
 	margin-left: 6vw;
@@ -66,7 +66,7 @@ body {
 	height: 5%;
 	border-radius: 89px;
 	border: 5px solid #FFF;
-	background: #342641; 
+	background: #342641;
 	display: flex;
 	justify-content: flex-end;
 	padding-right: 10px;
@@ -81,7 +81,7 @@ body {
 	margin: 0;
 }
 
-.logo { 
+.logo {
 	max-width: 4vw;
 	max-height: 4vw;
 	min-width: 55px;
@@ -91,16 +91,16 @@ body {
 }
 
 .iconAndText {
-	align-items: center; 
+	align-items: center;
 	gap: 8%;
 	display: flex;
-	flex-wrap: nowrap;	
+	flex-wrap: nowrap;
 	width: 29vw;
 }
- 
+
 /* Div de la partie gauche du header */
 .headerLeft {
-	align-items: center; 
+	align-items: center;
 	display: flex;
 	gap: 37%;
 	margin-right: -12vw;
@@ -109,7 +109,7 @@ body {
 
 /* Div de la partie droite du header */
 .headerRight {
-    align-items: center; 
+    align-items: center;
     display: flex;
     gap: 10%;
     flex-shrink: 0; /* Empêche le headerRight de se rétrécir */
@@ -153,20 +153,20 @@ body {
 	width: 95vw;
 
 }
-  
+
 .galerieContent {
 	display: flex;
 	transition: transform 0.5s ease-in-out;
 	gap: 5vw;
 }
-  
+
 /* Paramètre des affiches des films et séries */
 .thumbnailGalerie {
-	object-fit: cover; 
+	object-fit: cover;
     object-position: center;
 	border-radius: 15px;
 	border: 1px solid #171717;
-	flex-shrink: 0; 
+	flex-shrink: 0;
 
 	width: 18.75vw;
 	height: 10vw;
@@ -174,12 +174,12 @@ body {
 	justify-content: center;
 	align-items: center;
 }
-  
+
 /* Flèche de selection permettant de faire defiler les affiches */
 .selectionArrow {
 	width: 2vw;
 	height: 5.8vh;
-	flex-shrink: 0; 
+	flex-shrink: 0;
 	position: absolute; /* Position absolue pour positionner la flèche */
 	top: 50%; /* Ajustez la position verticale selon vos besoins */
 	right: 1.3vw; /* Ajustez la position horizontale selon vos besoins */

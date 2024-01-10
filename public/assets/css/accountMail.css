@@ -13,18 +13,33 @@ html {
 }
 
 body {
+<<<<<<< HEAD:app/Views/accountMail/styles.css
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+=======
 	margin: 0;
+>>>>>>> e23174c1cb0e92dfa83dab9975b3ee8a66eb43b5:public/assets/css/accountMail.css
 	padding: 0;
 	background: linear-gradient(183deg, rgba(55, 37, 72, 0.95) -5.36%, #000 108.29%);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	width: 100vw;
+<<<<<<< HEAD:app/Views/accountMail/styles.css
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+=======
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+>>>>>>> e23174c1cb0e92dfa83dab9975b3ee8a66eb43b5:public/assets/css/accountMail.css
 }
 
 .accountMainDiv {

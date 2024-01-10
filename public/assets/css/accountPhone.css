@@ -109,67 +109,70 @@ body {
 /* Responsive Design */
 @media only screen and (max-width: 600px) {
 	#ChamptexteName {
-		width: 55vw;
+		width: 65vw;
 		height: 40px;
 		font-size: 12px;
 	}
 
 	.updateButton {
-		width: 80vw;
-		height: 40px;
-		margin-top: -80px;
+		width: 40vw;
+		height: 35px;
+		margin-top: -150px;
 	}
 	.updateButtonText {
-		font-size: 15px;
+		font-size: 12px;
 	}
 	.accountPhoneTitle {
-		font-size: 25px;
+		font-size: 20px;
 	}
 	.accountNameSubtitle {
-		font-size: 15px;
+		font-size: 12px;
 	}
 }
 
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
+@media only screen and (min-width: 601px) and (max-width: 1023px) {
 	#ChamptexteName {
-		width: 50vw;
-		height: 70px;
-		font-size: 27px;
+		width: 65vw;
+		height: 40px;
+		font-size: 12px;
 	}
 
 	.updateButton {
-		width: 23vw;
-		height: 60px;
-		margin-top: -40px;
+		width: 40vw;
+		height: 35px;
+		margin-top: -150px;
 	}
 	.updateButtonText {
-		font-size: 25px;
+		font-size: 12px;
 	}
 	.accountPhoneTitle {
-		font-size: 40px;
+		font-size: 20px;
 	}
 	.accountNameSubtitle {
-		font-size: 30px;
+		font-size: 12px;
 	}
 }
 
-@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
 	#ChamptexteName {
-		width: 40vw;
-		height: 60px;
+		width: 30vw;
+		height: 40px;
+		font-size: 12px;
 	}
 
 	.updateButton {
 		width: 20vw;
+		height: 35px;
+		margin-top: -150px;
 	}
 	.updateButtonText {
-		font-size: 25px;
+		font-size: 12px;
 	}
 	.accountPhoneTitle {
-		font-size: 45px;
+		font-size: 30px;
 	}
 	.accountNameSubtitle {
-		font-size: 35px;
+		font-size: 20px;
 	}
 }
 
@@ -181,16 +184,17 @@ body {
 	}
 
 	.updateButton {
-		width: 12vw;
+		width: 10vw;
+		margin-top: -100px;
 	}
 	.updateButtonText {
-		font-size: 20px;
+		font-size: 17px;
 	}
 	.accountPhoneTitle {
-		font-size: 35px;
+		font-size: 30px;
 	}
 	.accountNameSubtitle {
-		font-size: 28px;
+		font-size: 22px;
 	}
 }
 
