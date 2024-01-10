@@ -1,0 +1,313 @@
+.nunito {
+	color: #FFF;
+	font-family: Nunito, sans-serif;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+}
+
+
+html{
+	margin:0;
+	padding:0;
+}
+
+body {
+	margin: 0; /* Pour enlever les marges par défaut du body */
+	padding:0;
+	background: linear-gradient(183deg, rgba(55, 37, 72, 0.95) -5.36%, #000 108.29%);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	width: 100vw;
+}
+
+
+.contentDiv {
+	margin-left: 6vw;
+	margin-right: 6vw;
+	margin-top: 5vh;
+}
+
+
+
+.header1 {
+	background: rgba(0, 0, 0, 0.35);/* Couleur de fond du header */
+	color: #fff; /* Couleur du texte */
+	display: flex; /* Utilisation de flexbox pour aligner les éléments */
+	align-items: center; /* Aligne les éléments verticalement */
+	justify-content: space-between; /* Espace entre les éléments */
+	/* padding: 10px 0; */
+	padding: 10px;
+}
+
+/*Paramètres de la barre de recherche*/
+.searchbar {
+	color: white;
+	font-size: 1.3vh;
+
+	border: 5px  solid #FFFFFF;
+	border-radius: 30px;
+	background: #342641 url('../images/Icons - Boldloupe.png') no-repeat right center;
+	background-size: 40px;
+	padding: 1vh 1.5vw;
+	padding-right: 10vh;
+	background-position-x: 95%;
+	outline: none;
+	margin-right: 12vw;
+	width: 20vw;
+}
+.searchbar:focus {
+	border-color: #0CBABA;
+}
+
+.headersearchbox {
+	width: 30%;
+	height: 5%;
+	border-radius: 89px;
+	border: 5px solid #FFF;
+	background: #342641;
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 10px;
+}
+
+.headersearchbox:active {
+	border: 5px solid #0CBABA;
+}
+
+.headerText {
+	font-size: 35px;
+	margin: 0;
+}
+
+.logo {
+	max-width: 4vw;
+	max-height: 4vw;
+	min-width: 55px;
+	min-height: 55px;
+	flex-shrink: 0;
+	margin-right: 2vw;
+}
+
+.iconAndText {
+	align-items: center;
+	gap: 8%;
+	display: flex;
+	flex-wrap: nowrap;
+	width: 29vw;
+}
+
+/* Div de la partie gauche du header */
+.headerLeft {
+	align-items: center;
+	display: flex;
+	gap: 37%;
+	margin-right: -12vw;
+
+}
+
+/* Div de la partie droite du header */
+.headerRight {
+	align-items: center;
+	display: flex;
+	gap: 10%;
+	flex-shrink: 0; /* Empêche le headerRight de se rétrécir */
+	overflow-x: hidden; /* Empêche le débordement horizontal */
+}
+
+
+/* Fin des paramètres du header */
+
+
+
+/* Paramètres des textes */
+
+.descriptionText {
+	color: #FFF;
+	text-align: justify;
+	font-family: Inter;
+	font-size: 2.6vh;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	display: inline-block; /* Affichage en ligne avec des propriétés de bloc pour la balise <p> */
+	vertical-align: middle; /* Aligner verticalement le contenu */
+}
+
+.interactionText {
+	white-space: nowrap;
+	margin: 0px;
+}
+
+.interactionText:hover {
+	text-decoration: underline; /* Ajoute un soulignement lorsque la souris survole le texte */
+}
+/*  */
+
+
+/* Fin des paramètres du header */
+
+
+.categoryTitle {
+	color: #FFF;
+	font-family: Nunito;
+	font-size: 48px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal; 
+	margin-top: 34px;
+	margin-bottom: 18px;
+}
+
+.updateButtonText {
+	color: #000;
+	text-align: center;
+	font-family: Nunito;
+	font-size: 25px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	margin: 0px;
+}
+
+
+
+/* Paramètre du lecteur du film selectionné */
+.videoFocused {
+	object-fit: cover; 
+    object-position: center;
+	border-radius: 15px;
+	border: 1px solid #171717;
+	width: 47.5vw;
+	height: 50vh;
+	flex-shrink: 0; 
+}
+
+/* Flèche permettant de circuler parmis les différents films que l'on propose */
+.selectionArrow {
+	width: 40px;
+	height: 58px;
+	flex-shrink: 0; 
+	margin-left: -150px;
+}
+
+/* Div comprenant les informations du films cliqués, la barre d'interaction et son affiche  */
+.focusedDiv {
+	display: flex;
+	flex-direction: row;
+	gap: 3vh
+}
+
+
+/* Bouton "acheter" */
+.updateButton {
+	background-color: #01F9BB;
+	border: 0px;
+	height: 8vh;
+	width: 11vw;
+	border-radius: 1vw;
+	cursor: pointer;
+}
+
+.updateButton:hover {
+	background-color: #00d6a1;
+}
+.updateButton:active {
+	background-color: #00ac81;
+}
+
+
+/* Petite "barre" qui contient le bouton acheter, les likes et le bouton regarder hors connexion */
+.interactionBar {
+	display: flex;
+	gap: 3vw;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Div qui contient les 2 boutons like et le bouton pour télécharger */
+.loveDiv {
+	display: flex;
+	flex-direction: row;
+	gap: 1vw;
+}
+
+/* Paramètres de hover de l'icon du coeur */
+.loveIcon  {
+	transition: fill 0.3s ease;
+}
+  
+.loveIcon:hover  {
+	fill: #ff0000; /* Rouge lorsque survolé */
+}
+  
+.loveIcon:active  {
+	fill: #cc0000; /* Rouge plus foncé lorsque cliqué */
+}
+
+.icon {
+	cursor: pointer;
+}
+
+/* Paramètres de hover des icons sauf de l'icon du coeur */
+.icon path { 
+	transition: stroke 0.3s ease; /* Animation de transition pour un changement progressif */
+}
+  
+.icon:hover path {
+	stroke: #cc0000; /* Couleur plus foncée (gris foncé) lorsque la souris est dessus */
+}
+  
+.icon:active path {
+	stroke: #910000; /* Couleur encore plus foncée (noir clair) lorsque cliqué */	
+}
+
+
+
+
+/* Div principale de la galerie. C'est le nom de la ligne ou on peut faire defiler les miniatures en cliquant sur la flèche. */
+.galerie {
+	overflow: hidden;
+	margin: 0px;
+	position: relative;
+	width: 95vw;
+
+}
+  
+.galerieContent {
+	display: flex;
+	transition: transform 0.5s ease-in-out;
+	gap: 5vw;
+}
+  
+/* Paramètre des affiches des films et séries */
+.thumbnailGalerie {
+	object-fit: cover; 
+    object-position: center;
+	border-radius: 3vh;
+	border: 1px solid #171717;
+	flex-shrink: 0; 
+
+	width: 18.75vw;
+	height: 10vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+  
+/* Flèche de selection permettant de faire defiler les affiches */
+.selectionArrow {
+	width: 2vw;
+	height: 5.8vh;
+	flex-shrink: 0; 
+	position: absolute; /* Position absolue pour positionner la flèche */
+	top: 50%; /* Ajustez la position verticale selon vos besoins */
+	right: 1.3vw; /* Ajustez la position horizontale selon vos besoins */
+	transform: translateY(-50%); /* Pour centrer verticalement la flèche */
+	z-index: 2; /* Pour placer la flèche au-dessus des miniatures */
+}
+
+/* Fin des paramètres de la galerie */
+

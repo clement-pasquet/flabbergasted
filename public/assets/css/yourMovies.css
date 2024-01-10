@@ -1,0 +1,192 @@
+.nunito {
+	color: #FFF;
+	font-family: Nunito, sans-serif;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+}
+
+
+html{
+	margin:0;
+	padding:0;
+}
+
+body {
+	margin: 0; /* Pour enlever les marges par défaut du body */
+	padding:0;
+	background: linear-gradient(183deg, rgba(55, 37, 72, 0.95) -5.36%, #000 108.29%);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	width: 100vw;
+}
+
+
+.contentDiv {
+	margin-left: 6vw;
+	margin-right: 6vw;
+	margin-top: 5vh;
+}
+
+
+
+.header1 {
+	background: rgba(0, 0, 0, 0.35);/* Couleur de fond du header */
+	color: #fff; /* Couleur du texte */
+	display: flex; /* Utilisation de flexbox pour aligner les éléments */
+	align-items: center; /* Aligne les éléments verticalement */
+	justify-content: space-between; /* Espace entre les éléments */
+	/* padding: 10px 0; */
+	padding: 10px;
+}
+
+/*Paramètres de la barre de recherche*/
+.searchbar {
+	color: white;
+	font-size: 1.3vh;
+
+	border: 5px  solid #FFFFFF;
+	border-radius: 30px;
+	background: #342641 url('../images/Icons - Boldloupe.png') no-repeat right center;
+	background-size: 40px;
+	padding: 1vh 1.5vw;
+	padding-right: 10vh;
+	background-position-x: 95%;
+	outline: none;
+	margin-right: 12vw;
+	width: 20vw;
+}
+.searchbar:focus {
+	border-color: #0CBABA;
+}
+
+.headersearchbox {
+	width: 30%;
+	height: 5%;
+	border-radius: 89px;
+	border: 5px solid #FFF;
+	background: #342641;
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 10px;
+}
+
+.headersearchbox:active {
+	border: 5px solid #0CBABA;
+}
+
+.headerText {
+	font-size: 35px;
+	margin: 0;
+}
+
+.logo {
+	max-width: 4vw;
+	max-height: 4vw;
+	min-width: 55px;
+	min-height: 55px;
+	flex-shrink: 0;
+	margin-right: 2vw;
+}
+
+.iconAndText {
+	align-items: center;
+	gap: 8%;
+	display: flex;
+	flex-wrap: nowrap;
+	width: 29vw;
+}
+
+/* Div de la partie gauche du header */
+.headerLeft {
+	align-items: center;
+	display: flex;
+	gap: 37%;
+	margin-right: -12vw;
+
+}
+
+/* Div de la partie droite du header */
+.headerRight {
+	align-items: center;
+	display: flex;
+	gap: 10%;
+	flex-shrink: 0; /* Empêche le headerRight de se rétrécir */
+	overflow-x: hidden; /* Empêche le débordement horizontal */
+}
+
+
+/* Fin des paramètres du header */
+
+
+
+
+/* Debut des paramètre de la Galerie */
+
+.contentTable {
+	display: flex;
+	flex-direction: column;
+	padding-left: 5vw;
+	height: 100%;
+	gap: 1.8vh;
+	margin-top: 3.4vh;
+}
+
+/* Paramètre de fonte et de police de caractère des titres de la page. Ici les titres sont série, films ... */
+.categoryTitle {
+	color: #FFF;
+	font-family: Nunito;
+	font-size: 48px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	margin: 0px;
+}
+
+
+
+/* Div principale de la galerie. C'est le nom de la ligne ou on peut faire defiler les miniatures en cliquant sur la flèche. */
+.galerie {
+	overflow: hidden;
+	margin: 0px;
+	position: relative;
+	width: 95vw;
+
+}
+  
+.galerieContent {
+	display: flex;
+	transition: transform 0.5s ease-in-out;
+	gap: 5vw;
+}
+  
+/* Paramètre des affiches des films et séries */
+.thumbnailGalerie {
+	object-fit: cover; 
+    object-position: center;
+	border-radius: 3vh;
+	border: 1px solid #171717;
+	flex-shrink: 0; 
+
+	width: 18.75vw;
+	height: 10vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+  
+/* Flèche de selection permettant de faire defiler les affiches */
+.selectionArrow {
+	width: 2vw;
+	height: 5.8vh;
+	flex-shrink: 0; 
+	position: absolute; /* Position absolue pour positionner la flèche */
+	top: 50%; /* Ajustez la position verticale selon vos besoins */
+	right: 1.3vw; /* Ajustez la position horizontale selon vos besoins */
+	transform: translateY(-50%); /* Pour centrer verticalement la flèche */
+	z-index: 2; /* Pour placer la flèche au-dessus des miniatures */
+}
+
+/* Fin des paramètres de la galerie */
