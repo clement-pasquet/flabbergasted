@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="<?=CSS.'yourMovies.css'?>">
   <title>vosFilms</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,8 +13,8 @@
 <header class="header1">
   <div class="headerLeft">
       <!-- Groupe à gauche avec logo/nom et Icon Fichier/Texte Vos Fichiers -->
-    <a href="/accueil1/index.html">
-      <img class="logo" src="images/logo1.png" alt="Logo Flabbergaster"></img>
+    <a href="/">
+      <img class="logo" src="<?= IMG.'logo1.png' ?>" alt="Logo Flabbergaster"></img>
     </a>
 
     <div class="iconAndText">
@@ -23,7 +23,7 @@
         <path d="M12.3507 18.5L4.08333 36.777C4.36745 36.8407 4.65756 36.8736 4.94866 36.875H31.3879C31.7809 36.8751 32.1655 36.7605 32.495 36.5452C32.8246 36.33 33.0849 36.0233 33.2444 35.6623L40.8333 18.5H12.3507Z" fill="white"/>
       </svg> 
 
-      <a href="/vosFilms/index.html">
+      <a href="/yourMovies">
         <p class="nunito headerText">Vos Films</p>
       </a>
     </div>
@@ -39,10 +39,10 @@
 
   <div class="headerRight">
       <!-- Groupe à droite avec texte et image du compte/de la connexion au compte -->
-    <a href="/accountConnection/index.html">
+    <a href="/accountConnection">
       <p class="nunito headerText">Connexion</p>
     </a>
-    <a href="/accountInformation/index.html">
+    <a href="/accountInformation">
       <svg class="logo" width="61" height="61" viewBox="0 0 61 61" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M30.5 58C45.6878 58 58 45.6878 58 30.5C58 15.3122 45.6878 3 30.5 3C15.3122 3 3 15.3122 3 30.5C3 45.6878 15.3122 58 30.5 58ZM30.5 58C35.8802 58.0059 41.1426 56.4243 45.6281 53.4533C45.2736 50.4988 43.85 47.7763 41.6259 45.7994C39.4019 43.8225 36.5312 42.7279 33.5556 42.7222H27.4444C24.4688 42.7279 21.5981 43.8225 19.3741 45.7994C17.15 47.7763 15.7265 50.4988 15.3719 53.4533C19.8574 56.4243 25.1198 58.0059 30.5 58ZM39.6667 24.3889C39.6667 29.4515 35.5626 33.5555 30.5 33.5555C25.4374 33.5555 21.3333 29.4515 21.3333 24.3889C21.3333 19.3263 25.4374 15.2222 30.5 15.2222C35.5626 15.2222 39.6667 19.3263 39.6667 24.3889Z" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
@@ -53,77 +53,24 @@
 <body>
 
   <div class="contentTable">
-    
-    <p class="categoryTitle">Contenus Téléchargés</p>
 
-    <div id="galerie1" class="galerie">
-      <div class="galerieContent">
-        <img class="thumbnailGalerie" src="images/rectangle_17.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_18.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_17.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_18.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_17.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_18.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_17.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_18.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
-      </div>
-    <img onclick="defiler('galerie1')" class="selectionArrow" src="images/arrowRight.png" alt="Flèche de selection"></img> 
-    </div>
 
     <p class="categoryTitle">Vos films</p>
   
     <div id="galerie2" class="galerie"> 
       <div class="galerieContent">
-        <img class="thumbnailGalerie" src="images/rectangle_17.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_18.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_17.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_18.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_17.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_18.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_17.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_18.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
+        <img class="thumbnailGalerie" src="<?= IMG.'rectangle_17.png' ?>"></img>
       </div>
-    <img onclick="defiler('galerie2')" class="selectionArrow" src="images/arrowRight.png" alt="Flèche de selection"></img> 
+    <img onclick="defiler('galerie2')" class="selectionArrow" src="<?= IMG.'arrowRight.png' ?>" alt="Flèche de selection"></img>
     </div>
 
     <p class="categoryTitle">Vos séries</p>
   
     <div id="galerie3" class="galerie"> 
       <div class="galerieContent">
-        <img class="thumbnailGalerie" src="images/rectangle_17.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_18.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_17.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_18.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_17.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_18.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_17.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_18.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
+        <img class="thumbnailGalerie" src="<?= IMG.'rectangle_17.png' ?>"></img>
       </div>
-    <img onclick="defiler('galerie3')" class="selectionArrow" src="images/arrowRight.png" alt="Flèche de selection"></img> 
+    <img onclick="defiler('galerie3')" class="selectionArrow" src="<?= IMG.'arrowRight.png' ?>" alt="Flèche de selection"></img>
     </div>
 
   
