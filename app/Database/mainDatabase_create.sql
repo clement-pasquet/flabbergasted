@@ -9,6 +9,21 @@ CREATE TABLE IF NOT EXISTS utilisateur (
 );
 
 
+CREATE TABLE IF NOT EXISTS film (
+    id_film INT PRIMARY KEY,
+    titre VARCHAR(255) NOT NULL,
+    date_release VARCHAR(255) NOT NULL,
+    image VARCHAR(255) NOT NULL,
+    prix INT,
+    genre VARCHAR(255) NOT NULL,
+    realisateur VARCHAR(255) NOT NULL,
+    synopsis TEXT NOT NULL,
+    duree INT,
+    pays VARCHAR(64),
+    est_serie BOOLEAN NOT NULL DEFAULT 0 -- Ajout de la colonne pour indiquer si c'est une série (0 pour film, 1 pour série)
+);
+
+
 CREATE TABLE IF NOT EXISTS achat (
     id_user INT,
     id_film INT,
@@ -17,19 +32,6 @@ CREATE TABLE IF NOT EXISTS achat (
     PRIMARY KEY (id_user, id_film)
 );
 
-
-CREATE TABLE IF NOT EXISTS film (
-    id_film INT PRIMARY KEY,
-    titre VARCHAR(255) NOT NULL,
-    date_release DATE NOT NULL,
-    image VARCHAR(255) NOT NULL,
-    prix INT,
-    genre VARCHAR(255) NOT NULL,
-    realisateur VARCHAR(255) NOT NULL,
-    synopsis TEXT NOT NULL,
-    duree INT,
-    pays VARCHAR(64)
-);
 
 CREATE TABLE IF NOT EXISTS serie (
     id_serie INT PRIMARY KEY,

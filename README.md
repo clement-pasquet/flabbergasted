@@ -16,9 +16,9 @@ Pour faire cela il faut :
 
 
 ```bash
-sudo mysql -u root -p
+mysql -u admin -p
 ``` 
-( pour se connecter en tant que root, si un mdp est demandé, appuyez sur entrée )
+( pour se connecter en tant que admin, si un mdp est demandé, donner "password", le root ne possède pas de password )
 
 ```sql
 CREATE DATABASE mainDatabase;

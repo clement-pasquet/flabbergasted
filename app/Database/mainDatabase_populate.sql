@@ -17,23 +17,9 @@ VALUES (1, 'clement@pasquet.fr', 'password', 'admin', 'screeny', 'pasquet', 'cle
        (2, 'ju.bernier5@gmail.com', 'password', 'admin', 'ju', 'bernier', 'justine');
 
 
--- Insertion des achats
--- Achats pour l'utilisateur 1 (Clément Pasquet)
-INSERT INTO achat (id_user, id_film) VALUES
-(1, 40), (1, 39), (1, 38), (1, 37), (1, 36), -- Achats des 5 derniers films pour l'utilisateur 1
-(1, 35), (1, 34), (1, 33), (1, 32), (1, 31), -- Ajoutez plus d'achats si nécessaire pour l'utilisateur 1
-(1, 30), (1, 29), (1, 28), (1, 27), (1, 26);
-
--- Achats pour l'utilisateur 2 (Justine Bernier)
-INSERT INTO achat (id_user, id_film) VALUES
-(2, 25), (2, 24), (2, 23), (2, 22), (2, 21), -- Ajoutez plus d'achats si nécessaire pour l'utilisateur 2
-(2, 20), (2, 19), (2, 18), (2, 17), (2, 16),
-(2, 15), (2, 14), (2, 13), (2, 12), (2, 11);
-
-
 
 -- Insertion des films
-INSERT INTO film (id_film, titre, date, image, prix, genre, realisateur, synopsis, duree, pays)
+INSERT INTO film (id_film, titre, date_release, image, prix, genre, realisateur, synopsis, duree, pays)
 VALUES
 (1, 'Les Étoiles Brillantes', '15 janvier 2024', 'etoiles_brillantes.jpg', 10, 'Science-fiction', 'Alice Dupont', 'Dans un futur lointain une équipe de scientifiques découvre une nouvelle source d''énergie dans l''espace.', 120, 'France'),
 (2, 'L''Odyssée Perdue', '3 mars 2023', 'odyssee_perdue.jpg', 12, 'Aventure', 'Jean-Luc Moreau', 'Un explorateur part à la recherche d''une ancienne cité perdue pleine de mystères et de dangers.', 145, 'États-Unis'),
@@ -73,12 +59,31 @@ VALUES
 (36, 'Renaissance Cérébrale', '7 mars 2023', 'renaissance_cerebrale.jpg', 11, 'Science-fiction', 'Julia Blanchard', 'Des scientifiques explorent les frontières de la conscience humaine avec une technologie révolutionnaire.', 135, 'États-Unis'),
 (37, 'L''Énigme de la Forêt Interdite', '28 juin 2025', 'enigme_foret_interdite.jpg', 9, 'Aventure', 'Louis Lévesque', 'Des explorateurs partent à la recherche d''un mystère caché au cœur d''une forêt mystique.', 120, 'Canada'),
 (38, 'Réalité Parallèle', '3 décembre 2022', 'realite_parallele.jpg', 12, 'Science-fiction', 'Sophie Laurent', 'Des voyageurs découvrent des réalités alternatives où chaque choix a des conséquences inattendues.', 140, 'Japon'),
-(39, 'Le Violoniste de Minuit', '15 septembre 2024', 'violoniste_minuit.jpg', 10, 'Drame', 'Alexandre Lavoie', 'Un virtuose du violon joue des mélodies envoûtantes la nuit attirant l''attention d''une audience mystérieuse.', 100, 'Allemagne'),
-(40, 'Les Mondes Parallèles', '10 mai 2026', 'mondes_paralleles.jpg', 11, 'Science-fiction', 'Éric Dubois', 'Cette série raconte une découverte scientifique ouvre la porte à des mondes parallèles, chacun avec ses propres défis et mystères.', 120, 'Canada'),
-(41, 'La Quête Infinie', '6 septembre 2027', 'quete_infinie.jpg', 13, 'Aventure', 'Juliette Martin', 'Cette série raconte une quête épique à travers des royaumes fantastiques à la recherche d''un artefact mystique aux pouvoirs infinis.', 135, 'France'),
-(42, 'Le Pouvoir de l Esprit', '18 janvier 2028', 'pouvoir_esprit.jpg', 10, 'Fantasy', 'Lucas Tremblay', 'Cette série raconte l histoire que des individus découvrent qu''ils ont des pouvoirs psychiques uniques et doivent apprendre à les maîtriser pour sauver le monde.', 110, 'États-Unis'),
-(43, 'La Révolution Virtuelle', '4 avril 2029', 'revolution_virtuelle.jpg', 12, 'Action', 'Amélie Gérard', 'Cette série raconte  qu une révolution se produit dans un monde virtuel où la liberté et la justice sont remises en question.', 125, 'Japon'),
-(44, 'Les Harmonies Perdues', '22 novembre 2030', 'harmonies_perdues.jpg', 9, 'Drame', 'Thomas Boucher', 'Cette série raconte la recherche de mélodies oubliées révèle des secrets du passé et influence le destin de ceux qui les découvrent.', 100, 'Allemagne');
+(39, 'Le Violoniste de Minuit', '15 septembre 2024', 'violoniste_minuit.jpg', 10, 'Drame', 'Alexandre Lavoie', 'Un virtuose du violon joue des mélodies envoûtantes la nuit attirant l''attention d''une audience mystérieuse.', 100, 'Allemagne');
+
+INSERT INTO film (id_film, titre, date_release, image, prix, genre, realisateur, synopsis, duree, pays, est_serie)
+VALUES
+    (40, 'Les Mondes Parallèles', '10 mai 2026', 'mondes_paralleles.jpg', 11, 'Science-fiction', 'Éric Dubois', 'Cette série raconte une découverte scientifique ouvre la porte à des mondes parallèles, chacun avec ses propres défis et mystères.', 120, 'Canada',1),
+    (41, 'La Quête Infinie', '6 septembre 2027', 'quete_infinie.jpg', 13, 'Aventure', 'Juliette Martin', 'Cette série raconte une quête épique à travers des royaumes fantastiques à la recherche d''un artefact mystique aux pouvoirs infinis.', 135, 'France',1),
+    (42, 'Le Pouvoir de l Esprit', '18 janvier 2028', 'pouvoir_esprit.jpg', 10, 'Fantasy', 'Lucas Tremblay', 'Cette série raconte l histoire que des individus découvrent qu''ils ont des pouvoirs psychiques uniques et doivent apprendre à les maîtriser pour sauver le monde.', 110, 'États-Unis',1),
+    (43, 'La Révolution Virtuelle', '4 avril 2029', 'revolution_virtuelle.jpg', 12, 'Action', 'Amélie Gérard', 'Cette série raconte  qu une révolution se produit dans un monde virtuel où la liberté et la justice sont remises en question.', 125, 'Japon',1),
+    (44, 'Les Harmonies Perdues', '22 novembre 2030', 'harmonies_perdues.jpg', 9, 'Drame', 'Thomas Boucher', 'Cette série raconte la recherche de mélodies oubliées révèle des secrets du passé et influence le destin de ceux qui les découvrent.', 100, 'Allemagne',1);
+
+
+
+-- Insertion des achats
+-- Achats pour l'utilisateur 1 (Clément Pasquet)
+INSERT INTO achat (id_user, id_film) VALUES
+                                         (1, 40), (1, 39), (1, 38), (1, 37), (1, 36), -- Achats des 5 derniers films pour l'utilisateur 1
+                                         (1, 35), (1, 34), (1, 33), (1, 32), (1, 31), -- Ajoutez plus d'achats si nécessaire pour l'utilisateur 1
+                                         (1, 30), (1, 29), (1, 28), (1, 27), (1, 26);
+
+-- Achats pour l'utilisateur 2 (Justine Bernier)
+INSERT INTO achat (id_user, id_film) VALUES
+                                         (2, 25), (2, 24), (2, 23), (2, 22), (2, 21), -- Ajoutez plus d'achats si nécessaire pour l'utilisateur 2
+                                         (2, 20), (2, 19), (2, 18), (2, 17), (2, 16),
+                                         (2, 15), (2, 14), (2, 13), (2, 12), (2, 11);
+
 
 
 -- Insersion des informations de série avec leur foreign key sur film et leur nombre d'épisodes
