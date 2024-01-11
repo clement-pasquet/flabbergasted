@@ -27,7 +27,7 @@ class UserModel extends Model
     public function setEmail($id_user, $newEmail)
     {
         $data = [
-            'email' => $newEmail,
+            'mail' => $newEmail,
         ];
 
         return $this->update($id_user, $data);
@@ -39,11 +39,21 @@ class UserModel extends Model
             ->first();
     }
 
-    public function setName($id_user, $prenom, $nom)
+    // Setter pour modifier le nom d'un utilisateur
+    public function setNom($id_user, $nom)
+    {
+    $data = [
+        'nom'    => $nom,
+    ];
+
+    return $this->update($id_user, $data);
+    }
+
+    // Setter pour modifier le prenom d'un utilisateur
+    public function setPrenom($id_user, $prenom)
     {
     $data = [
         'prenom' => $prenom,
-        'nom'    => $nom,
     ];
 
     return $this->update($id_user, $data);

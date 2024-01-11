@@ -121,7 +121,9 @@ class Inscription extends BaseController
 
         echo $id_user.$prenom.$nom;
 
-        $userModel->setName($id_user, $prenom, $nom);
+        $userModel->setNom($id_user, $nom);
+        $userModel->setPrenom($id_user, $prenom);
+
 
         $user = $session->get('user');
 
