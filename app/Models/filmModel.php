@@ -25,6 +25,6 @@ class filmModel extends Model
 
     public function getFilmByGenre($genre, $number)
     {
-        return $this->where('genre', $genre)->limit($number)->findAll();
+        return $this->where('genre', $genre)->limit($number)->get()->getResultArray();
     }
 }

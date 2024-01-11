@@ -93,7 +93,7 @@
     
   <div class="contentTable">
     
-    <p class="categoryTitle">Film du même genre</p>
+     <p class="categoryTitle">Du même genre</p>
 
     <div id="galerie1" class="galerie">
       <div class="galerieContent">
@@ -101,7 +101,6 @@
               <a href="filmFocused/<?=$film['id_film']?>"><img class="thumbnailGalerie" src="<?=IMG.$film['image']?>" alt="<?=$film['titre']?>"></a>
           <?php endforeach; ?>
       </div>
-    <img onclick="defiler('galerie1')" class="selectionArrow" src="images/arrowRight.png" alt="Flèche de selection"></img> 
     </div>
   </div>
 
