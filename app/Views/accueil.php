@@ -47,7 +47,7 @@
             </a>
         <?php else: ?>
             <!-- Sinon, affichez un espace vide -->
-            <a href="/accountConnection">
+            <a href="/deconnecter">
                 <p class="nunito headerText">Déconnexion</p>
             </a>
         <?php endif; ?>

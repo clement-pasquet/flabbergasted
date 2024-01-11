@@ -86,5 +86,15 @@ class Inscription extends BaseController
 
     }
 
+    // Fonction de "deconnexion" de l'utilisateur
+    public function deconnecter()
+    {
+        $session = session();
+
+        $session->destroy();
+
+        return redirect()->to(base_url('/'));
+    }
+
 
 }
