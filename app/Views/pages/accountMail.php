@@ -1,3 +1,8 @@
+<?php
+$session = session();
+$user = $session->get('user');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,16 +16,14 @@
 </head>
 
 
-
-
 <body>
   <div class="accountMainDiv">
     <p class="accountTitle">Mail</p>
     <p class="accountSubtitle">Le mail que vous indiquez ici sera associé à votre profil.<br>Ce numéro nous permettra de vérifier votre identité en cas de perte de mot de passe, et de vous envoyer des mails que nous considérons importants.</p>
 
-    <form action="#" method="post">
+    <form action="<?php echo base_url('changerMail'); ?>" method="post">
       <p class="accountTitle">Courriel</p>
-      <input id="ChamptexteMail" type="mail" value="adresseemail@gmail.com" placeholder="Entrez votre numéro de téléphone">
+      <input name="mail" id="ChamptexteMail" type="mail" value="<?= $user['mail']; ?>" placeholder="Entrez votre mail">
       
 
       <div class="buttonDiv">

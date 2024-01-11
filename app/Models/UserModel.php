@@ -24,7 +24,7 @@ class UserModel extends Model
         return $this->where(['id_user' => $id_user])->first();
     }
 
-    public function setEmail($id_user, $newEmail)
+    public function setMail($id_user, $newEmail)
     {
         $data = [
             'mail' => $newEmail,

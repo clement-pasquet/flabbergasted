@@ -136,4 +136,32 @@ class Inscription extends BaseController
 
     }
 
+
+    // Change le nom et le prénom d'un compte avec son id
+    public function changerMail()
+    {
+        // Récupérez les données du formulaire
+        $mail = $this->request->getPost('mail');
+
+        $session = session();
+        $id_user = $session->get('user')['id_user'];
+
+        // Création d'une instance du modèle UserModel
+        $userModel = new UserModel();
+
+        echo $mail;
+
+        $userModel->setMail($id_user, $mail);
+
+
+        $user = $session->get('user');
+
+        $user['mail'] = $mail;
+
+        $session->set('user', $user);
+
+        return redirect()->to(base_url('/'));
+
+    }
+
 }
