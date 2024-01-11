@@ -15,7 +15,7 @@ class Inscription extends BaseController
     }
 
     // Gestion de la gestion du formulaire d'inscription de AccountCreate
-    public function sauvegarder()
+    public function creerutilisateur()
     {
         // Récupérez les données du formulaire
         $pseudo = $this->request->getPost('pseudo');
@@ -23,15 +23,26 @@ class Inscription extends BaseController
         $password = $this->request->getPost('password');
         $passwordConfirmation = $this->request->getPost('passwordConfirmation');
 
+        $userModel = new UserModel();
+
+        $userCompared = $userModel->getUserByUsername($pseudo);
+
+        if (isset($userCompared)) {
+            $session = session();
+            $session->setFlashdata('error', 'Votre pseudonyme est déjà pris.');
+
+            // Redirection vers la page précédente (le formulaire)
+            return redirect()->to(base_url( '/accountCreate'));
+        }
+
         if ($password != $passwordConfirmation) {
             $session = session();
-            $session->setFlashdata('error', 'Une erreur est survenue lors de l\'enregistrement.');
+            $session->setFlashdata('error', 'Vos mots de passes ne correspondent pas');
 
             // Redirection vers la page précédente (le formulaire)
             return redirect()->to(base_url('/accountCreate'));
         }
         // Création d'une instance du modèle UserModel
-        $userModel = new UserModel();
 
         // Préparation des données à insérer dans la base de données
         $userData = [
@@ -57,14 +68,13 @@ class Inscription extends BaseController
     public function connecter()
     {
         // Récupérez les données du formulaire
-        $pseudoAndMail = $this->request->getPost('pseudoAndMail');
+        $pseudo = $this->request->getPost('pseudo');
         $password = $this->request->getPost('password');
-        $checkbox = $this->request->getPost('checkbox');
 
         // Création d'une instance du modèle UserModel
         $userModel = new UserModel();
 
-        $user = $userModel->getUserByUsernameOrEmail($pseudoAndMail);
+        $user = $userModel->getUserByUsername($pseudo);
 
         if ($user && password_verify($password, $user['password'])) {
             // Les informations de connexion sont correctes

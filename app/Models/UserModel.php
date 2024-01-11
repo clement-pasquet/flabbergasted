@@ -33,10 +33,9 @@ class UserModel extends Model
         return $this->update($id_user, $data);
     }
 
-    public function getUserByUsernameOrEmail($usernameOrEmail)
+    public function getUserByUsername($username)
     {
-        return $this->where('username', $usernameOrEmail)
-            ->orWhere('mail', $usernameOrEmail)
+        return $this->where('username', $username)
             ->first();
     }
 

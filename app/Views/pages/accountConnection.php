@@ -30,18 +30,13 @@
 
       <form class="mainConnectionDiv" action="<?php echo base_url('connecter'); ?>" method="post">
 
-      <input name="pseudoAndMail" class="mainConnectionChamptexte" type="text" placeholder="Pseudo ou adresse e-mail">
+      <input name="pseudo" class="mainConnectionChamptexte" type="text" placeholder="Pseudonyme">
 
       <div class="mainConnectionPassword">
         <input name="password" class="mainConnectionChamptextePassword" type="password" placeholder="Mot de passe">
         <span class="password-toggle" onclick="togglePasswordVisibility()"><img src="<?= IMG.'eyeIcon.png' ?>" class="eyeIcon" alt="To Toggle Password Visibility" ></span>
       </div>
 
-
-      <div class="checkboxPassword">
-        <input name="checkbox" class="checkboxPasswordInput" type="checkbox" id="passwordCheckbox1">
-        <label class="mainConnectionText" for="passwordCheckbox1">Se souvenir de moi</label>
-      </div>
 
       <button class="connectionButton">
         <p class="nunito connectionButtonText">Se connecter</p>

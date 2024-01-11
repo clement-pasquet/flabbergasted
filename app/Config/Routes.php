@@ -6,7 +6,7 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('/', 'Pages::index');
-$routes->post('inscription', 'Inscription::sauvegarder');
+$routes->post('inscription', 'Inscription::creerutilisateur');
 $routes->post('connecter', 'Inscription::connecter');
 $routes->get('deconnecter', 'Inscription::deconnecter');
 
