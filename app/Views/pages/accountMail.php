@@ -23,8 +23,7 @@ $user = $session->get('user');
 
     <form action="<?php echo base_url('changerMail'); ?>" method="post">
       <p class="accountTitle">Courriel</p>
-      <input name="mail" id="ChamptexteMail" type="mail" value="<?= $user['mail']; ?>" placeholder="Entrez votre mail">
-      
+      <input name="mail" id="ChamptexteMail" type="email" value="<?= $user['mail']; ?>" placeholder="Entrez votre mail" required>
 
       <div class="buttonDiv">
         <button type="submit" class="updateButton">

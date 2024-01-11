@@ -11,6 +11,8 @@ $routes->post('connecter', 'Inscription::connecter');
 $routes->get('deconnecter', 'Inscription::deconnecter');
 $routes->post('changerNomEtPrenom', 'Inscription::changerNomEtPrenom');
 $routes->post('changerMail', 'Inscription::changerMail');
+$routes->post('changerPassword', 'Inscription::changerPassword');
+
 
 
 

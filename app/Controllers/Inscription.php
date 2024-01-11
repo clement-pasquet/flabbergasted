@@ -137,7 +137,7 @@ class Inscription extends BaseController
     }
 
 
-    // Change le nom et le prénom d'un compte avec son id
+    // Change le mail d'un compte avec son id
     public function changerMail()
     {
         // Récupérez les données du formulaire
@@ -157,6 +157,45 @@ class Inscription extends BaseController
         $user = $session->get('user');
 
         $user['mail'] = $mail;
+
+        $session->set('user', $user);
+
+        return redirect()->to(base_url('/'));
+
+    }
+
+    // Change le mot de passe d'un compte avec son id
+    public function changerPassword()
+    {
+        // Récupérez les données du formulaire
+        $password = $this->request->getPost('password');
+        $passwordConfirmation = $this->request->getPost('password');
+
+
+        // Hachage du mdp
+        $password = password_hash($password, PASSWORD_DEFAULT);
+
+        $session = session();
+        $id_user = $session->get('user')['id_user'];
+
+        // Création d'une instance du modèle UserModel
+        $userModel = new UserModel();
+
+        if ($password != $passwordConfirmation) {
+            $session = session();
+            $session->setFlashdata('error', 'Vos mots de passe ne correspondent pas');
+
+            // Redirection vers la page précédente (le formulaire)
+            return redirect()->to(base_url('/accountPassword'));
+        }
+
+        $userModel->setPassword($id_user, $password);
+
+
+
+        $user = $session->get('user');
+
+        $user['password'] = $password;
 
         $session->set('user', $user);
 
