@@ -1,3 +1,8 @@
+<?php
+$session = session();
+$user = $session->get('user');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,9 +14,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
 </head>
-
-
-
 
 <body>
 
@@ -25,7 +27,9 @@
       <div class="accountParameterBlock">
         <div>
           <p class="accountParameterBlockTitle">Nom et Prenom</p>
-          <p class="accountParameterBlockText">Basma Malki</p>
+            <a href="/accountName">
+                <p class="accountParameterBlockText"><?= $user['nom'].' '.$user['prenom']; ?></p>
+            </a>
         </div>
         <a href="/accountName">
           <img class="arrowRight" src="<?= IMG.'arrowRight.png' ?>">
@@ -36,20 +40,10 @@
 
       <div class="accountParameterBlock">
         <div>
-          <p class="accountParameterBlockTitle">Numéro de téléphone</p>
-          <p class="accountParameterBlockText">+33 * ** ** ** **</p>
-        </div>
-        <a href="/accountPhone">
-          <img class="arrowRight" src="<?= IMG.'arrowRight.png' ?>">
-        </a>
-      </div>
-        <img class="BlockLine">
-
-
-      <div class="accountParameterBlock">
-        <div>
           <p class="accountParameterBlockTitle">Adresse e-mail</p>
-          <p class="accountParameterBlockText">adresseemail@gmail.com</p>
+            <a href="/accountMail">
+                <p class="accountParameterBlockText"><?= $user['mail']; ?></p>
+            </a>
         </div>
         <a href="/accountMail">
           <img class="arrowRight" src="<?= IMG.'arrowRight.png' ?>">
