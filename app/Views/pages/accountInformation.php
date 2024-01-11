@@ -26,7 +26,7 @@ $user = $session->get('user');
     <div class="accountParameter">
       <div class="accountParameterBlock">
         <div>
-          <p class="accountParameterBlockTitle">Nom et Prenom</p>
+          <p class="accountParameterBlockTitle">Nom et Prénom</p>
             <a href="/accountName">
                 <p class="accountParameterBlockText"><?= $user['nom'].' '.$user['prenom']; ?></p>
             </a>

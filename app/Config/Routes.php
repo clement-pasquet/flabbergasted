@@ -9,6 +9,7 @@ $routes->get('/', 'Pages::index');
 $routes->post('inscription', 'Inscription::creerutilisateur');
 $routes->post('connecter', 'Inscription::connecter');
 $routes->get('deconnecter', 'Inscription::deconnecter');
+$routes->post('changerNomEtPrenom', 'Inscription::changerNomEtPrenom');
 
 
 

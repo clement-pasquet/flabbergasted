@@ -39,5 +39,14 @@ class UserModel extends Model
             ->first();
     }
 
+    public function setName($id_user, $prenom, $nom)
+    {
+    $data = [
+        'prenom' => $prenom,
+        'nom'    => $nom,
+    ];
+
+    return $this->update($id_user, $data);
+    }
 
 }

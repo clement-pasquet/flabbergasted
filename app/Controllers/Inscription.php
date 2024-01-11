@@ -106,5 +106,32 @@ class Inscription extends BaseController
         return redirect()->to(base_url('/'));
     }
 
+    // Change le nom et le prénom d'un compte avec son id
+    public function changerNomEtPrenom()
+    {
+        // Récupérez les données du formulaire
+        $prenom = $this->request->getPost('prenom');
+        $nom = $this->request->getPost('nom');
+
+        $session = session();
+        $id_user = $session->get('user')['id_user'];
+
+        // Création d'une instance du modèle UserModel
+        $userModel = new UserModel();
+
+        echo $id_user.$prenom.$nom;
+
+        $userModel->setName($id_user, $prenom, $nom);
+
+        $user = $session->get('user');
+
+        $user['prenom'] = $prenom;
+        $user['nom'] = $nom;
+
+        $session->set('user', $user);
+
+        return redirect()->to(base_url('/'));
+
+    }
 
 }
