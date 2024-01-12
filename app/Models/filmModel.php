@@ -27,4 +27,10 @@ class filmModel extends Model
     {
         return $this->where('genre', $genre)->limit($number)->get()->getResultArray();
     }
+
+    // Fonction pour recupérer un film selon son id. N'a pas pu encore etre testé.
+    public function getFilmById($film_id)
+    {
+        return $this->find($film_id);
+    }
 }

@@ -13,6 +13,8 @@ $routes->post('connecter', 'Utilisateur::connecter');
 $routes->post('changerNomEtPrenom', 'Utilisateur::changerNomEtPrenom');
 $routes->post('changerMail', 'Utilisateur::changerMail');
 $routes->post('changerPassword', 'Utilisateur::changerPassword');
+$routes->post('achat', 'Achat::setAchat');
+
 
 
 

@@ -24,5 +24,18 @@ BEGIN
 END //
 DELIMITER ;
 
+
+-- Procédure d'ajout d'un achat
+DELIMITER //
+
+CREATE PROCEDURE ajouterAchat (IN id_user INT, IN id_film INT)
+BEGIN
+    INSERT INTO achat (id_user, id_film)
+    VALUES (id_user, id_film);
+END //
+
+DELIMITER ;
+
+
 -- Partie administrateur ----
 

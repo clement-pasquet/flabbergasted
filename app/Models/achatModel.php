@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 class achatModel extends Model
 {
     protected $table = 'achat';
-    protected $primaryKey = null; // adjust accordingly
+    protected $primaryKey = ['id_user', 'id_film'];
 
     // Crée un nouvelle achat grace a id_user et id_film
     public function setAchat($id_user, $id_film)
