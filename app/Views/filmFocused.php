@@ -52,10 +52,7 @@
     <div class="background"></div>
 
     <div class="focusedDiv">
-      <video controls class="videoFocused">
-        <source src="images/LE%20CHÊNE%20-%20Bande-annonce.mp4" type="video/mp4">
-        Votre navigateur ne prend pas en charge la lecture de vidéos.
-      </video>
+        <iframe class="videoFocused" src="https://www.youtube.com/embed/<?=$film['lien_trailer']?>" title="Bande annonce film" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       
       <div class="focusedDivDescription">
         <p class="nunito categoryTitle"><?= $film['titre']?></p>
@@ -98,7 +95,7 @@
     <div id="galerie1" class="galerie">
       <div class="galerieContent">
           <?php foreach ($filmGenre as $film): ?>
-              <a href="filmFocused/<?=$film['id_film']?>"><img class="thumbnailGalerie" src="<?=IMG.$film['image']?>" alt="<?=$film['titre']?>"></a>
+              <a href="<?=base_url('filmFocused/'.$film['id_film'])?>"><img class="thumbnailGalerie" src="<?=IMG.$film['image']?>" alt="<?=$film['titre']?>"></a>
           <?php endforeach; ?>
       </div>
     </div>
