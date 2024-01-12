@@ -19,19 +19,50 @@ class UserModel extends Model
         return $this->find($id_user);
     }
 
-    public function setEmail($id_user, $newEmail)
+    public function setMail($id_user, $newEmail)
     {
         $data = [
-            'email' => $newEmail,
+            'mail' => $newEmail,
         ];
 
         return $this->update($id_user, $data);
     }
 
-    public function getUserByUsernameOrEmail($usernameOrEmail)
+    public function getUserByUsername($username)
     {
-        return $this->where('username', $usernameOrEmail)
-            ->orWhere('mail', $usernameOrEmail)
+        return $this->where('username', $username)
             ->first();
     }
+
+    // Setter pour modifier le nom d'un utilisateur
+    public function setNom($id_user, $nom)
+    {
+        $data = [
+            'nom'    => $nom,
+        ];
+
+        return $this->update($id_user, $data);
+    }
+
+    // Setter pour modifier le prenom d'un utilisateur
+    public function setPrenom($id_user, $prenom)
+    {
+        $data = [
+            'prenom' => $prenom,
+        ];
+
+        return $this->update($id_user, $data);
+    }
+
+
+    // Setter pour modifier le prenom d'un utilisateur
+    public function setPassword($id_user, $password)
+    {
+        $data = [
+            'password' => $password,
+        ];
+
+        return $this->update($id_user, $data);
+    }
+
 }
