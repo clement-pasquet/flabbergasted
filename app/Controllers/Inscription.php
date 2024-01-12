@@ -169,11 +169,12 @@ class Inscription extends BaseController
     {
         // Récupérez les données du formulaire
         $password = $this->request->getPost('password');
-        $passwordConfirmation = $this->request->getPost('password');
+        $passwordConfirmation = $this->request->getPost('passwordConfirmation');
+
+        var_dump($password);
+        var_dump($passwordConfirmation);
 
 
-        // Hachage du mdp
-        $password = password_hash($password, PASSWORD_DEFAULT);
 
         $session = session();
         $id_user = $session->get('user')['id_user'];
@@ -189,8 +190,10 @@ class Inscription extends BaseController
             return redirect()->to(base_url('/accountPassword'));
         }
 
-        $userModel->setPassword($id_user, $password);
+        // Hachage du mdp
+        $password = password_hash($password, PASSWORD_DEFAULT);
 
+        $userModel->setPassword($id_user, $password);
 
 
         $user = $session->get('user');

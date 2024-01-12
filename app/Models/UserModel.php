@@ -59,4 +59,15 @@ class UserModel extends Model
     return $this->update($id_user, $data);
     }
 
+
+    // Setter pour modifier le prenom d'un utilisateur
+    public function setPassword($id_user, $password)
+    {
+        $data = [
+            'password' => $password,
+        ];
+
+        return $this->update($id_user, $data);
+    }
+
 }
