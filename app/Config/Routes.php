@@ -6,13 +6,13 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('/', 'Pages::index');
-$routes->get('deconnecter', 'Inscription::deconnecter');
+$routes->get('deconnecter', 'Utilisateur::deconnecter');
 
-$routes->post('inscription', 'Inscription::creerutilisateur');
-$routes->post('connecter', 'Inscription::connecter');
-$routes->post('changerNomEtPrenom', 'Inscription::changerNomEtPrenom');
-$routes->post('changerMail', 'Inscription::changerMail');
-$routes->post('changerPassword', 'Inscription::changerPassword');
+$routes->post('inscription', 'Utilisateur::creerutilisateur');
+$routes->post('connecter', 'Utilisateur::connecter');
+$routes->post('changerNomEtPrenom', 'Utilisateur::changerNomEtPrenom');
+$routes->post('changerMail', 'Utilisateur::changerMail');
+$routes->post('changerPassword', 'Utilisateur::changerPassword');
 
 
 

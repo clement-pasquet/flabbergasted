@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Models\UserModel;
 
-class Inscription extends BaseController
+class Utilisateur extends BaseController
 {
     protected $db; // Assurez-vous que la propriété $db est définie dans votre contrôleur
 
