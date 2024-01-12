@@ -21,4 +21,14 @@ class achatModel extends Model
 
     }
 
+    // Donne tous les ids des films achetés par un user. Pas utilisé car il existe une procédure stockée pour faire la même chose
+    public function getFilmIdsByUserId($id_user)
+    {
+        // Appel de la procédure stockée
+        $query = "CALL getFilmIdsByUserId(?)";
+        $result = $this->db->query($query, [$id_user]);
+
+        return $result->getResultArray(); // Retourne un tableau des id_film
+    }
+
 }

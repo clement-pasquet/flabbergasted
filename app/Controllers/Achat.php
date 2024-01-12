@@ -15,7 +15,7 @@ class Achat extends BaseController
     }
 
     // Rajout d'un achat à la table achat grace à un id_user et id_film donnés en post
-        public function setAchat()
+    public function setAchat()
     {
         // Récupérez les données du formulaire
         $id_film = $this->request->getPost('id_film');
@@ -51,4 +51,51 @@ class Achat extends BaseController
         return redirect()->to(base_url('/'));
     }
 
+
+    // Fonction regardant dans la table achat pour récupérer les id des films achetés par l'utilisateur pour les afficher dans yourMovies
+    public function getFilmByuser_id()
+    {
+        $session = session();
+
+        // Vérifier si l'utilisateur est connecté
+        if (!session()->has('user')) {
+            // Rediriger l'utilisateur vers la page de connexion ou afficher un message d'erreur
+            return redirect()->to(base_url('/'));
+        }
+
+        // Récupére l'id de l'utilisateur à partir de la session
+        $id_user = $session->get('user')['id_user'];
+
+        // Récupère les ids de films correspondant grâce à la procédure stockée
+        $query = "CALL getFilmIdsByUserId(?)";
+        $result = $this->db->query($query, [$id_user]);
+
+        $filmIds = $result->getResultArray(); // Retourne un tableau des id_film
+
+
+        $filmList = [];
+        $serieFilm = [];
+
+
+        foreach ($filmIds as $filmId) {
+            // Utilise la procédure stockée getFilmById pour obtenir les détails du film
+            $queryGetFilm = "CALL getFilmById(?)";
+            $resultGetFilm = $this->db->query($queryGetFilm, [$filmId['id_film']]);
+            $currentFilm = $resultGetFilm->getRowArray();
+
+            // Si la récupération du film grâce à son id a fonctionnée
+            if ($currentFilm) {
+                // Différencie les films des séries
+                if ($currentFilm['est_serie'] == 1) {
+                    $serieFilm[] = $currentFilm; // Ajoute à la liste des séries
+                } else {
+                    $filmList[] = $currentFilm; // Ajoute à la liste des films
+                }
+            }
+        }
+
+        // Passe les détails des films et des séries à la vue pour affichage
+
+        return view('pages/yourMovies', ['films' => $filmList, 'series' => $serieFilm]);
+    }
 }

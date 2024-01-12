@@ -1,3 +1,8 @@
+<?php
+$session = session();
+$user = $session->get('user')
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,7 +60,9 @@
   
     <div id="galerie2" class="galerie"> 
       <div class="galerieContent">
-        <img class="thumbnailGalerie" src="<?= IMG.'rectangle_17.png' ?>"></img>
+          <?php foreach ($films as $film): ?>
+                <a href="filmFocused/<?=$film['id_film']?>"><img class="thumbnailGalerie" src="<?=IMG.$film['image']?>" alt="<?=$film['titre']?>"></a>
+          <?php endforeach; ?>
       </div>
     <img onclick="defiler('galerie2')" class="selectionArrow" src="<?= IMG.'arrowRight.png' ?>" alt="Flèche de selection"></img>
     </div>
@@ -64,7 +71,9 @@
   
     <div id="galerie3" class="galerie"> 
       <div class="galerieContent">
-        <img class="thumbnailGalerie" src="<?= IMG.'rectangle_17.png' ?>"></img>
+          <?php foreach ($series as $serie): ?>
+                <a href="filmFocused/<?=$serie['id_film']?>"><img class="thumbnailGalerie" src="<?=IMG.$serie['image']?>" alt="<?=$serie['titre']?>"></a>
+          <?php endforeach; ?>
       </div>
     <img onclick="defiler('galerie3')" class="selectionArrow" src="<?= IMG.'arrowRight.png' ?>" alt="Flèche de selection"></img>
     </div>

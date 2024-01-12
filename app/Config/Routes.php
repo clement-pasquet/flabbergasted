@@ -7,6 +7,7 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Pages::index');
 $routes->get('deconnecter', 'Utilisateur::deconnecter');
+$routes->get('yourMovies', 'Achat::getFilmByuser_id');
 
 $routes->post('inscription', 'Utilisateur::creerutilisateur');
 $routes->post('connecter', 'Utilisateur::connecter');
