@@ -1,4 +1,7 @@
-
+<?php
+$session = session();
+$user = $session->get('user')
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -38,9 +41,7 @@
     <div class="headerRight">
       <!-- Groupe à droite avec texte et image du compte/de la connexion au compte -->
 
-        <?php $session = session();  ?>
-
-        <?php if (!$session->get('user')): ?>
+        <?php if (!$user): ?>
             <!-- Si l'utilisateur n'est pas connecté, affichez le lien de connexion -->
             <a href="/accountConnection">
                 <p class="nunito headerText">Connexion</p>
@@ -54,9 +55,12 @@
             </a>
         <?php else: ?>
             <!-- Sinon, affichez un espace vide -->
-            <a href="/deconnecter">
-                <p class="nunito headerText">Déconnexion</p>
-            </a>
+            <div class="boxDeco">
+                <p class="nunito username"><?=$user['username']?></p>
+                <a href="/deconnecter">
+                    <p class="nunito headerText">Déconnexion</p>
+                </a>
+            </div>
 
             <a href="/accountInformation">
               <svg class="logo" width="61" height="61" viewBox="0 0 61 61" fill="none" xmlns="http://www.w3.org/2000/svg">

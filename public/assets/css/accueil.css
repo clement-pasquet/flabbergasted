@@ -187,4 +187,11 @@ body {
 	z-index: 2; /* Pour placer la flèche au-dessus des miniatures */
 }
 
-/* Fin des paramètres de la galerie */
+.boxDeco{
+	display: flex;
+	flex-direction: column;
+}
+
+.username{
+	margin: 0;
+}
