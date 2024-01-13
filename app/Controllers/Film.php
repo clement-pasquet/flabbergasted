@@ -27,14 +27,14 @@ class Film extends BaseController
 
 
         $films = $filmInstance->getFilmByTitle($wordSearch);
-
+        return view('pages/resultSearch', ['films' => $films]);
 /*
         if (isset($filmRes)) {
             return view('accueil', ['filmResultat' => $filmRes]);
         } else {
             $filmRes = 'pas trouver';
             return view('accueil', ['filmResultat' => $filmRes]);
-        }*/
+        }
 
         if (isset($films)) {
             foreach ($films as $film) {
@@ -47,6 +47,6 @@ class Film extends BaseController
         } else {
             echo 'pas trouver';
         }
-        return $films;
+        return $films;*/
     }
 }
