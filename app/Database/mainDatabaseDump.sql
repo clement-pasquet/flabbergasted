@@ -202,7 +202,7 @@ CREATE TABLE `utilisateur` (
   `nom` varchar(64) NOT NULL,
   `prenom` varchar(64) NOT NULL,
   PRIMARY KEY (`id_user`)
-) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -230,10 +230,20 @@ UNLOCK TABLES;
 /*!50003 SET character_set_results = utf8mb3 */ ;
 /*!50003 SET collation_connection  = utf8mb3_general_ci */ ;
 DELIMITER ;;
-CREATE DEFINER=`admin`@`localhost` PROCEDURE `ajouterAchat`(IN id_user INT, IN id_film INT)
+CREATE DEFINER=`admin`@`localhost` PROCEDURE `ajouterAchat`(IN p_id_user INT, IN p_id_film INT)
 BEGIN
-    INSERT INTO achat (id_user, id_film)
-    VALUES (id_user, id_film);
+    DECLARE user_already_purchased BOOLEAN;
+
+    
+    SELECT COUNT(*) INTO user_already_purchased
+    FROM achat
+    WHERE id_user = p_id_user AND id_film = p_id_film;
+
+    
+    IF user_already_purchased = 0 THEN
+        INSERT INTO achat (id_user, id_film)
+        VALUES (p_id_user, p_id_film);
+    END IF;
 END ;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
@@ -324,4 +334,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-01-13 20:48:44
+-- Dump completed on 2024-01-13 21:05:43

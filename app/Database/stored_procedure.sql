@@ -28,13 +28,24 @@ DELIMITER ;
 -- Procédure d'ajout d'un achat
 DELIMITER //
 
-CREATE PROCEDURE ajouterAchat (IN id_user INT, IN id_film INT)
+CREATE PROCEDURE ajouterAchat(IN p_id_user INT, IN p_id_film INT)
 BEGIN
-    INSERT INTO achat (id_user, id_film)
-    VALUES (id_user, id_film);
+    DECLARE user_already_purchased BOOLEAN;
+
+    -- Vérifier si l'utilisateur a déjà acheté le film
+    SELECT COUNT(*) INTO user_already_purchased
+    FROM achat
+    WHERE id_user = p_id_user AND id_film = p_id_film;
+
+    -- Utilisateur n'a pas encore acheté le film, ajouter l'achat
+    IF user_already_purchased = 0 THEN
+        INSERT INTO achat (id_user, id_film)
+        VALUES (p_id_user, p_id_film);
+    END IF;
 END //
 
 DELIMITER ;
+
 
 
 
