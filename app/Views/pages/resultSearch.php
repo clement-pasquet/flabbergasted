@@ -14,7 +14,7 @@
 <?php foreach ($films as $film): ?>
     <a href="../filmFocused/<?=$film['id_film']?>" class="link_style"><p>ID du film :<?= $film['titre']?></p><br>
                                     <p>Genre :<?= $film['genre']?></p><br>
-        <p>ID du film :<?= $film['likes']?></p></a>
+        <p>NB likes :<?= $film['likes']?></p></a>
 <?php endforeach; ?>
 <?php endif; ?>
 </body>

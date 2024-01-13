@@ -18,13 +18,14 @@ class Film extends BaseController
     public function chercher()
     {
         // Récupérez les données du formulaire
-        $wordSearch = $this->request->getPost('titre');
+        $titre = $this->request->getPost('titre');
 
         // Création d'un instance du modèle filmModel
         $filmInstance = new filmModel();
 
         // je regarde si le film est dans la bd
-        $filmResultat = $filmInstance->getFilmByTitle($wordSearch);
+        $filmResultat = $filmInstance->getFilmByTitleAndLike($titre);
+
         return view('pages/resultSearch', ['films' => $filmResultat]);
     }
 
