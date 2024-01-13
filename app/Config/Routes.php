@@ -17,7 +17,7 @@ $routes->post('changerNomEtPrenom', 'Utilisateur::changerNomEtPrenom');
 $routes->post('changerMail', 'Utilisateur::changerMail');
 $routes->post('changerPassword', 'Utilisateur::changerPassword');
 $routes->post('achat', 'Achat::setAchat');
-
+$routes->post('chercher', 'Film::chercher');
 
 
 

@@ -34,10 +34,12 @@ $user = $session->get('user')
     </div>
   </div>
 
-  <!-- Barre de recherche au milieu -->
-    <input type="text" name="autocomplete" class="searchbar" placeholder="Rechercher un film ou une série">
-
-
+    <div>
+        <!-- Barre de recherche au milieu -->
+        <form action="<?= base_url('chercher') ?>" method="post" id="searchForm">
+            <input name="titre" type="text" name="autocomplete" class="searchbar" placeholder="Rechercher un film ou une série" id="searchInput">
+        </form>
+    </div>
     <div class="headerRight">
       <!-- Groupe à droite avec texte et image du compte/de la connexion au compte -->
 

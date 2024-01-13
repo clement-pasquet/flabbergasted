@@ -33,4 +33,7 @@ class filmModel extends Model
     {
         return $this->find($film_id);
     }
+    public function getFilmByTitle($titre) {
+        return $this->like('Lower(titre)', strtolower($titre))->findAll();
+    }
 }
