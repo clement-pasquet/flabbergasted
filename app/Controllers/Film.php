@@ -24,30 +24,8 @@ class Film extends BaseController
         $filmInstance = new filmModel();
 
         // je regarde si le film est dans la bd
-
-
-        $films = $filmInstance->getFilmByTitle($wordSearch);
-
-/*
-        if (isset($filmRes)) {
-            return view('accueil', ['filmResultat' => $filmRes]);
-        } else {
-            $filmRes = 'pas trouver';
-            return view('accueil', ['filmResultat' => $filmRes]);
-        }*/
-
-        if (isset($films)) {
-            foreach ($films as $film) {
-                echo 'ID du film : ' . $film['id_film'] . '<br>';
-                echo 'Titre : ' . $film['titre'] . '<br>';
-                echo 'Genre : ' . $film['genre'] . '<br>';
-                // Ajoutez d'autres détails du film selon votre structure de base de données
-                echo '<hr>';
-            }
-        } else {
-            echo 'pas trouver';
-        }
-        return $films;
+        $filmResultat = $filmInstance->getFilmByTitle($wordSearch);
+        return view('pages/resultSearch', ['films' => $filmResultat]);
     }
 
     // Nouvelle méthode pour passer à la page de paiement avec les détails du film
