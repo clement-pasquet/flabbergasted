@@ -205,8 +205,7 @@ LOCK TABLES `utilisateur` WRITE;
 /*!40000 ALTER TABLE `utilisateur` DISABLE KEYS */;
 INSERT INTO `utilisateur` VALUES
 (1,'clement@pasquet.fr','password','admin','screeny','pasquet','clement'),
-(2,'ju.bernier5@gmail.com','password','admin','ju','bernier','justine'),
-(49,'dzd@zd.com','$2y$10$YQLRdCE9hsmGvMmhn1V7EucmQss.FMYfyjfsJEXhAS6G1T9dgdiAq','adherent','clement','','');
+(2,'ju.bernier5@gmail.com','password','admin','ju','bernier','justine');
 /*!40000 ALTER TABLE `utilisateur` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -219,4 +218,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-01-13 13:44:58
+-- Dump completed on 2024-01-13 18:46:07
