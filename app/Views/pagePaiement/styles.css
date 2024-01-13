@@ -14,10 +14,11 @@
     --font-family:'Open Sans', sans-serif;
 }
 
-body{
-    display: inline-block;
+html {
     margin: 0;
     padding: 0;
+}
+body{
     background: linear-gradient(183deg, rgba(55, 37, 72, 0.95) -5.36%, #000 108.29%);
     background-size: cover;
     background-repeat: no-repeat;
@@ -35,7 +36,7 @@ body{
     flex-direction: column;
 }
 .connectionLogo{
-    margin-left: 1300px;
+    margin-left: 85vw;
     width: 128px;
     height: 128px;
 }
@@ -43,6 +44,7 @@ body{
     display: flex;
     flex-direction: column;
     height: fit-content;
+    margin-top: 20vh;
 }
 .Prix{
     display: flex;
@@ -56,17 +58,13 @@ body{
 }
 .resume{
     background: #FFF;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     border-radius: 10px;
-    margin: 32px 32px 0px 0px;
-    width: fit-content;
+    width: 35vw;
 }
 .Info-personnelles{
-    background: #FFF;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -89,11 +87,27 @@ body{
     flex-direction: column;
     justify-content: flex-start;
     line-height: 150%;
-    color: var(--Secondary-500);
+    color: #F0F0F0;
     letter-spacing: -0.03em;
     margin-top: 24px;
     margin-right: 116;
     margin-bottom: 4px;
+    margin-left: 24px;
+}
+.Titre11{
+    font-family: var(--font-family);
+    font-weight: var(--Bold);
+    font-size: var(--type-l);
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    line-height: 150%;
+    color: #000000;
+    letter-spacing: -0.03em;
+    margin-top: 24px;
+    margin-right: 116;
+    margin-bottom: 35px;
     margin-left: 24px;
 }
 .Sous-titre1{
@@ -105,33 +119,46 @@ body{
     flex-direction: column;
     justify-content: flex-start;
     line-height: 150%;
-    color: var(--Secondary-300);
+    color: #D8D8D8;
     letter-spacing: -0.02em;
     margin-top: 0px;
     margin-right: 116;
     margin-bottom: 33px;
     margin-left: 24px;
 }
-.resume-voiture{
+.Sous-titre11{
+    font-family: var(--font-family);
+    font-weight: var(--Regular);
+    font-size: var(--type-s);
+    font-style: normal;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin: 0px 16px 32px 24px;
-    background: #3563E9;
-    border-radius: 8px;
+    line-height: 150%;
+    color: #000000;
+    letter-spacing: -0.02em;
+    margin-top: -35px;
+    margin-right: 116;
+    margin-bottom: 33px;
+    margin-left: 24px;
+}
+.resume-achat{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0vh 2.67vw 5.33vh 3.2vw;
     width: fit-content;
 }
-.nom-voiture{
+.nom-film{
     font-family: var(--font-family);
     font-style: normal;
     font-weight: var(--Bold);
-    font-size: var(--type-2xl);
+    font-size: var(--type-xl);
     line-height: 150%;
     display: flex;
     align-items: center;
     letter-spacing: -0.03em;
-    color: var(--Secondary-500);
-    margin: 33px 100px 66px 0px;
+    margin: 33px 10px 66px 0px;
 }
 hr{
     align-items: center;
@@ -156,7 +183,6 @@ hr{
     line-height: 150%;
     align-items: center;
     letter-spacing: -0.02em;
-    color: var(--Secondary-300);
     margin: 0px 212px 0px 24px;
     display: flex;
     flex-direction: column;
@@ -171,30 +197,29 @@ hr{
     display: flex;
     align-items: center;
     letter-spacing: -0.02em;
-    color: var(--Secondary-500);
     margin-left: auto;
     margin-right: 24px;
     margin-top: 0px;
     text-align: right;
 }
-.Appliquer{
-    background-color: var(--Primary-0);
+.code-promo{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
-    border-radius: 4px;
-    border-color: var(--Secondary-400);
+    margin: 0px 0px 0px 0px;
+}
+.Appliquer{
+    background-color: #01F9BB;
+    border-radius: 10px;
+    border-color: #01F9BB;
     border-width: 1px;
     border-style:solid;
-    margin-top: -12px;
-    margin-right: 0px;
-    margin-bottom: 0px;
-    margin-left: 24px;
-    justify-items: center;
-    justify-content: center;
-    vertical-align: center;
-    padding: 9px 16px 9px 16px;
-    color: var(--Secondary-500);
+    margin-top: 15px;
+    margin-right: 68px;
+    margin-bottom: 20px;
+    margin-left: 28px;
+    padding: 14px,27px,15px,46px;
+    color:  #000000;
     font-family: var(--font-family);
     font-size: var(--type-s);
     font-weight: var(--Semibold);
@@ -203,7 +228,8 @@ hr{
     font-style: normal;
     line-height: 150%;
     text-decoration: none;
-    width: fit-content;
+    width: 187px;
+    height: 53px;
 }
 .Final-prix{
     font-family: 'Plus Jakarta Sans' ;
@@ -214,7 +240,6 @@ hr{
     display: flex;
     align-items: center;
     letter-spacing: -0.02em;
-    color: var(--Secondary-500);
     margin-left: auto;
     margin-right: 24px;
     margin-top: 0px;
@@ -230,20 +255,18 @@ label{
     flex-direction: column;
     justify-content: flex-start;
     line-height: 150%;
-    color: var(--Secondary-500);
     letter-spacing: -0.02em;
     margin: 0px 32px 0px 24px;
 }
 .Entry{
     width: 322px;
-    background-color: var(--Primary-0);
+    background-color: rgba(255, 255, 255, 1);
     border-radius: 10px;
-    border-color: var(--Secondary-400);
+    border-color: #000000;
     margin: 16px 8px 24px 24px;
     border-style: solid;
     border-width: 1px;
     padding: 16px 32px 16px 32px;
-    color: var(--Secondary-300);
     font-family: var(--font-family);
     font-weight: var(--Regular);
     font-size: var(--type-s);
@@ -252,7 +275,6 @@ label{
 
 }
 .Location{
-    background-color: var(--Primary-0);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -271,7 +293,6 @@ label{
     flex-direction: column;
     justify-content: flex-start;
     line-height: 150%;
-    color: var(--Secondary-500);
     letter-spacing: -0.02em;
     margin: 1px 474px 24px 24px;
 }
@@ -279,13 +300,11 @@ select{
     position: absolute;
     padding: 16px 51px 16px 32px;
     width: 386px;
-    background-color: var(--Primary-0);
     border-radius: 10px;
     border-color: var(--Secondary-400);
     margin: 16px 32px 24px 24px;
     border-style: solid;
     border-width: 1px;
-    color: var(--Secondary-900);
     font-family: var(--font-family);
     font-weight: var(--Regular);
     font-size: var(--type-s);
@@ -314,12 +333,10 @@ select{
     flex-direction: column;
     justify-content: flex-start;
     line-height: 150%;
-    color: var(--Secondary-500);
     letter-spacing: -0.02em;
     margin: 1px 474px 24px 24px;
 }
 .Paiement{
-    background-color: var(--Primary-0);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -328,7 +345,7 @@ select{
     width: fit-content;
 }
 .box1{
-    background-color: var(--Secondary-100);
+    background-color: #D9D9D9;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -338,7 +355,7 @@ select{
     padding-right: 16px;
 }
 .box2{
-    background-color: var(--Secondary-100);
+    background-color:#D9D9D9 ;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -346,14 +363,7 @@ select{
     margin: 0px 24px 24px 24px;
 
 }
-.box3{
-    background-color: var(--Secondary-100);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    border-radius: 10px;
-    margin: 0px 24px 24px 24px;
-}
+
 .header-paiement{
     display: flex;
     flex-direction: row;
@@ -365,7 +375,6 @@ select{
     font-size: var(--type-base);
     font-weight: var(--Semibold);
     letter-spacing: -0.02em;
-    color: var(--Secondary-500);
     margin: 24px 403px 32px 0px;
     display: flex;
     flex-direction: column;
@@ -376,7 +385,6 @@ select{
     font-size: var(--type-base);
     font-weight: var(--Semibold);
     letter-spacing: -0.02em;
-    color: var(--Secondary-500);
     margin: 16px 544px 16px 0px;
     display: flex;
     flex-direction: column;
@@ -387,7 +395,6 @@ select{
     font-size: var(--type-base);
     font-weight: var(--Semibold);
     letter-spacing: -0.02em;
-    color: var(--Secondary-500);
     margin: 16px 546px 16px 0px;
     display: flex;
     flex-direction: column;
@@ -399,14 +406,11 @@ select{
 }
 .Entry2{
     width: 298px;
-    background-color: var(--Primary-0);
     border-radius: 10px;
-    border-color: var(--Secondary-400);
     margin: 16px 8px 24px 24px;
     border-style: solid;
     border-width: 1px;
     padding: 16px 32px 16px 32px;
-    color: var(--Secondary-300);
     font-family: var(--font-family);
     font-weight: var(--Regular);
     font-size: var(--type-s);
@@ -425,18 +429,11 @@ select{
     display: flex;
     flex-direction: row;
 }
-.Bitcoin-Icon{
-    margin-left: auto;
-    margin-right: 24px;
-    display: flex;
-    flex-direction: row;
-}
 .BoutonPaiement{
     width: 20px;
     height: 20px;
     margin: 26px 8px 32px 24px;
     border-width: 1.5px;
-    border-color: var(--Secondary-300);
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -446,7 +443,6 @@ select{
     height: 20px;
     margin: 16px 8px 16px 24px;
     border-width: 1.5px;
-    border-color: var(--Secondary-300);
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -456,13 +452,11 @@ select{
     height: 20px;
     margin: 16px 8px 16px 24px;
     border-width: 1.5px;
-    border-color: var(--Secondary-300);
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
 }
 .confirmation{
-    background-color: var(--Primary-0);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -484,7 +478,6 @@ select{
     flex-direction: row;
     justify-content: flex-start;
     letter-spacing: -0.02em;
-    color: var(--Secondary-500);
     margin: 0px 101px 24px 0px;
     align-items: center;
     text-align: left;
@@ -499,7 +492,6 @@ select{
     flex-direction: row;
     justify-content: flex-start;
     letter-spacing: -0.02em;
-    color: var(--Secondary-500);
     margin-right: 130px;
     align-items: center;
     text-align: left;
@@ -519,13 +511,13 @@ select{
 
 }
 .button{
-    background-color: var(--Primary-500);
+    background-color: #01F9BB;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     border-radius: 4px;
     border-style: none;
-    margin-top: 96px;
+    margin-top: 40px;
     margin-right: 736px;
     margin-bottom: 30px;
     margin-left: 24px;
@@ -533,7 +525,7 @@ select{
     justify-content: center;
     vertical-align: center;
     padding: 13px 24px 13px 24px;
-    color: var(--Primary-0);
+    color: #000000;
     font-family: var(--font-family);
     font-size: var(--type-s);
     font-weight: var(--Semibold);
@@ -548,4 +540,10 @@ select{
     display: flex;
     flex-direction: row;
     width: fit-content;
+}
+.Option{
+    color: #F0F0F0;
+}
+.labelcolor{
+    color: #F0F0F0;
 }

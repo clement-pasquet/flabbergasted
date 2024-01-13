@@ -1,191 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Paiement page</title>
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 <header>
-  <img class="connectionLogo" src="Image/logo1.png" alt="Logo Flabbergaster"></img>
+  <img class="connectionLogo" src="Image/logo1.png" alt="Logo Flabbergaster">
 </header>
+
 <div class="Top-page">
+  <!-- Left Part - Informations personnelles -->
   <div class="left-part">
     <div class="Info-personnelles">
       <p class="Titre1">Informations personnelles</p>
       <p class="Sous-titre1">Merci de remplir vos informations personnelles</p>
       <div class="input-pos">
+        <!-- Input Fields for Personal Information -->
         <div>
-          <label for="nom">Nom</label>
+          <label class="labelcolor" for="nom">Nom</label>
           <input name="nom" class="Entry" placeholder="Simon Strueux" />
         </div>
-
         <div>
-          <label for="num">Numéro de téléphone</label>
-          <input name="num" class="Entry" placeholder="0123456789"/>
+          <label class="labelcolor" for="num">Numéro de téléphone</label>
+          <input name="num" class="Entry" placeholder="0123456789" />
         </div>
-
         <div>
-          <label for="adresse">Adresse</label>
-          <input name="adresse" class="Entry" placeholder="2 rue de la poésie"/>
+          <label class="labelcolor" for="adresse">Adresse</label>
+          <input name="adresse" class="Entry" placeholder="2 rue de la poésie" />
         </div>
-
         <div>
-          <label for="ville">Ville</label>
-          <input name="ville" class="Entry" placeholder="Nantes"/>
-        </div>
-      </div>
-    </div>
-    <div class="Location">
-      <p class="Titre1">Location</p>
-      <p class="Sous-titre1">Merci de préciser les dates de location</p>
-      <p class="info1">Début de location</p>
-      <div class="input-pos2">
-        <div>
-          <label for="ville" >Ville</label>
-          <select name="ville"  required>
-            <option disabled selected value="">Sélectionner votre ville</option>
-            <option>Paris</option>
-            <option>Nantes</option>
-            <option>Bordeaux</option>
-            <option>Marseille</option>
-          </select>
-        </div>
-
-        <div>
-          <label for="date" >Date</label>
-          <input name="date" class="Entry" placeholder="jj / mm / aaaa"/>
-        </div>
-
-        <div>
-          <label for="heure" >Heure</label>
-          <input name="heure" class="Entry" placeholder="-- : --"/>
-        </div>
-      </div>
-      <p class="info2">Fin de location</p>
-      <div class="input-pos2">
-        <div>
-          <label for="ville" >Ville</label>
-          <select name="ville"  required>
-            <option disabled selected value="">Sélectionner votre ville</option>
-            <option>Paris</option>
-            <option>Nantes</option>
-            <option>Bordeaux</option>
-            <option>Marseille</option>
-          </select>
-        </div>
-
-        <div>
-          <label for="date" >Date</label>
-          <input name="date" class="Entry" placeholder="jj / mm / aaaa"/>
-        </div>
-
-        <div>
-          <label for="heure" >Heure</label>
-          <input name="heure" class="Entry" placeholder="-- : --"/>
+          <label class="labelcolor" for="ville">Ville</label>
+          <input name="ville" class="Entry" placeholder="Nantes" />
         </div>
       </div>
     </div>
 
+    <!-- Paiement - Méthode de paiement -->
     <div class="Paiement">
       <p class="Titre1">Méthode de paiement</p>
       <p class="Sous-titre1">Merci de renseigner vos informations de paiement</p>
+
+      <!-- Box 1 - Carte de crédit -->
       <div class="box1">
+        <!-- Header for Carte de crédit -->
         <div class="header-paiement">
+          <!-- Input Fields for Carte de crédit -->
           <input name="Option1" type="radio" class="BoutonPaiement" required />
-          <label for="Option1" class="optiondepaiement"  >Carte de crédit</label>
-          <img src="../images/Visaicon.svg" alt="Visa-Icon" class="Visa-Icon">
+          <label for="Option1" class="optiondepaiement">Carte de crédit</label>
+          <img src="Image/Visa.svg" alt="Visa-Icon" class="Visa-Icon">
         </div>
         <div class="input-pos3">
           <div>
             <label for="carte">Numéro de carte</label>
             <input name="carte" class="Entry2" placeholder="1234 5678 1234 5678" maxlength="16" required />
           </div>
-
           <div>
             <label for="expiration">Date d’expiration</label>
-            <input name="expiration" class="Entry2" placeholder="mm / aa"/>
+            <input name="expiration" class="Entry2" placeholder="mm / aa" />
           </div>
-
           <div>
             <label for="nomcarte">Nom sur la carte</label>
-            <input name="nomcarte" class="Entry2" placeholder="Simon Strueux"/>
+            <input name="nomcarte" class="Entry2" placeholder="Simon Strueux" />
           </div>
-
           <div>
             <label for="cvc">CVC</label>
-            <input name="cvc" class="Entry2" placeholder="123"/>
+            <input name="cvc" class="Entry2" placeholder="123" />
           </div>
         </div>
       </div>
 
+      <!-- Box 2 - Paypal -->
       <div class="box2">
+        <!-- Header for Paypal -->
         <div class="header-paiement">
           <input name="Option1" type="radio" class="BoutonPaiement2" required />
-          <label for="Option1" class="optiondepaiement2"  >Paypal</label>
-          <img src="../images/PayPal.svg" alt="Paypal-Icon" class="Paypal-Icon">
-        </div>
-      </div>
-
-      <div class="box3">
-        <div class="header-paiement">
-          <input name="Option1" type="radio" class="BoutonPaiement3" required />
-          <label for="Option1" class="optiondepaiement3">Bitcon</label>
-          <img src="../images/Bitcoin.svg" alt="Bitcoin-Icon" class="Bitcoin-Icon">
+          <label for="Option1" class="optiondepaiement2">Paypal</label>
+          <img src="Image/PayPal.svg" alt="Paypal-Icon" class="Paypal-Icon">
         </div>
       </div>
     </div>
+
+    <!-- Confirmation -->
     <div class="confirmation">
       <p class="Titre1">Confirmation</p>
       <p class="Sous-titre1">Nous arrivons vers la fin. Juste quelques clics et votre location est prête !</p>
+
+      <!-- Checkboxes for Confirmation -->
       <div class="choix1">
         <input name="Option1" type="checkbox" class="checkbox1" required />
-        <label for="Option1">J’accepte de recevoir des offres promotionnelles.</label>
+        <label class="Option" for="Option1">J’accepte de recevoir des offres promotionnelles.</label>
       </div>
       <div class="choix2">
         <input name="Option2" type="checkbox" class="checkbox2" required />
-        <label for="Option2" >J’accepte les conditions de vente et la politique privée du site.</label>
+        <label class="Option" for="Option2">J’accepte les conditions de vente et la politique privée du site.</label>
       </div>
-      <button class="button">Louer
-      </button>
+
+      <!-- Purchase Button -->
+      <button class="button">Acheter</button>
     </div>
   </div>
+
+  <!-- Right Part - Résumé de l'achat -->
   <div class="right-part">
     <div class="resume">
-      <p class="Titre1">Résumé de la location</p>
-      <p class="Sous-titre1">Les prix peuvent changer selon la durée de la location et le prix de la voiture.</p>
+      <p class="Titre11">Résumé de l'achat</p>
+
+      <!-- Partie 1 - Image and Name -->
       <div class="Partie1-end">
-        <img src="../images/Voitures/Koenigsegg_bg.png" alt="Koenigsegg" class="resume-voiture">
-        <p class="nom-voiture">Koenigsegg</p>
+        <img src="Image/TheMarvels.png" alt="TheMarvels" class="resume-achat">
+        <p class="nom-film">The Marvels</p>
       </div>
+
+      <!-- Code promo Section -->
+      <hr class="seperateur">
+      <label>Code promo</label>
+      <div class="code-promo">
+        <input name="code-pr" class="Entry" placeholder="Code Promo" />
+        <button class="Appliquer">Appliquer</button>
+      </div>
+
+      <!-- Sous-total and Taxes Sections -->
       <hr class="seperateur">
       <div class="sous-total">
         <p class="soustotal-title">Sous-total</p>
-        <p class="money-soustotal">99€</p>
+        <p class="money-soustotal">15.00€</p>
       </div>
       <div class="sous-total">
         <p class="soustotal-title">Taxes</p>
-        <p class="money-soustotal">0€</p>
+        <p class="money-soustotal">0.00€</p>
       </div>
-      <div class="code-promo">
-        <label for="code-pr">Code promo</label>
-        <input name="code-pr" class="Entry" placeholder="XXXXXX"/>
-        <button class="Appliquer">Appliquer</button>
-      </div>
+
+      <!-- Prix Total Section -->
+      <hr class="seperateur">
       <div class="Prix">
         <div class="Titre">
-          <p class="Titre1">Prix total</p>
-          <p class="Sous-titre1">Prix total incluant les remises</p>
+          <p class="Titre11">Prix total</p>
+          <p class="Sous-titre11">Prix total incluant les remises</p>
         </div>
-        <p class="Final-prix">99€</p>
+        <p class="Final-prix">15.00€</p>
       </div>
     </div>
   </div>
