@@ -25,7 +25,6 @@ class Film extends BaseController
 
         // je regarde si le film est dans la bd
 
-
         $films = $filmInstance->getFilmByTitle($wordSearch);
         return view('pages/resultSearch', ['films' => $films]);
 /*
@@ -34,18 +33,6 @@ class Film extends BaseController
         } else {
             $filmRes = 'pas trouver';
             return view('accueil', ['filmResultat' => $filmRes]);
-        }
-
-        if (isset($films)) {
-            foreach ($films as $film) {
-                echo 'ID du film : ' . $film['id_film'] . '<br>';
-                echo 'Titre : ' . $film['titre'] . '<br>';
-                echo 'Genre : ' . $film['genre'] . '<br>';
-                // Ajoutez d'autres détails du film selon votre structure de base de données
-                echo '<hr>';
-            }
-        } else {
-            echo 'pas trouver';
         }
         return $films;*/
     }
