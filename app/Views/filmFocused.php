@@ -1,3 +1,7 @@
+<?php
+$session = session();
+$user = $session->get('user');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,18 +63,37 @@
         <p class="nunito descriptionText"><?=$film['synopsis']?></p>
 
         <div class="interactionBar">
-          <a href="<?= base_url('/pagePaiement') ?>" class="updateButton">
-              <button type="submit" class="updateButton">
-                <p class="nunito updateButtonText">Acheter</p>
-              </button>
-          </a>
+<!--        Sert à rediriger vers la page de paiement avec les bonnes informations-->
+        <form action="<?= base_url('payement') ?>" method="post">
+            <!-- Ajoutez un champ caché pour chaque information du film -->
+            <input type="hidden" name="id_film" value="<?= $film['id_film'] ?>">
+            <input type="hidden" name="titre" value="<?= $film['titre'] ?>">
+            <input type="hidden" name="date_release" value="<?= $film['date_release'] ?>">
+            <input type="hidden" name="image" value="<?= $film['image'] ?>">
+            <input type="hidden" name="prix" value="<?= $film['prix'] ?>">
+            <input type="hidden" name="genre" value="<?= $film['genre'] ?>">
+            <input type="hidden" name="realisateur" value="<?= $film['realisateur'] ?>">
+            <input type="hidden" name="synopsis" value="<?= $film['synopsis'] ?>">
+            <input type="hidden" name="duree" value="<?= $film['duree'] ?>">
+            <input type="hidden" name="pays" value="<?= $film['pays'] ?>">
+            <input type="hidden" name="est_serie" value="<?= $film['est_serie'] ?>">
+            <input type="hidden" name="lien_trailer" value="<?= $film['lien_trailer'] ?>">
+            <input type="hidden" name="likes" value="<?= $film['likes'] ?>">
 
-          <!-- une fonction qui se charge de rajouter le film aux films likés -->
+            <!-- Bouton d'achat -->
+
+            <button type="submit" class="updateButton" <?= isset($user) ? '' : 'disabled' ?>>
+                <p class="nunito updateButtonText">Acheter</p>
+            </button>
+
+        </form>
+
+
+
+            <!-- une fonction qui se charge de rajouter le film aux films likés -->
           <!-- système qui affiche une icon rouge si on a deja liké ou que l'on vient de liker le film -->
         <a href="<?= base_url('liker?id_film=' . $film['id_film']) ?>">
             <?php
-            $session = session();
-            $user = $session->get('user');
             $isUserLoggedIn = $user !== null;
 
             if ($isUserLoggedIn) {

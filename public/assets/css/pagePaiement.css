@@ -29,6 +29,7 @@ body{
 .Top-page{
     display: flex;
     align-items: flex-start;
+    justify-content: space-around;
     flex-direction: row;
 }
 .left-part{
@@ -36,16 +37,19 @@ body{
     flex-direction: column;
 }
 .connectionLogo{
-    margin-left: 85vw;
+    margin-left: 88vw;
     width: 128px;
     height: 128px;
 }
+
 .right-part{
     display: flex;
     flex-direction: column;
     height: fit-content;
     margin-top: 20vh;
+    align-items: flex-start;
 }
+
 .Prix{
     display: flex;
     flex-direction: row;
@@ -69,7 +73,6 @@ body{
     flex-direction: column;
     justify-content: flex-start;
     border-radius: 10px;
-    margin: 32px 32px 0px 32px;
     width: fit-content;
     padding-right: 16px;
 }
@@ -274,28 +277,7 @@ label{
     font-weight: 150%;
 
 }
-.Location{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    border-radius: 10px;
-    margin: 32px 32px 32px 32px;
-    width: fit-content;
-    padding-right: 16px;
 
-}
-.info1{
-    font-family: var(--font-family);
-    font-weight: var(--Semibold);
-    font-size: var(--type-base);
-    font-style: normal;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    line-height: 150%;
-    letter-spacing: -0.02em;
-    margin: 1px 474px 24px 24px;
-}
 select{
     position: absolute;
     padding: 16px 51px 16px 32px;
@@ -324,24 +306,12 @@ select{
     grid-template-columns: repeat(2,auto);
     width: fit-content;
 }
-.info2{
-    font-family: var(--font-family);
-    font-weight: var(--Semibold);
-    font-size: var(--type-base);
-    font-style: normal;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    line-height: 150%;
-    letter-spacing: -0.02em;
-    margin: 1px 474px 24px 24px;
-}
+
 .Paiement{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     border-radius: 10px;
-    margin: 0px 32px 32px 32px;
     width: fit-content;
 }
 .box1{
@@ -375,7 +345,7 @@ select{
     font-size: var(--type-base);
     font-weight: var(--Semibold);
     letter-spacing: -0.02em;
-    margin: 24px 403px 32px 0px;
+    margin: 24px 403px 32px 24px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -438,24 +408,7 @@ select{
     flex-direction: row;
     justify-content: flex-start;
 }
-.BoutonPaiement2{
-    width: 20px;
-    height: 20px;
-    margin: 16px 8px 16px 24px;
-    border-width: 1.5px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-}
-.BoutonPaiement3{
-    width: 20px;
-    height: 20px;
-    margin: 16px 8px 16px 24px;
-    border-width: 1.5px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-}
+
 .confirmation{
     display: flex;
     flex-direction: column;
@@ -546,4 +499,50 @@ select{
 }
 .labelcolor{
     color: #F0F0F0;
+}
+
+/* Paramètre des affiches des miniatures des films et séries */
+.thumbnailGalerie {
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+    border: 1px solid #171717;
+    flex-shrink: 0;
+
+    width: 18.75vw;
+    height: 10vw;
+
+    margin: 24px;
+
+}
+
+
+/* Bouton "acheter" */
+.updateButton {
+    background-color: #01F9BB;
+    border: 0px;
+    height: 8vh;
+    width: 11vw;
+    border-radius: 1vw;
+    cursor: pointer;
+
+    margin-top: 5vh;
+}
+
+.updateButton:hover {
+    background-color: #00d6a1;
+}
+.updateButton:active {
+    background-color: #00ac81;
+}
+
+.updateButtonText {
+    color: #000;
+    text-align: center;
+    font-family: Nunito;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0px;
 }

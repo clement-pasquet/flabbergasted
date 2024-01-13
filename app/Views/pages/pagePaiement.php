@@ -1,3 +1,8 @@
+<?php
+$session = session();
+$user = $session->get('user')
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,12 +21,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700&display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="<?=CSS.'pagePaiement.css'?>">
 </head>
 
 <body>
 <header>
-  <img class="connectionLogo" src="Image/logo1.png" alt="Logo Flabbergaster">
+<a href="/">
+    <img class="connectionLogo" src="<?=IMG.'logo1.png'?>" alt="Logo Flabbergaster">
+</a>
 </header>
 
 <div class="Top-page">
@@ -34,7 +41,7 @@
         <!-- Input Fields for Personal Information -->
         <div>
           <label class="labelcolor" for="nom">Nom</label>
-          <input name="nom" class="Entry" placeholder="Simon Strueux" />
+          <input name="nom" class="Entry" placeholder="<?= $user['nom']; ?>" />
         </div>
         <div>
           <label class="labelcolor" for="num">Numéro de téléphone</label>
@@ -60,10 +67,8 @@
       <div class="box1">
         <!-- Header for Carte de crédit -->
         <div class="header-paiement">
-          <!-- Input Fields for Carte de crédit -->
-          <input name="Option1" type="radio" class="BoutonPaiement" required />
           <label for="Option1" class="optiondepaiement">Carte de crédit</label>
-          <img src="Image/Visa.svg" alt="Visa-Icon" class="Visa-Icon">
+          <img src="<?=IMG.'Visa.svg'?>" alt="Visa-Icon" class="Visa-Icon">
         </div>
         <div class="input-pos3">
           <div>
@@ -85,15 +90,6 @@
         </div>
       </div>
 
-      <!-- Box 2 - Paypal -->
-      <div class="box2">
-        <!-- Header for Paypal -->
-        <div class="header-paiement">
-          <input name="Option1" type="radio" class="BoutonPaiement2" required />
-          <label for="Option1" class="optiondepaiement2">Paypal</label>
-          <img src="Image/PayPal.svg" alt="Paypal-Icon" class="Paypal-Icon">
-        </div>
-      </div>
     </div>
 
     <!-- Confirmation -->
@@ -111,8 +107,17 @@
         <label class="Option" for="Option2">J’accepte les conditions de vente et la politique privée du site.</label>
       </div>
 
-      <!-- Purchase Button -->
-      <button class="button">Acheter</button>
+        <form action="<?= base_url('achat') ?>" method="post">
+            <!-- Appelle la route achat qui elle meme appelle la fonction setAchat du controleur Achat pour MAJ. La table achat -->
+            <input type="hidden" name="id_film" value="<?= $film['id_film'] ?>">
+            <input type="hidden" name="id_user" value="<?= $session->get('user')['id_user'] ?>">
+
+            <!-- Bouton Acheter -->
+            <button class="updateButton" type="submit">
+                <p class="updateButtonText">Acheter</p>
+            </button>
+        </form>
+
     </div>
   </div>
 
@@ -123,28 +128,10 @@
 
       <!-- Partie 1 - Image and Name -->
       <div class="Partie1-end">
-        <img src="Image/TheMarvels.png" alt="TheMarvels" class="resume-achat">
-        <p class="nom-film">The Marvels</p>
+        <img src="<?= IMG . $film['image'] ?>" alt="TheMarvels" class="thumbnailGalerie">
+        <p class="nom-film"><?= $film['titre'] ?></p>
       </div>
 
-      <!-- Code promo Section -->
-      <hr class="seperateur">
-      <label>Code promo</label>
-      <div class="code-promo">
-        <input name="code-pr" class="Entry" placeholder="Code Promo" />
-        <button class="Appliquer">Appliquer</button>
-      </div>
-
-      <!-- Sous-total and Taxes Sections -->
-      <hr class="seperateur">
-      <div class="sous-total">
-        <p class="soustotal-title">Sous-total</p>
-        <p class="money-soustotal">15.00€</p>
-      </div>
-      <div class="sous-total">
-        <p class="soustotal-title">Taxes</p>
-        <p class="money-soustotal">0.00€</p>
-      </div>
 
       <!-- Prix Total Section -->
       <hr class="seperateur">
@@ -153,7 +140,7 @@
           <p class="Titre11">Prix total</p>
           <p class="Sous-titre11">Prix total incluant les remises</p>
         </div>
-        <p class="Final-prix">15.00€</p>
+        <p class="Final-prix"><?= $film['prix'] ?> €</p>
       </div>
     </div>
   </div>
