@@ -24,9 +24,10 @@ class Film extends BaseController
         $filmInstance = new filmModel();
 
         // je regarde si le film est dans la bd
-        $filmResultat = $filmInstance->getFilmByTitleAndLike($titre);
+        $filmsResultat = $filmInstance->getFilmByTitleAndLike($titre);
 
-        return view('pages/resultSearch', ['films' => $filmResultat]);
+
+        return view('pages/resultSearch', ['films' => $filmsResultat]);
     }
 
     // Nouvelle méthode pour passer à la page de paiement avec les détails du film
