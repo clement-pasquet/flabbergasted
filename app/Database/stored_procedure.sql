@@ -24,5 +24,42 @@ BEGIN
 END //
 DELIMITER ;
 
+
+-- Procédure d'ajout d'un achat
+DELIMITER //
+
+CREATE PROCEDURE ajouterAchat (IN id_user INT, IN id_film INT)
+BEGIN
+    INSERT INTO achat (id_user, id_film)
+    VALUES (id_user, id_film);
+END //
+
+DELIMITER ;
+
+
+
+-- Procédure pour récupérer les id des films achetés par un user
+DELIMITER //
+
+CREATE PROCEDURE getFilmIdsByUserId(IN current_id_user INT)
+BEGIN
+    SELECT id_film FROM achat WHERE id_user = current_id_user;
+END //
+
+DELIMITER ;
+
+
+-- Procédure pour récupérer un film grâce à son id
+DELIMITER //
+
+CREATE PROCEDURE getFilmById(IN current_id_film INT)
+BEGIN
+    SELECT * FROM film WHERE id_film = current_id_film;
+END //
+
+DELIMITER ;
+
+
+
 -- Partie administrateur ----
 

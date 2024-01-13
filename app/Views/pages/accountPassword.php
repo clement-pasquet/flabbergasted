@@ -1,3 +1,8 @@
+<?php
+$session = session();
+$user = $session->get('user');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,12 +23,23 @@
     <p class="accountTitle">Mot de passe</p>
     <p class="accountSubtitle">Le mot de passe que vous indiquez ici sera associé à votre profil.<br>Mettez un mot de passe solide mais facilement mémorisable.</p>
 
-    <form action="#" method="post">
+    <form action="<?php echo base_url('changerPassword'); ?>" method="post">
       <p class="accountTitle">Modifier mot de passe</p>
-      <input id="ChamptextePassword" type="password" placeholder="Entrez votre nouveau mot de passe">
-      <br>
-      <input id="ChamptextePassword" type="password" placeholder="Confirmez votre nouveau mot de passe">
 
+
+      <input name="password" id="ChamptextePassword" type="password" placeholder="Entrez votre nouveau mot de passe">
+      <br>
+      <input name="passwordConfirmation" id="ChamptextePassword" type="password" placeholder="Confirmez votre nouveau mot de passe">
+
+
+              <?php
+              // Affichage du message d'erreur s'il existe
+              $session = session();
+              $error = $session->getFlashdata('error');
+              if ($error !== null) {
+                  echo '<div class="errorText">' . $error . '</div>';
+              }
+              ?>
 
       <div class="buttonDiv">
         <button type="submit" class="updateButton">

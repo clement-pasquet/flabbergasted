@@ -1,3 +1,8 @@
+<?php
+$session = session();
+$user = $session->get('user');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,9 +15,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
 </head>
 
-
-
-
 <body>
 
   <p class="accountInformationMainText">Informations sur le compte :</p>
@@ -24,8 +26,10 @@
     <div class="accountParameter">
       <div class="accountParameterBlock">
         <div>
-          <p class="accountParameterBlockTitle">Nom et Prenom</p>
-          <p class="accountParameterBlockText">Basma Malki</p>
+          <p class="accountParameterBlockTitle">Nom et Prénom</p>
+            <a href="/accountName">
+                <p class="accountParameterBlockText"><?= $user['nom'].' '.$user['prenom']; ?></p>
+            </a>
         </div>
         <a href="/accountName">
           <img class="arrowRight" src="<?= IMG.'arrowRight.png' ?>">
@@ -36,20 +40,10 @@
 
       <div class="accountParameterBlock">
         <div>
-          <p class="accountParameterBlockTitle">Numéro de téléphone</p>
-          <p class="accountParameterBlockText">+33 * ** ** ** **</p>
-        </div>
-        <a href="/accountPhone">
-          <img class="arrowRight" src="<?= IMG.'arrowRight.png' ?>">
-        </a>
-      </div>
-        <img class="BlockLine">
-
-
-      <div class="accountParameterBlock">
-        <div>
           <p class="accountParameterBlockTitle">Adresse e-mail</p>
-          <p class="accountParameterBlockText">adresseemail@gmail.com</p>
+            <a href="/accountMail">
+                <p class="accountParameterBlockText"><?= $user['mail']; ?></p>
+            </a>
         </div>
         <a href="/accountMail">
           <img class="arrowRight" src="<?= IMG.'arrowRight.png' ?>">
@@ -61,7 +55,9 @@
       <div class="accountParameterBlock">
         <div>
           <p class="accountParameterBlockTitle">Mot de passe</p>
-          <p class="accountParameterBlockText">Changer de mot de passe</p>
+            <a href="/accountPassword">
+                <p class="accountParameterBlockText">Changer de mot de passe</p>
+            </a>
         </div>
         <a href="/accountPassword">
           <img class="arrowRight" src="<?= IMG.'arrowRight.png' ?>">

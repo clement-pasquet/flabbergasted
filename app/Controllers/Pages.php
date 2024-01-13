@@ -1,13 +1,37 @@
 <?php
 
 namespace App\Controllers;
+use App\Models\filmModel;
+
 
 class Pages extends BaseController
 {
+
+    protected filmModel $filmModel;
+
+    public function __construct()
+    {
+        $this->filmModel = new filmModel();
+    }
+
     public function index()
     {
-        return view('accueil');
+        $data['series'] = $this->filmModel->getSeries();
+        $data['filmsAventure'] = $this->filmModel->getFilmsAventure();
+        $data['filmsScienceFiction'] = $this->filmModel->getFilmScienceFiction();
+        return view('accueil', $data);
     }
+
+    public function filmFocused($id)
+    {
+        $film = $this->filmModel->find($id);
+        if ($film === null) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Film not found');
+        }
+        $filmGenre = $this->filmModel->getFilmByGenre($film['genre'], 4);
+        return view('filmFocused', ['film' => $film, 'filmGenre' => $filmGenre]);
+    }
+
     public function view($page = 'home')
     {
         if (! is_file(APPPATH . 'Views/pages/' . $page . '.php')) {

@@ -1,3 +1,8 @@
+<?php
+$session = session();
+$user = $session->get('user')
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,21 +58,38 @@
 
     <p class="categoryTitle">Vos films</p>
   
-    <div id="galerie2" class="galerie"> 
-      <div class="galerieContent">
-        <img class="thumbnailGalerie" src="<?= IMG.'rectangle_17.png' ?>"></img>
-      </div>
-    <img onclick="defiler('galerie2')" class="selectionArrow" src="<?= IMG.'arrowRight.png' ?>" alt="Flèche de selection"></img>
+    <div id="galerie2" class="galerie">
+        <?php if (!empty($films)): ?>
+            <div class="galerieContent">
+                <?php foreach ($films as $film): ?>
+                    <a href="filmFocused/<?= $film['id_film'] ?>"><img class="thumbnailGalerie" src="<?= IMG . $film['image'] ?>" alt="<?= $film['titre'] ?>"></a>
+                <?php endforeach; ?>
+            </div>
+            <img onclick="defiler('galerie2')" class="selectionArrow" src="<?= IMG . 'arrowRight.png' ?>" alt="Flèche de selection"></img>
+        <?php else: ?>
+            <div class="nofilmDiv">
+                <p class="nofilmText">Vous n'avez pas encore acheté de film.</p>
+            </div>
+        <?php endif; ?>
     </div>
 
     <p class="categoryTitle">Vos séries</p>
   
-    <div id="galerie3" class="galerie"> 
-      <div class="galerieContent">
-        <img class="thumbnailGalerie" src="<?= IMG.'rectangle_17.png' ?>"></img>
-      </div>
-    <img onclick="defiler('galerie3')" class="selectionArrow" src="<?= IMG.'arrowRight.png' ?>" alt="Flèche de selection"></img>
+    <div id="galerie3" class="galerie">
+        <?php if (!empty($films)): ?>
+            <div class="galerieContent">
+              <?php foreach ($series as $serie): ?>
+                    <a href="filmFocused/<?=$serie['id_film']?>"><img class="thumbnailGalerie" src="<?=IMG.$serie['image']?>" alt="<?=$serie['titre']?>"></a>
+              <?php endforeach; ?>
+            </div>
+            <img onclick="defiler('galerie2')" class="selectionArrow" src="<?= IMG . 'arrowRight.png' ?>" alt="Flèche de selection"></img>
+        <?php else: ?>
+            <div class="nofilmDiv">
+                <p class="nofilmText">Vous n'avez pas encore acheté de série.</p>
+            </div>
+        <?php endif; ?>
     </div>
+
 
   
   <script>

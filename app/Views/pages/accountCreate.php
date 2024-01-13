@@ -22,32 +22,41 @@
 
     <p class="nunito mainConnectionText">Créer compte</p>
 
-    <form class="mainConnectionDiv" action="#" method="post">
+      <?php
+      // Affichage du message d'erreur s'il existe
+      $session = session();
+      $error = $session->getFlashdata('error');
+      if ($error !== null) {
+          echo '<div class="errorText">' . $error . '</div>';
+      }
+      ?>
 
-      <input class="mainConnectionChamptexte mainConnectionwritingText" type="text" placeholder="Pseudo ou adresse e-mail">
 
-      <div class="mainConnectionPassword">
-        <input class="mainConnectionChamptextePassword mainConnectionwritingText" type="password" placeholder="Mot de passe">
-        <span class="password-toggle" onclick="togglePasswordVisibility(1)"><img src="<?= IMG.'eyeIcon.png' ?>" class="eyeIcon" alt="To Toggle Password Visibility" ></span>
-      </div>
+      <form class="mainConnectionDiv" action="<?php echo base_url('inscription'); ?>" method="post">
 
-      <div class="mainConnectionPassword">
-        <input class="mainConnectionChamptextePassword mainConnectionwritingText" type="password" placeholder="Confirmation du MDP">
-        <span class="password-toggle" onclick="togglePasswordVisibility(2)"><img src="<?= IMG.'eyeIcon.png' ?>" class="eyeIcon" alt="To Toggle Password Visibility" ></span>
-      </div>
 
-      
+          <input name="pseudo" class="mainConnectionChamptexte mainConnectionwritingText" type="text" placeholder="Pseudo" required></input>
 
-      <div class="checkboxPassword"> 
-        <input class="checkboxPasswordInput" type="checkbox" id="passwordCheckbox1">
-        <label class="mainConnectionText" for="passwordCheckbox1">Se souvenir de moi</label>
-      </div>
-      
-      <button type="submit" class="connectionButton">
-        <p class="nunito connectionButtonText">S'inscrire</p>
-      </button>
+          <input name="email" class="mainConnectionChamptexte mainConnectionwritingText" type="mail" placeholder="Adresse e-mail" required>
 
-    </form>
+          <div class="mainConnectionPassword">
+            <input name="password" class="mainConnectionChamptextePassword mainConnectionwritingText" type="password" placeholder="Mot de passe">
+            <span class="password-toggle" onclick="togglePasswordVisibility(1)"><img src="<?= IMG.'eyeIcon.png' ?>" class="eyeIcon" alt="To Toggle Password Visibility" ></span>
+          </div>
+
+          <div class="mainConnectionPassword">
+            <input name="passwordConfirmation" class="mainConnectionChamptextePassword mainConnectionwritingText" type="password" placeholder="Confirmation du MDP">
+            <span class="password-toggle" onclick="togglePasswordVisibility(2)"><img src="<?= IMG.'eyeIcon.png' ?>" class="eyeIcon" alt="To Toggle Password Visibility" ></span>
+          </div>
+
+          <button type="submit" class="connectionButton">
+            <p class="nunito connectionButtonText">S'inscrire</p>
+          </button>
+
+        </form>
+
+
+
 
     <a href="/accountConnection">
       <p class="nunito createaccountText">Connexion</p>

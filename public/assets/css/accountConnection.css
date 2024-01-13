@@ -74,6 +74,17 @@ body {
 	margin: 0px;
 }
 
+/*Paramètres du texte message d'erreur'*/
+.errorText {
+	color: #ff0000;
+	font-family: Nunito;
+	font-size: 2vh;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	margin: 0px;
+}
+
 /* Paramètres du logo affiché du milieu de l'écran */
 .connectionLogo {
 	max-width: 12vw;

@@ -12,9 +12,9 @@ sudo mysql -u root -p mainDatabase < mainDatabaseDump.sql
 
 
 -- Insertion utilisateur
-INSERT INTO utilisateur (id_user, mail, password, status, username, nom, prenom)
-VALUES (1, 'clement@pasquet.fr', 'password', 'admin', 'screeny', 'pasquet', 'clement'),
-       (2, 'ju.bernier5@gmail.com', 'password', 'admin', 'ju', 'bernier', 'justine');
+INSERT INTO utilisateur (mail, password, status, username, nom, prenom)
+VALUES ('clement@pasquet.fr', 'password', 'admin', 'screeny', 'pasquet', 'clement'),
+       ('ju.bernier5@gmail.com', 'password', 'admin', 'ju', 'bernier', 'justine');
 
 
 

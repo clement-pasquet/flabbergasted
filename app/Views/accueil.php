@@ -1,3 +1,8 @@
+<?php
+$session = session();
+$user = $session->get('user')
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,14 +40,36 @@
 
     <div class="headerRight">
       <!-- Groupe à droite avec texte et image du compte/de la connexion au compte -->
-    <a href="/accountConnection">
-      <p class="nunito headerText">Connexion</p>
-    </a>
-    <a href="/accountInformation">
-      <svg class="logo" width="61" height="61" viewBox="0 0 61 61" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M30.5 58C45.6878 58 58 45.6878 58 30.5C58 15.3122 45.6878 3 30.5 3C15.3122 3 3 15.3122 3 30.5C3 45.6878 15.3122 58 30.5 58ZM30.5 58C35.8802 58.0059 41.1426 56.4243 45.6281 53.4533C45.2736 50.4988 43.85 47.7763 41.6259 45.7994C39.4019 43.8225 36.5312 42.7279 33.5556 42.7222H27.4444C24.4688 42.7279 21.5981 43.8225 19.3741 45.7994C17.15 47.7763 15.7265 50.4988 15.3719 53.4533C19.8574 56.4243 25.1198 58.0059 30.5 58ZM39.6667 24.3889C39.6667 29.4515 35.5626 33.5555 30.5 33.5555C25.4374 33.5555 21.3333 29.4515 21.3333 24.3889C21.3333 19.3263 25.4374 15.2222 30.5 15.2222C35.5626 15.2222 39.6667 19.3263 39.6667 24.3889Z" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </a>
+
+        <?php if (!$user): ?>
+            <!-- Si l'utilisateur n'est pas connecté, affichez le lien de connexion -->
+            <a href="/accountConnection">
+                <p class="nunito headerText">Connexion</p>
+            </a>
+
+            <!-- De même, il ne peux pas accéder à ses paramètres de compte vu qu'il n'en a pas -->
+            <a href="/">
+              <svg class="logo" width="61" height="61" viewBox="0 0 61 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30.5 58C45.6878 58 58 45.6878 58 30.5C58 15.3122 45.6878 3 30.5 3C15.3122 3 3 15.3122 3 30.5C3 45.6878 15.3122 58 30.5 58ZM30.5 58C35.8802 58.0059 41.1426 56.4243 45.6281 53.4533C45.2736 50.4988 43.85 47.7763 41.6259 45.7994C39.4019 43.8225 36.5312 42.7279 33.5556 42.7222H27.4444C24.4688 42.7279 21.5981 43.8225 19.3741 45.7994C17.15 47.7763 15.7265 50.4988 15.3719 53.4533C19.8574 56.4243 25.1198 58.0059 30.5 58ZM39.6667 24.3889C39.6667 29.4515 35.5626 33.5555 30.5 33.5555C25.4374 33.5555 21.3333 29.4515 21.3333 24.3889C21.3333 19.3263 25.4374 15.2222 30.5 15.2222C35.5626 15.2222 39.6667 19.3263 39.6667 24.3889Z" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+        <?php else: ?>
+            <!-- Sinon, affichez un espace vide -->
+            <div class="boxDeco">
+                <p class="nunito username"><?=$user['username']?></p>
+                <a href="/deconnecter">
+                    <p class="nunito headerText">Déconnexion</p>
+                </a>
+            </div>
+
+            <a href="/accountInformation">
+              <svg class="logo" width="61" height="61" viewBox="0 0 61 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30.5 58C45.6878 58 58 45.6878 58 30.5C58 15.3122 45.6878 3 30.5 3C15.3122 3 3 15.3122 3 30.5C3 45.6878 15.3122 58 30.5 58ZM30.5 58C35.8802 58.0059 41.1426 56.4243 45.6281 53.4533C45.2736 50.4988 43.85 47.7763 41.6259 45.7994C39.4019 43.8225 36.5312 42.7279 33.5556 42.7222H27.4444C24.4688 42.7279 21.5981 43.8225 19.3741 45.7994C17.15 47.7763 15.7265 50.4988 15.3719 53.4533C19.8574 56.4243 25.1198 58.0059 30.5 58ZM39.6667 24.3889C39.6667 29.4515 35.5626 33.5555 30.5 33.5555C25.4374 33.5555 21.3333 29.4515 21.3333 24.3889C21.3333 19.3263 25.4374 15.2222 30.5 15.2222C35.5626 15.2222 39.6667 19.3263 39.6667 24.3889Z" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+        <?php endif; ?>
+
+
   </div>
 </header>
 
@@ -54,70 +81,31 @@
 
     <div id="galerie1" class="galerie">
       <div class="galerieContent">
-        <img class="thumbnailGalerie" src="<?=IMG.'rectangle_17.png'?>"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_18.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_17.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_18.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_17.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_18.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_17.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_18.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
+          <?php foreach ($series as $serie): ?>
+                <a href="filmFocused/<?=$serie['id_film']?>"><img class="thumbnailGalerie" src="<?=IMG.$serie['image']?>" alt="<?=$serie['titre']?>"></a>
+          <?php endforeach; ?>
       </div>
     <img onclick="defiler('galerie1')" class="selectionArrow" src="<?=IMG.'arrowRight.png'?>" alt="Flèche de selection"></img>
     </div>
 
-    <p class="categoryTitle">Nouveaux films</p>
+    <p class="categoryTitle">Films d'Aventure</p>
   
     <div id="galerie2" class="galerie"> 
       <div class="galerieContent">
-        <img class="thumbnailGalerie" src="images/rectangle_17.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_18.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_17.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_18.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_17.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_18.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_17.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_18.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
+          <?php foreach ($filmsAventure as $film): ?>
+              <a href="filmFocused/<?=$film['id_film']?>"><img class="thumbnailGalerie" src="<?=IMG.$film['image']?>" alt="<?=$film['titre']?>"></a>
+          <?php endforeach; ?>
       </div>
     <img onclick="defiler('galerie2')" class="selectionArrow" src="<?=IMG.'arrowRight.png'?>" alt="Flèche de selection"></img>
     </div>
 
-    <p class="categoryTitle">Documentaire</p>
-  
-    <div id="galerie3" class="galerie"> 
+    <p class="categoryTitle">Science-Fiction</p>
+
+    <div id="galerie3" class="galerie">
       <div class="galerieContent">
-        <img class="thumbnailGalerie" src="images/rectangle_17.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_18.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_17.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_18.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_17.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_18.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_17.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_18.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_19.png"></img>
-        <img class="thumbnailGalerie" src="images/rectangle_20.png"></img>
+          <?php foreach ($filmsScienceFiction as $film): ?>
+              <a href="filmFocused/<?=$film['id_film']?>"><img class="thumbnailGalerie" src="<?=IMG.$film['image']?>" alt="<?=$film['titre']?>"></a>
+          <?php endforeach; ?>
       </div>
     <img onclick="defiler('galerie3')" class="selectionArrow" src="<?=IMG.'arrowRight.png'?>" alt="Flèche de selection"></img>
     </div>

@@ -145,6 +145,17 @@ body {
 	margin: 0px;
 }
 
+/*Paramètres du texte qui s'affiche si l'utilisateur n'a acheté aucun film ou aucune série*/
+.nofilmText {
+	color: #FFF;
+	font-family: Nunito;
+	font-size: 30px;
+	font-style: italic; /* Ajout de l'italique */
+	font-weight: 300;   /* Utilisation d'une valeur plus légère pour le poids de la police */
+	line-height: normal;
+	margin: 0px;
+}
+
 
 
 /* Div principale de la galerie. C'est le nom de la ligne ou on peut faire defiler les miniatures en cliquant sur la flèche. */
@@ -190,3 +201,12 @@ body {
 }
 
 /* Fin des paramètres de la galerie */
+
+/* Paramètres du div du texte */
+.nofilmDiv {
+	display: flex;
+	flex-direction: column; /* Utilisation de la direction colonne pour aligner verticalement */
+	justify-content: center; /* Centre horizontalement */
+	align-items: center; /* Centre verticalement */
+	height: 20vh; /* Utilisation de 100vh pour occuper toute la hauteur de la vue */
+}

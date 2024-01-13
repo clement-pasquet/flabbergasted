@@ -1,3 +1,8 @@
+<?php
+$session = session();
+$user = $session->get('user');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,12 +23,12 @@
     <p class="accountNameTitle">Nom</p>
     <p class="accountNameSubtitle">Le nom que vous indiquez ici sera associé à votre profil.<br>Choisissez un nom qui vous plaît et qui représente votre identité sur notre plateforme.</p>
 
-    <form action="#" method="post">
+    <form action="<?php echo base_url('changerNomEtPrenom'); ?>" method="post">
       <p class="accountNameTitle">Prénom</p>
-      <input id="ChamptexteName" type="text" value="Prénom Actuel">
+      <input name="prenom" id="ChamptexteName" type="text" value="<?= $user['prenom']; ?>">
       
       <p class="accountNameTitle">Nom de famille</p>
-      <input id="ChamptexteName" type="text" value="Nom de famille Actuel">
+      <input name="nom" id="ChamptexteName" type="text" value="<?= $user['nom']; ?>">
 
 
       <div class="buttonDiv">
