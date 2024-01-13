@@ -16,15 +16,10 @@ Pour faire cela il faut :
 
 
 ```bash
-mysql -u admin -p
+sudo mysql -u admin -ppassword 
 ``` 
 ( pour se connecter en tant que admin, si un mdp est demandé, donner "password", le root ne possède pas de password )
 
-```sql
-CREATE DATABASE mainDatabase;
-```
-
-( pour créer la base de données qu'on remplira )
 
 ```shell
 sudo mysql -u root -p mainDatabase < mainDatabaseDump.sql
@@ -36,9 +31,11 @@ sudo mysql -u root -p mainDatabase < mainDatabaseDump.sql
 Si l'on souhaite faire une "sauvegarde" des diverses modifications faites aux tabels et à leurs éléments, ils faut faire un dump, une "sauvegarde" :
 
 ```shell
-sudo mysqldump -u root -p mainDatabase > mainDatabaseDump.sql
+mysqldump -u admin -ppassword --databases mainDatabase --routines --result-file=mainDatabaseDump.sql
 ```
 ( **ATTENTION**, il faut être dans le dossier app/Database )
+
+( Le dump inclue désormais les procédures stockées )
 
 
 # CodeIgniter 4 Application Starter
