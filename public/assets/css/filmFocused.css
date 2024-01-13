@@ -222,15 +222,7 @@ body {
 .interactionBar {
 	display: flex;
 	gap: 3vw;
-	align-items: center;
-	justify-content: center;
-}
-
-/* Div qui contient les 2 boutons like et le bouton pour télécharger */
-.loveDiv {
-	display: flex;
-	flex-direction: row;
-	gap: 1vw;
+	align-items: center; /* Pour aligner les éléments verticalement au centre */
 }
 
 /* Paramètres de hover de l'icon du coeur */
@@ -244,10 +236,6 @@ body {
   
 .loveIcon:active  {
 	fill: #cc0000; /* Rouge plus foncé lorsque cliqué */
-}
-
-.icon {
-	cursor: pointer;
 }
 
 /* Paramètres de hover des icons sauf de l'icon du coeur */

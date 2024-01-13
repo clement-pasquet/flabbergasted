@@ -60,6 +60,36 @@ END //
 DELIMITER ;
 
 
+-- Procédure pour rajouter ou enlever un like à un film de la table film + MAJ la table likes
+DELIMITER //
+
+CREATE PROCEDURE like_movie(IN current_id_film INT, IN current_id_user INT)
+BEGIN
+    DECLARE existing_like_count INT;
+
+    -- Vérifier si l'utilisateur a déjà liké ce film
+    SELECT COUNT(*) INTO existing_like_count
+    FROM likes
+    WHERE id_film = current_id_film AND id_user = current_id_user;
+
+    IF existing_like_count = 0 THEN
+        -- Ajouter un like
+        INSERT INTO likes (id_film, id_user) VALUES (current_id_film, current_id_user);
+        -- Mettre à jour le nombre de likes dans la table 'film'
+        UPDATE film SET likes = likes + 1 WHERE id_film = current_id_film;
+    ELSE
+        -- Enlever le like
+        DELETE FROM likes WHERE id_film = current_id_film AND id_user = current_id_user;
+        -- Mettre à jour le nombre de likes dans la table 'film'
+        UPDATE film SET likes = likes - 1 WHERE id_film = current_id_film;
+    END IF;
+END //
+
+DELIMITER ;
+
+
+
+
 
 -- Partie administrateur ----
 
