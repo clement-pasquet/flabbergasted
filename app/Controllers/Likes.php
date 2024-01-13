@@ -19,13 +19,23 @@ class Likes extends BaseController
     {
         $id_film = $this->request->getGet('id_film');
         $session = session();
-        $id_user = $session->get('user')['id_user'];
 
-        // Appeler la nouvelle procédure stockée pour liker/déliker un film
-        $this->db->query("CALL like_movie(?, ?)", [$id_film, $id_user]);
+        // Vérifiez d'abord si la clé 'user' existe dans la session
+        if ($session->has('user')) {
+            $id_user = $session->get('user')['id_user'];
 
-        return redirect()->to(base_url()); // Redirigez vers une autre page après le traitement.
+            // Appeler la nouvelle procédure stockée pour liker/déliker un film
+            $this->db->query("CALL like_movie(?, ?)", [$id_film, $id_user]);
+
+            return redirect()->to(base_url()); // Redirigez vers une autre page après le traitement.
+        } else {
+            // Gérez le cas où la clé 'user' n'existe pas dans la session
+            // Vous pouvez rediriger l'utilisateur vers une page de connexion ou effectuer d'autres actions nécessaires.
+            // Par exemple :
+            return redirect()->to(base_url('/accountConnection'));
+        }
     }
+
 
 
 }
