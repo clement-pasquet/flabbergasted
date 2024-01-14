@@ -8,7 +8,7 @@ $user = $session->get('user')
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?=CSS.'accueil.css'?>">
+    <link rel="stylesheet" href="<?=CSS.'header.css'?>">
     <title>accueil</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
