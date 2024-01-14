@@ -89,7 +89,7 @@ class Utilisateur extends BaseController
             // Les informations de connexion sont incorrectes
             // Redirection vers la page de connexion avec un message d'erreur
             $session = session();
-            $session->setFlashdata('error', 'Identifiants incorrects.');
+            $session->setFlashdata('error', 'Identifiant et/ou mots de passe incorrects.');
 
             return redirect()->to(base_url('/accountConnection'));
         }
@@ -176,8 +176,6 @@ class Utilisateur extends BaseController
         var_dump($passwordConfirmation);
 
 
-        $session = session();
-        $id_user = $session->get('user')['id_user'];
 
         // Création d'une instance du modèle UserModel
         $userModel = new UserModel();
@@ -186,8 +184,8 @@ class Utilisateur extends BaseController
             $session = session();
             $session->setFlashdata('error', 'Vos mots de passe ne correspondent pas');
 
-            // Redirection vers la page précédente (le formulaire)
-            return redirect()->to(base_url('/accountPassword'));
+            // Redirection vers la page précédente
+            return redirect()->to(base_url('/accountResetPassword'));
         }
 
         // Hachage du mdp
@@ -205,8 +203,7 @@ class Utilisateur extends BaseController
 
         $userModel->setPassword($user['id_user'], $password);
 
-        return redirect()->to(base_url('/'));
-
+        return redirect()->to(base_url('/accountConnection'));
     }
 
 }
