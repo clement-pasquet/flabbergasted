@@ -168,12 +168,12 @@ class Utilisateur extends BaseController
     public function changerPassword()
     {
         // Récupérez les données du formulaire
+        $mail = $this->request->getPost('email');
         $password = $this->request->getPost('password');
         $passwordConfirmation = $this->request->getPost('passwordConfirmation');
 
         var_dump($password);
         var_dump($passwordConfirmation);
-
 
 
         $session = session();
@@ -193,14 +193,17 @@ class Utilisateur extends BaseController
         // Hachage du mdp
         $password = password_hash($password, PASSWORD_DEFAULT);
 
-        $userModel->setPassword($id_user, $password);
+        $user = $userModel->getUserByMail($mail);
 
+        if (!isset($user)) {
+            $session = session();
+            $session->setFlashdata('error', 'Votre email n existe pas');
 
-        $user = $session->get('user');
+            // Redirection vers la page précédente
+            return redirect()->to(base_url('/accountResetPassword'));
+        }
 
-        $user['password'] = $password;
-
-        $session->set('user', $user);
+        $userModel->setPassword($user['id_user'], $password);
 
         return redirect()->to(base_url('/'));
 

@@ -16,8 +16,6 @@ $user = $session->get('user');
 </head>
 
 
-
-
 <body>
 <div class="accountMainDiv">
     <p class="accountTitle">Mot de passe</p>
@@ -30,10 +28,12 @@ $user = $session->get('user');
         echo '<div class="errorText">' . $error . '</div>';
     }
     ?>
-    <form action="<?php echo base_url('changerPasswordByMail'); ?>" method="post">
+    <form action="<?php echo base_url('changerPassword'); ?>" method="post">
+        <?php if (!$user): ?>
         <p class="accountTitle">Email</p>
 
         <input name="email" id="ChamptextePassword" type="mail" placeholder="Entrez adresse mail" required>
+        <?php endif; ?>
         <p class="accountTitle">Modifier mot de passe</p>
 
 

@@ -76,7 +76,7 @@ $user = $session->get('user')
     <p class="categoryTitle">Vos séries</p>
   
     <div id="galerie3" class="galerie">
-        <?php if (!empty($films)): ?>
+        <?php if (!empty($series)): ?>
             <div class="galerieContent">
               <?php foreach ($series as $serie): ?>
                     <a href="filmFocused/<?=$serie['id_film']?>"><img class="thumbnailGalerie" src="<?=IMG.$serie['image']?>" alt="<?=$serie['titre']?>"></a>

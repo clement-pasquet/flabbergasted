@@ -55,7 +55,7 @@ class UserModel extends Model
     }
 
 
-    // Setter pour modifier le prenom d'un utilisateur
+    // Setter pour modifier le mot de passe d'un utilisateur
     public function setPassword($id_user, $password)
     {
         $data = [
@@ -63,6 +63,11 @@ class UserModel extends Model
         ];
 
         return $this->update($id_user, $data);
+    }
+
+    // Sert à récupérer un utilisateur entier grace a son mail
+    public function getUserByMail($mail) {
+        return $this->where('mail', $mail)->first();
     }
 
 }
