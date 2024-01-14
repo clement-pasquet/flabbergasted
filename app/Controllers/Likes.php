@@ -27,7 +27,7 @@ class Likes extends BaseController
             // Appeler la nouvelle procédure stockée pour liker/déliker un film
             $this->db->query("CALL like_movie(?, ?)", [$id_film, $id_user]);
 
-            return redirect()->to(base_url()); // Redirigez vers une autre page après le traitement.
+            return redirect()->to(base_url('filmFocused/'.$id_film)); // Redirigez vers une autre page après le traitement.
         } else {
             // Gérez le cas où la clé 'user' n'existe pas dans la session
             // Vous pouvez rediriger l'utilisateur vers une page de connexion ou effectuer d'autres actions nécessaires.
