@@ -15,6 +15,10 @@ $user = $session->get('user');
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
 </head>
 
+<header>
+    <?php include('header.php'); ?>
+</header>
+
 <body>
 
   <p class="accountInformationMainText">Informations sur le compte :</p>
