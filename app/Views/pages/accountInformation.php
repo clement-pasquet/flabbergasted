@@ -59,7 +59,7 @@ $user = $session->get('user');
                 <p class="accountParameterBlockText">Changer de mot de passe</p>
             </a>
         </div>
-        <a href="/accountPassword">
+        <a href="/accountResetPassword">
           <img class="arrowRight" src="<?= IMG.'arrowRight.png' ?>">
         </a>
       </div>

@@ -187,18 +187,24 @@ class Utilisateur extends BaseController
             // Redirection vers la page précédente
             return redirect()->to(base_url('/accountResetPassword'));
         }
+        // si l'utilisateur est déjà connecter
+        $session = session();
+        $user = $session->get('user');
 
         // Hachage du mdp
         $password = password_hash($password, PASSWORD_DEFAULT);
 
-        $user = $userModel->getUserByMail($mail);
-
         if (!isset($user)) {
-            $session = session();
-            $session->setFlashdata('error', 'Votre email n existe pas');
+            $user = $userModel->getUserByMail($mail);
+            if (!isset($user)) {
 
-            // Redirection vers la page précédente
-            return redirect()->to(base_url('/accountResetPassword'));
+                $session = session();
+                $session->setFlashdata('error', 'Votre email n existe pas');
+
+                // Redirection vers la page précédente
+                return redirect()->to(base_url('/accountResetPassword'));
+            }
+
         }
 
         $userModel->setPassword($user['id_user'], $password);
