@@ -80,6 +80,9 @@ $user = $session->get('user');
             <input type="hidden" name="lien_trailer" value="<?= $film['lien_trailer'] ?>">
             <input type="hidden" name="likes" value="<?= $film['likes'] ?>">
 
+<!--            Envoie de l'id de l'user pour pouvoir vérifier si l'utilisateur a deja acheté le film-->
+            <input type="hidden" name="id_user" value="<?= $user['id_user'] ?>">
+
             <!-- Bouton d'achat -->
 
             <button type="submit" class="updateButton" <?= isset($user) ? '' : 'disabled' ?>>

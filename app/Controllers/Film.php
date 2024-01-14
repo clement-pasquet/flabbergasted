@@ -47,7 +47,14 @@ class Film extends BaseController
         $est_serie = $this->request->getPost('est_serie');
         $lien_trailer = $this->request->getPost('lien_trailer');
         $likes = $this->request->getPost('likes');
-        // Ajoutez d'autres champs selon votre structure de base de données
+
+        // Vérifie si l'utilisateur a déjà acheté le film
+        $id_user = $this->request->getPost('id_user');
+        $query = "SELECT * FROM achat WHERE id_user = ? AND id_film = ?";
+        $result = $this->db->query($query, [$id_user, $id_film]);
+        if ($result->getNumRows() > 0) {
+            return redirect()->to(base_url('/'))->with('error', 'Vous avez déjà acheté ce film.');
+        }
 
         // Création de la variable $film
         $film = [
