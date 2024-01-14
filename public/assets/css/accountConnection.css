@@ -182,6 +182,7 @@ body {
 	height: 6vh;
 	width: 12vw;
 	border-radius: 1vw;
+	cursor: pointer;
 }
 
 /* Paramètres de reglage de l'icon pour "toggle" la visibilité des mots de passe */

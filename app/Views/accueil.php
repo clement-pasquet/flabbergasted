@@ -29,7 +29,7 @@ $user = $session->get('user')
     <img onclick="defiler('galerie1')" class="selectionArrow" src="<?=IMG.'arrowRight.png'?>" alt="Flèche de selection"></img>
     </div>
 
-    <p class="categoryTitle">Films d'Aventure</p>
+    <p class="categoryTitle">Films d'aventure</p>
   
     <div id="galerie2" class="galerie"> 
       <div class="galerieContent">

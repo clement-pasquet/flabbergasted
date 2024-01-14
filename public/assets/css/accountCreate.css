@@ -178,6 +178,7 @@ body {
 	height: 6vh;
 	width: 12vw;
 	border-radius: 1vw;
+	cursor: pointer;
 }
 
 /* Responsivité */

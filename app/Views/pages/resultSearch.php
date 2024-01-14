@@ -17,7 +17,7 @@
         <img class="cardPic" src="<?=IMG.$film['image']?>" alt="<?=$film['titre']?>">
         <p>Genre : <?= $film['genre']?></p>
         <p>NB likes : <?= $film['likes']?></p>
-        <p>realisateur : <?= $film['realisateur'] ?> </p>
+        <p>Réalisateur : <?= $film['realisateur'] ?> </p>
         </div>
     </a>
 

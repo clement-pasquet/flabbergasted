@@ -173,6 +173,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	cursor: pointer;
 }
 
 /* Flèche de selection permettant de faire defiler les affiches */
@@ -185,6 +186,7 @@ body {
 	right: 1.3vw; /* Ajustez la position horizontale selon vos besoins */
 	transform: translateY(-50%); /* Pour centrer verticalement la flèche */
 	z-index: 2; /* Pour placer la flèche au-dessus des miniatures */
+	cursor: pointer;
 }
 
 .boxDeco{
