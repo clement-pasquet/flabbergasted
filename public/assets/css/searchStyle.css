@@ -1,5 +1,16 @@
-.link_style {
-    text-decoration: none;
+/* Styles de texte */
+
+.cardInfo,
+.cardInfoWithoutTitle {
+    margin: 0;
+    font-family: Nunito, sans-serif;
+    color: #FFF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: left;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 .titleFilm {
@@ -9,41 +20,57 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0;
+    text-align: center;
+    word-wrap: break-word;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    text-transform: uppercase;
 }
 
-p{
-    margin : 0;
-    font-family: Nunito, sans-serif;
-    color: #FFF;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
+/* Styles des éléments */
+
+.contentDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-
+.cardDiv {
+    width: 18.75vw;
+    max-width: 18.75vw;
+    margin-bottom: 20px;
+}
 
 .cardPic {
+    object-fit: cover;
     object-position: center;
     border-radius: 15px;
     border: 1px solid #171717;
-    width: 115px;
-    height: 75px;
+    flex-shrink: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 10vw; /* Ajustez cette valeur selon vos besoins */
+    object-fit: cover;
 }
 
-.cardsFlex {
-    display: flex;
-    flex-direction: column;
-    background: linear-gradient(183deg, rgba(55, 37, 72, 0.95) -5.36%, #000 108.29%);
-    gap: 50px;
-    border-radius: 15px;
-    padding : 15px 25px;
+/* Autres styles */
+
+.link_style {
+    text-decoration: none;
+    color: #333;
 }
-.cardFlex {
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
+
+/* Media Query pour les écrans plus petits si nécessaire */
+@media (max-width: 768px) {
+    .cardDiv {
+        width: 100%;
+        max-width: none;
+    }
 }
+

@@ -21,8 +21,7 @@ class Pages extends BaseController
         $data['filmsScienceFiction'] = $this->filmModel->getFilmScienceFiction();
         //echo view('header');
         //return view('accueil', $data);
-        $data['main_content'] = 'accueil';
-        echo view('pages/template', $data);
+        echo view('accueil', $data);
     }
 
     public function filmFocused($id)
