@@ -24,6 +24,7 @@ body {
 }
 
 
+
 .contentDiv {
     margin-left: 6vw;
     margin-right: 6vw;
@@ -79,6 +80,10 @@ body {
 .headerText {
     font-size: 35px;
     margin: 0;
+}
+
+a {
+    text-decoration: none;
 }
 
 .logo {
