@@ -59,7 +59,7 @@ body {
     width: 20vw;
 }
 .searchbar:focus {
-    border-color: #0CBABA;
+    border-color: #01F9BB;
 }
 
 .headersearchbox {
@@ -121,5 +121,9 @@ a {
     overflow-x: hidden; /* Empêche le débordement horizontal */
 }
 
-
+.username{
+    margin: 0;
+    font-size: 2em;
+    color: #01F9BB;
+}
 /* Fin des paramètres du header */
