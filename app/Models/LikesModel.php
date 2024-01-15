@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 class LikesModel extends Model
 {
     protected $table                = 'likes';
-    protected $primaryKey           = null;
+    protected $primaryKey           = ['id_film', 'id_user'];
     protected $returnType           = 'array';
     protected $useSoftDeletes       = false;
     protected $protectFields        = true;
