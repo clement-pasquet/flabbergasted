@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\UserModel;
+use App\Models\achatModel;
 
 class Achat extends BaseController
 {
@@ -66,12 +67,11 @@ class Achat extends BaseController
         // Récupére l'id de l'utilisateur à partir de la session
         $id_user = $session->get('user')['id_user'];
 
-        // Récupère les ids de films correspondant grâce à la procédure stockée
-        $query = "CALL getFilmIdsByUserId(?)";
-        $result = $this->db->query($query, [$id_user]);
 
-        $filmIds = $result->getResultArray(); // Retourne un tableau des id_film
+        // Obtenir une instance unique du modèle AchatModel
+        $achatModel = achatModel::getInstance();
 
+        $filmIds = $achatModel->getFilmIdsByUserId($id_user);
 
         $filmList = [];
         $serieFilm = [];

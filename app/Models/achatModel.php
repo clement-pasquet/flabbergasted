@@ -5,8 +5,34 @@ use CodeIgniter\Model;
 
 class achatModel extends Model
 {
+    // Instance statique de la classe
+    private static $instance;
+
     protected $table = 'achat';
     protected $primaryKey = ['id_user', 'id_film'];
+
+
+    // Méthode pour obtenir une instance unique du modèle
+    public static function getInstance()
+    {
+        if (!isset(self::$instance)) {
+            self::$instance = new self();
+        }
+
+        return self::$instance;
+    }
+
+    // Restreint la création d'objets en dehors de la classe
+    private function __construct()
+    {
+        parent::__construct();
+    }
+
+
+    // Empêche la clonage de l'instance
+    private function __clone()
+    {
+    }
 
     // Crée un nouvelle achat grace a id_user et id_film
     public function setAchat($id_user, $id_film)
