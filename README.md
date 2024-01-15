@@ -205,13 +205,13 @@ En premier, lançons mariadb : ```sudo service mariadb start```
 
 En deuxième, dumpons la base de données ( depuis le dossier app/Database ) : ```sudo mysql -u root -p mainDatabase < mainDatabaseDump.sql```
 
-En troisième, modifions le port par défaut pour 8080 : ```nano /etc/apache2/ports.conf```
+En troisième, vérifions que le port par défaut est bel et bien 80 : ```nano /etc/apache2/ports.conf```
 
 Redémarrons apache2 : ```sudo service apache2 restart```
 
 Rajoutons une configuration de VirtualHost pour apache2 : ```sudo nano /etc/apache2/sites-available/flabbergasted.conf```
 ```
-<VirtualHost *:8080>
+<VirtualHost *:80>
     ServerAdmin webmaster@example.com
     DocumentRoot /var/www/html/eq_01_02_bernier-justine_malki-basma_pasquet-clement_troeira-paul-adrien/public
     ServerName flabbergasted.local
@@ -239,12 +239,17 @@ Premièrement, clonons le projet :
 
 Mettons à jour composer : ```composer update```
 
+( si besoin, installez les extensions demandées ou donnez les bonnes permissions au dossier )
+
 Déplacons les fichiers du projet dans /var/www/html : ```cp -r eq_01_02_bernier-justine_malki-basma_pasquet-clement_troeira-paul-adrien/ /var/www/html/```
 
 #### Modification des constantes :
 
 Il faut adapter les constantes utilisées, pour pouvoir utiliser CSS ou IMG comme ici : ```<?=CSS.'accueil.css'?>``` 
 
-Dans app/Config/App.php modifier : ```public string $baseURL = 'http://localhost:8080/';``` en ```public string $baseURL = 'http://172.26.82.53:8080/';```
+Dans app/Config/App.php modifier : ```public string $baseURL = 'http://localhost:8080/';``` en ```public string $baseURL = 'http://172.26.82.53/';```
 
-Dans app/Config/Constants.php modifier : ```define('BASE_URL_ASSET', 'http://localhost:8080/assets/');``` en ```define('BASE_URL_ASSET', 'http://172.26.82.53:8080/assets/');```
+Dans app/Config/Constants.php modifier : ```define('BASE_URL_ASSET', 'http://localhost:8080/assets/');``` en ```define('BASE_URL_ASSET', 'http://172.26.82.53/assets/');```
+
+### Accéder au site :
+http://172.26.82.53/
