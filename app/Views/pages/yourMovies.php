@@ -51,7 +51,7 @@ $user = $session->get('user')
                     <a href="filmFocused/<?=$serie['id_film']?>"><img class="thumbnailGalerie" src="<?=IMG.$serie['image']?>" alt="<?=$serie['titre']?>"></a>
               <?php endforeach; ?>
             </div>
-            <img onclick="defiler('galerie2')" class="selectionArrow" src="<?= IMG . 'arrowRight.png' ?>" alt="Flèche de selection"></img>
+            <img onclick="defiler('galerie3')" class="selectionArrow" src="<?= IMG . 'arrowRight.png' ?>" alt="Flèche de selection"></img>
         <?php else: ?>
             <div class="nofilmDiv">
                 <p class="nofilmText">Vous n'avez pas encore acheté de série.</p>
