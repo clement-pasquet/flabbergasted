@@ -187,3 +187,64 @@ CSS est un chemin php prédéfini vers le dossier css.
 De même, pour les images, il faut utiliser ```<?=IMG.'logo1.png'?>```.
 
 Il permet d'utiliser les images du répertoire image.
+
+## Mettre sur le serveur
+
+Nous devons mettre le projet sur le serveur.
+
+Pour ce faire, nous devons déjà nous y connecter en ssh :
+```sshpass -p "e3qnBIJF" ssh root@172.26.82.53```
+
+( **ATTENTION** il faut être dans le réseau de l'IUT )
+
+### Etapes faites à l'initialisation
+
+Le Projet sera accessible grâce à apache2.
+
+En premier, lançons mariadb : ```sudo service mariadb start```
+
+En deuxième, dumpons la base de données ( depuis le dossier app/Database ) : ```sudo mysql -u root -p mainDatabase < mainDatabaseDump.sql```
+
+En troisième, modifions le port par défaut pour 8080 : ```nano /etc/apache2/ports.conf```
+
+Redémarrons apache2 : ```sudo service apache2 restart```
+
+Rajoutons une configuration de VirtualHost pour apache2 : ```sudo nano /etc/apache2/sites-available/flabbergasted.conf```
+```
+<VirtualHost *:8080>
+    ServerAdmin webmaster@example.com
+    DocumentRoot /var/www/html/eq_01_02_bernier-justine_malki-basma_pasquet-clement_troeira-paul-adrien/public
+    ServerName flabbergasted.local
+
+    <Directory /var/www/html/eq_01_02_bernier-justine_malki-basma_pasquet-clement_troeira-paul-adrien/public>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+```
+
+Utilisation d'un lien symbolique pour activer le site web : ```sudo ln -s /etc/apache2/sites-available/flabbergasted.conf /etc/apache2/sites-enabled/```
+
+Redémarrons apache2 : ```sudo service apache2 restart```
+
+### Mettre le projet sur le serveur
+
+Premièrement, clonons le projet :
+
+```git clone https://gitlab.univ-nantes.fr/pub/but/but2/sae3.real.01_developpement_d_une_application/groupe01/eq_01_02_bernier-justine_malki-basma_pasquet-clement_troeira-paul-adrien.git```
+
+Mettons à jour composer : ```composer update```
+
+Déplacons les fichiers du projet dans /var/www/html : ```cp -r eq_01_02_bernier-justine_malki-basma_pasquet-clement_troeira-paul-adrien/ /var/www/html/```
+
+#### Modification des constantes :
+
+Il faut adapter les constantes utilisées, pour pouvoir utiliser CSS ou IMG comme ici : ```<?=CSS.'accueil.css'?>``` 
+
+Dans app/Config/App.php modifier : ```public string $baseURL = 'http://localhost:8080/';``` en ```public string $baseURL = 'http://172.26.82.53:8080/';```
+
+Dans app/Config/Constants.php modifier : ```define('BASE_URL_ASSET', 'http://localhost:8080/assets/');``` en ```define('BASE_URL_ASSET', 'http://172.26.82.53:8080/assets/');```
