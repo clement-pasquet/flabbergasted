@@ -44,8 +44,6 @@
 
     </form>
 
-    <a href="/accountResetPassword"><p class="nunito reinitText">Réinitialiser mot de passe ?</p></a>
-
     <a href="/accountCreate">
       <p class="nunito createaccountText">Créer compte</p>
     </a>

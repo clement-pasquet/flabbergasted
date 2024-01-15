@@ -29,11 +29,6 @@ $user = $session->get('user');
     }
     ?>
     <form action="<?php echo base_url('changerPassword'); ?>" method="post">
-        <?php if (!$user): ?>
-        <p class="accountTitle">Email</p>
-
-        <input name="email" id="ChamptextePassword" type="mail" placeholder="Entrez adresse mail" required>
-        <?php endif; ?>
         <p class="accountTitle">Modifier mot de passe</p>
 
 
