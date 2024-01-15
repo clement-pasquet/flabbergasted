@@ -33,6 +33,12 @@
             </a>
         <?php endforeach; ?>
     <?php endif; ?>
+
+    <?php if (empty($films)): ?>
+        <div class="nofilmDiv">
+            <div class="nofilmText">Votre recherche n'a donné aucun résultat.</div>
+        </div>
+    <?php endif; ?>
 </div>
 
 
