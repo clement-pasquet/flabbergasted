@@ -96,3 +96,4 @@ define('EVENT_PRIORITY_HIGH', 10);
 define('BASE_URL_ASSET', 'http://localhost:8080/assets/');
 define('CSS', BASE_URL_ASSET.'css/');
 define('IMG', BASE_URL_ASSET.'images/');
+define('JS', BASE_URL_ASSET.'js/');
