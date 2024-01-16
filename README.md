@@ -1,3 +1,6 @@
+*Les rendus de Qualité de développement et de Développement Efficace sont dans les dossiers
+```/Qualité de développement``` et ```/Développement Efficace```.*
+
 # Projet Flabbergasted
 
 <img src="./public/assets/images/screenshot_accueil.jpg" width="640px" height="360px">
