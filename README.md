@@ -68,6 +68,10 @@ Vos films sont accessibles dans la rubrique "Vos Films" :
 
 <img src="./public/assets/images/screenshot_yourmovies.jpg" width="640px" height="360px">
 
+Puis vous pouvez cliquer sur le film dans la page de vos films et visioner le film en entier :
+
+<img src="./public/assets/images/filmEntier.png" width="640px" height="360px">
+
 De plus, nous pouvons accéder à nos informations de compte <b>en cliquant sur le l'image de profile</b> ce qui nous renvoit à cette page :
 
 <img src="./public/assets/images/infoAccount.png" width="640px" height="360px">
