@@ -47,6 +47,7 @@ il ne récupère donc aucune donnée.
 Cliquer sur le bouton acheter rajoute instantanément le film à l'utilisateur sans conséquence.)
 
 Vos films sont accessibles dans la rubrique "Vos Films" :
+
 <img src="./public/assets/images/screenshot_yourmovies.jpg" width="640px" height="360px">
 
 
