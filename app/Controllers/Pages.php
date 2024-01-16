@@ -6,6 +6,7 @@ use App\Models\filmModel;
 use App\Models\achatModel;
 
 use App\Controllers\DisplayStrategies\ConnectedUserDisplayStrategy;
+use App\Controllers\DisplayStrategies\AlreadyBuyedDisplaystrategy;
 use App\Controllers\DisplayStrategies\GuestUserDisplayStrategy;
 use App\Controllers\DisplayStrategies\ButtonDisplayStrategy;
 
@@ -41,7 +42,13 @@ class Pages extends BaseController
             $id_user = $session->get('user')['id_user'];
             $filmOwned = $this->achatModel->utilisateurPossedeFilm($id_user, $id);
 
-            $strategy = new ConnectedUserDisplayStrategy();
+            // Si l'utilisateur possède le film, on n'affiche pas le bouton acheter
+            if ($filmOwned) {
+                $strategy = new AlreadyBuyedDisplaystrategy();
+            } else { // Sinon, on afficher le bouton qui permet d'acheter le film
+                $strategy = new ConnectedUserDisplayStrategy();
+            }
+
         } else {
             $strategy = new GuestUserDisplayStrategy();
         }
