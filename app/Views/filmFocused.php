@@ -24,8 +24,13 @@ $user = $session->get('user');
     <div class="background"></div>
 
     <div class="focusedDiv">
-        <iframe class="videoFocused" src="https://www.youtube.com/embed/<?=$film['lien_trailer']?>" title="Bande annonce film" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      
+        <?php if (!$filmOwned): ?>
+            <iframe class="videoFocused" src="https://www.youtube.com/embed/<?=$film['lien_trailer']?>" title="Bande annonce film" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <?php else: ?>
+            <video class="videoFocused" controls>
+                <source src="https://kdrive.infomaniak.com/2/app/826520/share/60a4a545-1a68-4dd1-8f1d-15c421834d1c/files/7/download" type="video/mp4">
+            </video>
+        <?php endif; ?>
       <div class="focusedDivDescription">
         <p class="nunito categoryTitle"><?= $film['titre']?></p>
         <p class="nunito descriptionText"><?=$film['synopsis']?></p>

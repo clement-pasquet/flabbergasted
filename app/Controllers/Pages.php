@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\filmModel;
+use App\Models\achatModel;
 
 use App\Controllers\DisplayStrategies\ConnectedUserDisplayStrategy;
 use App\Controllers\DisplayStrategies\GuestUserDisplayStrategy;
@@ -12,10 +13,12 @@ class Pages extends BaseController
 {
 
     protected filmModel $filmModel;
+    private achatModel $achatModel;
 
     public function __construct()
     {
         $this->filmModel = new filmModel();
+        $this->achatModel = achatModel::getInstance();
     }
 
     public function index()
@@ -31,10 +34,12 @@ class Pages extends BaseController
     public function filmFocused($id)
     {
         $session = session();
+        $filmOwned = false;
 
         // Vérifier si la clé 'user' existe dans la session et n'est pas null
         if ($session->has('user') && $session->get('user') !== null) {
             $id_user = $session->get('user')['id_user'];
+            $filmOwned = $this->achatModel->utilisateurPossedeFilm($id_user, $id);
 
             $strategy = new ConnectedUserDisplayStrategy();
         } else {
@@ -53,6 +58,7 @@ class Pages extends BaseController
             'film' => $film,
             'filmGenre' => $filmGenre,
             'buttonDisplayStrategy' => $strategy,
+            'filmOwned' => $filmOwned
         ]);
     }
 

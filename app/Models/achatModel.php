@@ -57,4 +57,12 @@ class achatModel extends Model
         return $result->getResultArray(); // Retourne un tableau des id_film
     }
 
+    public function utilisateurPossedeFilm($id_user, $id_film)
+    {
+        // Vérifier si la ligne existe
+        $result = $this->where(['id_user' => $id_user, 'id_film' => $id_film])->get();
+
+        // Retourner un booléen
+        return ($result->getRow() !== null);
+    }
 }

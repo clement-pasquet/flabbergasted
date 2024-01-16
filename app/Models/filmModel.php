@@ -3,7 +3,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class filmModel extends Model
+class  filmModel extends Model
 {
     protected $table = 'film';
     protected $primaryKey = 'id_film'; // adjust accordingly
