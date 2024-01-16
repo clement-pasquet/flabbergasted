@@ -119,8 +119,6 @@ class Utilisateur extends BaseController
         // Création d'une instance du modèle UserModel
         $userModel = new UserModel();
 
-        echo $id_user.$prenom.$nom;
-
         $userModel->setNom($id_user, $nom);
         $userModel->setPrenom($id_user, $prenom);
 

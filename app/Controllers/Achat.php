@@ -22,28 +22,27 @@ class Achat extends BaseController
         $id_film = $this->request->getPost('id_film');
         $id_user = $this->request->getPost('id_user');
 
+        // Nous vérifions si l'utilisateur est connecté
+        if (empty($id_user)) {
+            $session = session();
+            $session->setFlashdata('error', 'L utilisateur n\'est pas connecté pas.');
+
+            return redirect()->to(base_url( '/accountConnection'));
+        }
+
 
         $userModel = new UserModel();
-//         $filmModel = new filmModel();
 
-//         $filmCompared = $filmModel->getFilmById($id_film);
         $userCompared = $userModel->getUser($id_user);
 
         // Nous vérifions si l'utilisateur existe bel et bien
         if (!isset($userCompared)) {
             $session = session();
-            $session->setFlashdata('error', 'L utilisateur n existe pas.');
+            $session->setFlashdata('error', 'L utilisateur n\'existe pas.');
 
             return redirect()->to(base_url( '/'));
         }
 
-//         // Nous vérifions si le film existe bel et bien
-//         if (!isset($filmCompared)) {
-//             $session = session();
-//             $session->setFlashdata('error', 'Le film n existe pas.');
-//
-//             return redirect()->to(base_url( '/'));
-//         }
 
         // Utilisation de la procédure stocké ajouterAchat avec comme paramètres id_user et id_film
         $query = "CALL ajouterAchat(?, ?)";
