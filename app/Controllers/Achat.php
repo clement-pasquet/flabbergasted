@@ -61,7 +61,7 @@ class Achat extends BaseController
         // Vérifier si l'utilisateur est connecté
         if (!session()->has('user')) {
             // Rediriger l'utilisateur vers la page de connexion ou afficher un message d'erreur
-            return redirect()->to(base_url('/'));
+            return redirect()->to(base_url('/accountConnection'));
         }
 
         // Récupére l'id de l'utilisateur à partir de la session
