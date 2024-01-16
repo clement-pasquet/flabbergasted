@@ -26,7 +26,23 @@ e3qnBIJF
 
 ## Utiliser le site web
 
-En premier il faut se créer un compte cliquant sur "connexion" puis "Créer compte" :
+Ce que les utilisateurs peuvent faire :
+
+- Utilisateur non-inscrit : 
+  - rechercher un film
+  - sélectionner un film
+
+
+- Utilisateur inscrit :
+  - rechercher un film
+  - sélectionner un film
+  - aimé film
+  - acheter film
+  - regarder film
+  - changer ces informations de compte
+
+
+  En premier il faut se créer un compte cliquant sur "connexion" puis "Créer compte" :
 
 <img src="./public/assets/images/screenshot_accountcreate.jpg" width="640px" height="360px">
 
@@ -34,9 +50,11 @@ En premier il faut se créer un compte cliquant sur "connexion" puis "Créer com
 
 Une fois sur l'accueil, vous pouvez cliquer sur n'importe quel film pour arriver sur la vue filmFocused.
 
+<img src="./public/assets/images/accueilPic.png" width="640px" height="360px">
+
 Elle vous permet d'acheter ou de "liker" n'importe quel film.
 
-<img src="./public/assets/images/screenshot_filmfocused.jpg" width="640px" height="360px">
+<img src="./public/assets/images/filmFocusPic.png" width="640px" height="360px">
 
 Si vous décidez de cliquer sur acheter
 
@@ -50,7 +68,21 @@ Vos films sont accessibles dans la rubrique "Vos Films" :
 
 <img src="./public/assets/images/screenshot_yourmovies.jpg" width="640px" height="360px">
 
+De plus, nous pouvons accéder à nos informations de compte <b>en cliquant sur le l'image de profile</b> ce qui nous renvoit à cette page :
 
+<img src="./public/assets/images/infoAccount.png" width="640px" height="360px">
+
+Puis, nous pouvons ajouter un nom et prénom, modifier l'adresse mail et le mots de passe en cliquant sur la flèche droite correspondant aux champs, ce qui nous renvoie par exemple a cette pages :
+
+<img src="./public/assets/images/changeName.png" width="640px" height="360px">
+
+Mais aussi changer son adresse mail :
+
+<img src="./public/assets/images/changeMail.png" width="640px" height="360px">
+
+Puis, changer son mots de passe :
+
+<img src="./public/assets/images/changeMDP.png" width="640px" height="360px">
 
 ## Structure du code
 
