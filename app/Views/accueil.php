@@ -65,8 +65,9 @@ $user = $session->get('user')
     galerie4: 0,
   };
 
-  const imageWidth = 360; // Largeur de l'image utilisée
-  const timeoutDuration = 10000; // Durée d'attente en millisecondes (10 secondes) avant remise en position de départ
+  const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+  const imageWidth = (7.9 * viewportWidth) / 100; // Largeur de l'image utilisée
+  const timeoutDuration = 5000; // Durée d'attente en millisecondes (10 secondes) avant remise en position de départ
   const scrollSpeed = 3; // Vitesse du défilement lorsqu'on appuie (3 fois plus rapide)
   let timeoutIDs = {};
 
