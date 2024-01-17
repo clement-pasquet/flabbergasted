@@ -32,82 +32,84 @@ $user = $session->get('user')
 </header>
 
 <div class="Top-page">
+<form action="<?= base_url('achat') ?>" method="post">
   <!-- Left Part - Informations personnelles -->
   <div class="left-part">
-    <div class="Info-personnelles">
-      <p class="Titre1">Informations personnelles</p>
-      <p class="Sous-titre1">Merci de remplir vos informations personnelles</p>
-      <div class="input-pos">
-        <!-- Input Fields for Personal Information -->
-        <div>
-          <label class="labelcolor" for="nom">Nom</label>
-          <input name="nom" class="Entry" placeholder="<?= $user['nom']; ?>" />
-        </div>
-        <div>
-          <label class="labelcolor" for="num">Numéro de téléphone</label>
-          <input name="num" class="Entry" placeholder="0123456789" />
-        </div>
-        <div>
-          <label class="labelcolor" for="adresse">Adresse</label>
-          <input name="adresse" class="Entry" placeholder="2 rue de la poésie" />
-        </div>
-        <div>
-          <label class="labelcolor" for="ville">Ville</label>
-          <input name="ville" class="Entry" placeholder="Nantes" />
-        </div>
-      </div>
-    </div>
-
-    <!-- Paiement - Méthode de paiement -->
-    <div class="Paiement">
-      <p class="Titre1">Méthode de paiement</p>
-      <p class="Sous-titre1">Merci de renseigner vos informations de paiement</p>
-
-      <!-- Box 1 - Carte de crédit -->
-      <div class="box1">
-        <!-- Header for Carte de crédit -->
-        <div class="header-paiement">
-          <label for="Option1" class="optiondepaiement">Carte de crédit</label>
-          <img src="<?=IMG.'Visa.svg'?>" alt="Visa-Icon" class="Visa-Icon">
-        </div>
-        <div class="input-pos3">
-          <div>
-            <label for="carte">Numéro de carte</label>
-            <input name="carte" class="Entry2" placeholder="1234 5678 1234 5678" maxlength="16" required />
-          </div>
-          <div>
-            <label for="expiration">Date d’expiration</label>
-            <input name="expiration" class="Entry2" placeholder="mm / aa" />
-          </div>
-          <div>
-            <label for="nomcarte">Nom sur la carte</label>
-            <input name="nomcarte" class="Entry2" placeholder="Simon Strueux" />
-          </div>
-          <div>
-            <label for="cvc">CVC</label>
-            <input name="cvc" class="Entry2" placeholder="123" />
+        <div class="Info-personnelles">
+          <p class="Titre1">Informations personnelles</p>
+          <p class="Sous-titre1">Merci de remplir vos informations personnelles</p>
+          <div class="input-pos">
+            <!-- Input Fields for Personal Information -->
+            <div>
+              <label class="labelcolor" for="nom">Nom</label>
+              <input name="nom" class="Entry" placeholder="<?= $user['nom']; ?>" required/>
+            </div>
+            <div>
+              <label class="labelcolor" for="num">Numéro de téléphone</label>
+              <input name="num" class="Entry" placeholder="0123456789" required/>
+            </div>
+            <div>
+              <label class="labelcolor" for="adresse">Adresse</label>
+              <input name="adresse" class="Entry" placeholder="2 rue de la poésie" />
+            </div>
+            <div>
+              <label class="labelcolor" for="ville">Ville</label>
+              <input name="ville" class="Entry" placeholder="Nantes" />
+            </div>
           </div>
         </div>
-      </div>
 
-    </div>
+        <!-- Paiement - Méthode de paiement -->
+        <div class="Paiement">
+          <p class="Titre1">Méthode de paiement</p>
+          <p class="Sous-titre1">Merci de renseigner vos informations de paiement</p>
 
-    <!-- Confirmation -->
-    <div class="confirmation">
-      <p class="Titre1">Confirmation</p>
-      <p class="Sous-titre1">Nous arrivons vers la fin. Juste quelques clics et votre film est prêt !</p>
+          <!-- Box 1 - Carte de crédit -->
+          <div class="box1">
+            <!-- Header for Carte de crédit -->
+            <div class="header-paiement">
+              <label for="Option1" class="optiondepaiement">Carte de crédit</label>
+              <img src="<?=IMG.'Visa.svg'?>" alt="Visa-Icon" class="Visa-Icon">
+            </div>
+            <div class="input-pos3">
+              <div>
+                <label for="carte">Numéro de carte</label>
+                <input name="carte" class="Entry2" placeholder="1234 5678 1234 5678" maxlength="16" required />
+              </div>
+              <div>
+                <label for="expiration">Date d’expiration</label>
+                <input name="expiration" class="Entry2" placeholder="mm / aa" required />
+              </div>
+              <div>
+                <label for="nomcarte">Nom sur la carte</label>
+                <input name="nomcarte" class="Entry2" placeholder="Simon Strueux" required />
+              </div>
+              <div>
+                <label for="cvc">CVC</label>
+                <input name="cvc" class="Entry2" placeholder="123" required />
+              </div>
+            </div>
+          </div>
 
-      <!-- Checkboxes for Confirmation -->
-      <div class="choix1">
-        <input name="Option1" type="checkbox" class="checkbox1" required />
-        <label class="Option" for="Option1">J’accepte de recevoir des offres promotionnelles.</label>
-      </div>
-      <div class="choix2">
-        <input name="Option2" type="checkbox" class="checkbox2" required />
-        <label class="Option" for="Option2">J’accepte les conditions de vente et la politique privée du site.</label>
-      </div>
+        </div>
 
-        <form action="<?= base_url('achat') ?>" method="post">
+        <!-- Confirmation -->
+        <div class="confirmation">
+          <p class="Titre1">Confirmation</p>
+          <p class="Sous-titre1">Nous arrivons vers la fin. Juste quelques clics et votre film est prêt !</p>
+
+
+          <!-- Checkboxes for Confirmation -->
+          <div class="choix1">
+            <input name="Option1" type="checkbox" class="checkbox1"/>
+            <label class="Option" for="Option1">J’accepte de recevoir des offres promotionnelles.</label>
+          </div>
+          <div class="choix2">
+            <input name="Option2" type="checkbox" class="checkbox2" required />
+            <label class="Option" for="Option2">J’accepte les conditions de vente et la politique privée du site.</label>
+          </div>
+
+
             <!-- Appelle la route achat qui elle meme appelle la fonction setAchat du controleur Achat pour MAJ. La table achat -->
             <input type="hidden" name="id_film" value="<?= $film['id_film'] ?>">
             <input type="hidden" name="id_user" value="<?= $session->get('user')['id_user'] ?>">
@@ -116,11 +118,10 @@ $user = $session->get('user')
             <button class="updateButton" type="submit">
                 <p class="updateButtonText">Acheter</p>
             </button>
-        </form>
+        </div>
 
-    </div>
   </div>
-
+  </form>
   <!-- Right Part - Résumé de l'achat -->
   <div class="right-part">
     <div class="resume">
