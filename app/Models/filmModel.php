@@ -23,9 +23,9 @@ class  filmModel extends Model
         return $this->where(['est_serie' => 0, 'genre' => 'Science-fiction'])->findAll();
     }
 
-    public function getFilmByGenre($genre, $number)
+    public function getFilmByGenre($genre, $number, $id)
     {
-        return $this->where('genre', $genre)->limit($number)->get()->getResultArray();
+        return $this->where('genre', $genre)->where('id_film !=', $id)->limit($number)->get()->getResultArray();
     }
 
     // Fonction pour recupérer un film selon son id. N'a pas pu encore etre testé.

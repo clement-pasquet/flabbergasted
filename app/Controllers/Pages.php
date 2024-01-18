@@ -58,7 +58,7 @@ class Pages extends BaseController
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Film not found');
         }
 
-        $filmGenre = $this->filmModel->getFilmByGenre($film['genre'], 4);
+        $filmGenre = $this->filmModel->getFilmByGenre($film['genre'], 4, $id);
 
 
         return view('filmFocused', [
