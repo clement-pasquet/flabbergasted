@@ -86,7 +86,7 @@ $user = $session->get('user')
               </div>
               <div>
                 <label for="cvc">CVC</label>
-                <input name="cvc" class="Entry2" placeholder="123" required />
+                <input name="cvc" class="Entry2" type="number" placeholder="123" maxlength="3" required />
               </div>
             </div>
           </div>
