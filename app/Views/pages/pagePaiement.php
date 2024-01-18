@@ -74,11 +74,11 @@ $user = $session->get('user')
             <div class="input-pos3">
               <div>
                 <label for="carte">Numéro de carte</label>
-                <input name="carte" class="Entry2" placeholder="1234 5678 1234 5678" maxlength="16" required />
+                <input name="carte" class="Entry2" type="number"  placeholder="1234 5678 1234 5678" maxlength="16" required />
               </div>
               <div>
                 <label for="expiration">Date d’expiration</label>
-                <input name="expiration" class="Entry2" placeholder="mm / aa" required />
+                <input name="expiration" class="Entry2" type="date" placeholder="mm / aa" required />
               </div>
               <div>
                 <label for="nomcarte">Nom sur la carte</label>
