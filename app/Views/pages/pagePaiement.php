@@ -13,12 +13,12 @@ $user = $session->get('user')
   <title>Paiement page</title>
 
   <!-- Fonts -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="<?=CSS.'pagePaiement.css'?>">
@@ -32,7 +32,7 @@ $user = $session->get('user')
 </header>
 
 <div class="Top-page">
-<form action="<?= base_url('achat') ?>" method="post">
+
   <!-- Left Part - Informations personnelles -->
   <div class="left-part">
         <div class="Info-personnelles">
@@ -86,7 +86,7 @@ $user = $session->get('user')
               </div>
               <div>
                 <label for="cvc">CVC</label>
-                <input name="cvc" class="Entry2" type="number" placeholder="123" maxlength="3" required />
+                <input name="cvc" class="Entry2" type="" placeholder="123" maxlength="3" required />
               </div>
             </div>
           </div>
@@ -109,7 +109,7 @@ $user = $session->get('user')
             <label class="Option" for="Option2">J’accepte les conditions de vente et la politique privée du site.</label>
           </div>
 
-
+            <form action="<?= base_url('achat') ?>" method="post">
             <!-- Appelle la route achat qui elle meme appelle la fonction setAchat du controleur Achat pour MAJ. La table achat -->
             <input type="hidden" name="id_film" value="<?= $film['id_film'] ?>">
             <input type="hidden" name="id_user" value="<?= $session->get('user')['id_user'] ?>">
@@ -118,10 +118,11 @@ $user = $session->get('user')
             <button class="updateButton" type="submit">
                 <p class="updateButtonText">Acheter</p>
             </button>
+            </form>
         </div>
 
   </div>
-  </form>
+
   <!-- Right Part - Résumé de l'achat -->
   <div class="right-part">
     <div class="resume">
